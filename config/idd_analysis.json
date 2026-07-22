@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "registered_at": "2026-07-16T03:05:00+08:00",
+  "seed": 20260716,
+  "scope": {
+    "disease": "intervertebral_disc_degeneration_and_lumbar_disc_herniation",
+    "objective": "druggable_and_deliverable_causal_target_dossier",
+    "novelty_is_exclusion_gate": false,
+    "pqtl_required": false
+  },
+  "bulk": {
+    "primary_dataset": "GSE70362",
+    "primary_tissue": "annulus_fibrosus",
+    "primary_contrast": "Thompson_III_IV_V_vs_I_I-II_II",
+    "secondary_tissue": "nucleus_pulposus",
+    "donor_blocking": true,
+    "batch_covariate": true,
+    "repeat_combat": false,
+    "fdr_max": 0.05,
+    "absolute_log2fc_min": 0.5,
+    "supporting_datasets": ["GSE56081", "GSE23130", "GSE153761"],
+    "blood_datasets": ["GSE124272", "GSE150408"]
+  },
+  "wgcna": {
+    "dataset": "GSE70362",
+    "tissues": ["annulus_fibrosus", "nucleus_pulposus"],
+    "top_variance_features": 5000,
+    "powers": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 14, 16, 18, 20],
+    "scale_free_fit_min": 0.8,
+    "network_type": "signed",
+    "min_module_size": 30,
+    "merge_cut_height": 0.25
+  },
+  "genetics": {
+    "gene_universe": "Finan_2017_Table_S1",
+    "primary_eqtl": "eQTLGen_full_cis",
+    "proxy_eqtl_tissues": ["GTEx_v8_whole_blood", "GTEx_v8_skeletal_muscle", "GTEx_v8_fibroblast"],
+    "ld_reference": "1000G_Phase3_EUR_GRCh37",
+    "outcomes": [
+      "FinnGen_R13_M13_INTERVERTEB",
+      "FinnGen_R13_M13_LOWBACKPAIN",
+      "FinnGen_R13_M13_SCIATICA"
+    ],
+    "instrument_pvalue_max": 5e-8,
+    "instrument_f_min_exclusive": 10,
+    "clump_r2_max": 0.001,
+    "clump_window_kb": 10000,
+    "coloc_pp4_min": 0.8,
+    "coloc_window_bp": 1000000,
+    "heidi_pvalue_min_exclusive": 0.01,
+    "steiger_required": true,
+    "reverse_mr_required": true
+  },
+  "single_cell": {
+    "primary_dataset": "GSE230809",
+    "healthy_subseries": "GSE229711",
+    "diseased_subseries": "GSE230808",
+    "role": "cell_type_localization",
+    "disease_effect_claim_allowed": false,
+    "minimum_cells_expressing_fraction": 0.05,
+    "qc": {
+      "minimum_genes": 200,
+      "minimum_counts": 500,
+      "maximum_genes": 7500,
+      "maximum_mitochondrial_percent": 20
+    },
+    "clustering": {
+      "highly_variable_genes": 3000,
+      "principal_components": 40,
+      "neighbors": 20,
+      "leiden_resolution": 0.5,
+      "batch_key": "sample_id",
+      "max_cells_per_sample": 1500
+    },
+    "marker_sets": {
+      "nucleus_pulposus": ["KRT8", "KRT18", "KRT19", "CA12", "CD24"],
+      "chondrocyte_like": ["COL2A1", "ACAN", "SOX9", "COMP", "MATN3"],
+      "annulus_fibrosus": ["COL1A1", "COL1A2", "DCN", "LUM", "COL3A1"],
+      "immune": ["PTPRC", "LST1", "TYROBP", "C1QA", "CD68"],
+      "endothelial": ["PECAM1", "VWF", "EMCN", "KDR", "RAMP2"]
+    }
+  },
+  "ranking": {
+    "required_primary_targets": 1,
+    "required_backup_targets_min": 2,
+    "required_backup_targets_max": 3,
+    "priority_locus_separation_bp": 1000000,
+    "require_complete_evidence_for_every_modality": false,
+    "optimize_for": "injectable_hydrogel_or_nanoparticle_delivery_wet_lab_validation",
+    "weights": {
+      "bulk_deg": 2,
+      "wgcna_module": 2,
+      "mr_fdr": 3,
+      "coloc_pp4": 3,
+      "smr_heidi": 3,
+      "steiger": 1,
+      "reverse_mr_no_evidence": 1,
+      "single_cell_localization": 2,
+      "known_modulator": 2,
+      "local_delivery_feasibility": 2
+    },
+    "tie_breakers": [
+      "genetic_evidence_count",
+      "local_delivery_feasibility",
+      "known_modulator",
+      "gene_symbol"
+    ]
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "checked_at": "2026-07-16T03:05:00+08:00",
+  "bulk": [
+    {"accession": "GSE70362", "samples": 48, "platform": "GPL17810", "role": "primary_tissue_discovery", "local_path": "data/raw/idd/GSE70362/GSE70362_series_matrix.txt.gz"},
+    {"accession": "GSE23130", "samples": 23, "platform": "GPL1352", "role": "supporting_annulus_grade_trend", "local_path": "data/raw/idd/GSE23130/GSE23130_series_matrix.txt.gz"},
+    {"accession": "GSE153761", "samples": 6, "platform": "GPL22120", "role": "supporting_cervical_endplate", "local_path": "data/raw/idd/GSE153761/GSE153761_series_matrix.txt.gz"},
+    {"accession": "GSE56081", "samples": 10, "platform": "GPL15314", "role": "supporting_nucleus_pulposus", "local_path": "data/raw/idd/GSE56081/GSE56081_series_matrix.txt.gz"},
+    {"accession": "GSE124272", "samples": 16, "platform": "GPL21185", "role": "blood_supplement", "local_path": "data/raw/idd/GSE124272/GSE124272_series_matrix.txt.gz"},
+    {"accession": "GSE150408", "samples": 59, "platform": "GPL21185", "role": "blood_supplement", "local_path": "data/raw/idd/GSE150408/GSE150408_series_matrix.txt.gz"}
+  ],
+  "single_cell": {
+    "accession": "GSE230809",
+    "healthy_subseries": "GSE229711",
+    "diseased_subseries": "GSE230808",
+    "role": "primary_human_disc_cell_localization",
+    "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE230nnn/GSE230809/suppl/GSE230809_RAW.tar",
+    "expected_content_length": 1201612800,
+    "status": "downloaded_verified"
+  },
+  "gwas": [
+    {"outcome_id": "FinnGen_R13_M13_INTERVERTEB", "cases": 53270, "controls": 347768, "genome_build": "GRCh38", "url": "https://storage.googleapis.com/finngen-public-data-r13/summary_stats/finngen_R13_M13_INTERVERTEB.gz", "expected_content_length": 810165287, "expected_md5": "7c44656bc506f3908b8ecb00762eacc4", "index_expected_content_length": 1770519, "index_expected_md5": "12888027247f6c364405f2e29667d9cd", "status": "downloaded_verified"},
+    {"outcome_id": "FinnGen_R13_M13_LOWBACKPAIN", "cases": 45696, "controls": 347768, "genome_build": "GRCh38", "url": "https://storage.googleapis.com/finngen-public-data-r13/summary_stats/finngen_R13_M13_LOWBACKPAIN.gz", "expected_content_length": 809321364, "expected_md5": "29ae56b535dd48c77eac449236ceb1e8", "index_expected_content_length": 1770553, "index_expected_md5": "3955c8bd33f835a142ca33a1314ce32f", "status": "downloaded_verified"},
+    {"outcome_id": "FinnGen_R13_M13_SCIATICA", "cases": 28094, "controls": 347768, "genome_build": "GRCh38", "url": "https://storage.googleapis.com/finngen-public-data-r13/summary_stats/finngen_R13_M13_SCIATICA.gz", "expected_content_length": 808334919, "expected_md5": "ce754ddceeaf8d9f542e615f600d1441", "index_expected_content_length": 1769923, "index_expected_md5": "caee88951686ec34436d8b8c9b1fc9dd", "status": "downloaded_verified"}
+  ],
+  "eqtl_and_ld_source_contract": "config/mr_sources.json",
+  "gene_universe_source": "data/raw/mr/finan_2017_table_s1.xlsx",
+  "missing_data_rule": "Record unavailable fields as null or not_estimable; never infer them."
+}

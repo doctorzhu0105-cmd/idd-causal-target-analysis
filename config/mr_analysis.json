@@ -1,0 +1,158 @@
+{
+  "schema_version": 1,
+  "preregistered_at": "2026-07-15T23:37:34+08:00",
+  "random_seed": 20260715,
+  "scope": {
+    "primary_analysis": "eqtl_based_cis_mr",
+    "pqtl_status": "deferred_by_user",
+    "pqtl_required_for_completion": false,
+    "requester_pays_data_allowed": false
+  },
+  "gene_universe": {
+    "source": "Finan_2017_Table_S1",
+    "doi": "10.1126/scitranslmed.aag1166",
+    "included_druggability_tiers": [
+      "Tier 1",
+      "Tier 2",
+      "Tier 3A",
+      "Tier 3B"
+    ],
+    "deduplicate_by": "ensembl_gene_id",
+    "retain_missing_hgnc_in_source_audit": true,
+    "require_hgnc_symbol_for_downstream_analysis": true
+  },
+  "exposure": {
+    "primary_source": "eQTLGen_Phase_I_2019-12-11",
+    "tissue": "whole_blood",
+    "genome_build": "GRCh37",
+    "cis_definition": "source_defined_gene_center_distance_lt_1000000_bp",
+    "instrument_pvalue_max": 5e-8,
+    "instrument_f_statistic_min_exclusive": 10,
+    "f_statistic_formula": "zscore_squared",
+    "require_biallelic_snp": true
+  },
+  "ld": {
+    "reference": "1000_Genomes_Phase_3_EUR",
+    "ancestry": "EUR",
+    "clump_r2_max": 0.001,
+    "clump_window_kb": 10000,
+    "palindromic_maf_lower": 0.42,
+    "palindromic_maf_upper": 0.58,
+    "drop_palindromic_without_frequency": true
+  },
+  "outcomes": [
+    {
+      "outcome_id": "morris_2019_ebmd",
+      "role": "primary",
+      "accession": "GCST006979",
+      "genome_build": "GRCh37",
+      "ancestry": "European",
+      "sample_size": 426824,
+      "effect_scale": "beta",
+      "recommended_pvalue_field": "P.NI"
+    },
+    {
+      "outcome_id": "morris_2019_fracture",
+      "role": "primary",
+      "accession": "GCST006980",
+      "genome_build": "GRCh37",
+      "ancestry": "European",
+      "cases": 53184,
+      "controls": 373611,
+      "effect_scale": "log_odds",
+      "recommended_pvalue_field": "P.I"
+    },
+    {
+      "outcome_id": "finngen_r13_osteoporosis_pathological_fracture",
+      "role": "external_sensitivity",
+      "endpoint": "OSTEOPOROSIS_FRACTURE_FG",
+      "genome_build": "GRCh38",
+      "ancestry": "European",
+      "cases": 2808,
+      "controls": 368412,
+      "effect_scale": "log_odds"
+    }
+  ],
+  "harmonization": {
+    "primary_build": "GRCh37",
+    "liftover_finngen_to": "GRCh37",
+    "drop_allele_mismatches": true,
+    "drop_unresolved_palindromic_variants": true,
+    "do_not_use_ebi_harmonised_outcome_files": true
+  },
+  "mr": {
+    "single_instrument_method": "wald_ratio",
+    "multiple_instrument_primary_method": "inverse_variance_weighted",
+    "weighted_median_min_instruments": 3,
+    "mr_egger_min_instruments": 3,
+    "mr_presso_min_instruments": 4,
+    "heterogeneity_test": "cochran_q",
+    "leave_one_out_min_instruments": 3,
+    "multiple_testing_method": "benjamini_hochberg",
+    "primary_fdr_max": 0.05,
+    "directional_consistency_rule": "higher_expression_effects_on_ebmd_and_fracture_log_odds_have_opposite_signs"
+  },
+  "colocalization": {
+    "method": "coloc_abf",
+    "window_bp": 1000000,
+    "prior_p1": 0.0001,
+    "prior_p2": 0.0001,
+    "prior_p12": 0.00001,
+    "minimum_shared_variants": 50,
+    "pp4_min": 0.8,
+    "gtex_proxy_datasets": [
+      {
+        "dataset_id": "QTD000356",
+        "sample_group": "blood",
+        "sample_size": 670
+      },
+      {
+        "dataset_id": "QTD000281",
+        "sample_group": "muscle",
+        "sample_size": 702
+      },
+      {
+        "dataset_id": "QTD000216",
+        "sample_group": "fibroblast",
+        "sample_size": 483
+      }
+    ],
+    "proxy_tissue_claim_limit": "not_bone_or_bone_marrow"
+  },
+  "smr_heidi": {
+    "exposure_source": "eQTLGen_Phase_I_official_BESD",
+    "ld_reference": "1000_Genomes_Phase_3_EUR",
+    "smr_multiple_testing_method": "bonferroni_over_tested_probes_per_outcome",
+    "smr_familywise_alpha": 0.05,
+    "heidi_pvalue_min_exclusive": 0.01,
+    "minimum_heidi_snps": 10
+  },
+  "directionality": {
+    "reverse_mr_required": true,
+    "reverse_mr_multiple_testing_method": "benjamini_hochberg",
+    "reverse_mr_fdr_min_for_no_evidence": 0.05,
+    "steiger_required": true,
+    "steiger_expected_direction": "expression_to_outcome"
+  },
+  "target_evidence_tiers": {
+    "tier_a": "primary eQTLGen MR passes FDR for eBMD and fracture with direction consistency, both primary coloc PP4 pass, SMR and HEIDI pass, reverse MR is negative, and Steiger supports expression-to-outcome",
+    "tier_b": "primary eQTLGen MR passes FDR for eBMD and at least one fracture outcome with direction consistency, at least one primary coloc PP4 passes, SMR and HEIDI pass for the concordant outcome, reverse MR is negative, and Steiger supports expression-to-outcome",
+    "tier_c": "partial genetic evidence that does not satisfy tier A or tier B and cannot support a nominated target"
+  },
+  "nomination": {
+    "required_primary_targets": 1,
+    "required_backup_targets": 2,
+    "minimum_nominatable_tier": "tier_b",
+    "do_not_nominate_if_fewer_than_three_eligible_targets": true,
+    "no_post_result_threshold_changes": true
+  },
+  "single_cell": {
+    "datasets": [
+      "GSE169396",
+      "GSE147287"
+    ],
+    "allowed_role": "descriptive_cell_type_localization_only",
+    "disease_differential_expression_allowed": false,
+    "biological_replicate_is_donor": true
+  }
+}

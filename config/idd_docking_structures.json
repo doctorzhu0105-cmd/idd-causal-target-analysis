@@ -1,0 +1,26 @@
+{
+  "checked_at": "2026-07-16T06:03:00+08:00",
+  "source": "UniProt reviewed human entries, PDB cross-references",
+  "targets": {
+    "AKR1C1": {
+      "uniprot_accession": "Q04828",
+      "pdb_ids": ["1MRQ", "3C3U", "3GUG", "3NTY", "4YVP", "6A7A", "6IJX", "8JP2"]
+    },
+    "AKR1C2": {
+      "uniprot_accession": "P52895",
+      "pdb_ids": ["1IHI", "1J96", "1XJB", "2HDJ", "2IPJ", "4JQ1", "4JQ2", "4JQ3", "4JQ4", "4JQA", "4JTQ", "4JTR", "4L1W", "4L1X", "4XO6", "4XO7"]
+    },
+    "CCL28": {
+      "uniprot_accession": "Q9NRJ3",
+      "pdb_ids": ["6CWS"]
+    },
+    "NT5E": {
+      "uniprot_accession": "P21589",
+      "pdb_ids": ["4H1S", "4H1Y", "4H2B", "4H2F", "4H2G", "4H2I", "6HXW", "6S7F", "6S7H", "6TVE", "6TVG", "6TVX", "6TW0", "6TWA", "6TWF", "6VC9", "6VCA", "6XUE", "6XUG", "6XUQ", "6YE1", "6YE2", "6Z9B", "6Z9D", "7BBJ", "7JV8", "7JV9", "7P9N", "7P9R", "7P9T", "7PA4", "7PB5", "7PBA", "7PBB", "7PBY", "7PCP", "7PD9", "7QGA", "7QGL", "7QGM", "7QGO", "8ZNZ", "9HJ4", "9HJG", "9I1H"]
+    },
+    "P2RY13": {
+      "uniprot_accession": "Q9BPV8",
+      "pdb_ids": []
+    }
+  }
+}

@@ -1,0 +1,163 @@
+{
+  "checked_at": "2026-07-15T23:37:34+08:00",
+  "sources": [
+    {
+      "source_id": "finan_2017_druggable_genome",
+      "role": "gene_universe",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/6321762/bin/NIHMS80906-supplement-Table_S1.xlsx",
+      "local_path": "data/raw/mr/finan_2017_table_s1.xlsx",
+      "expected_rows_including_header": 4480,
+      "expected_sha256": "bffb21dd667a8c1e7c163d030af04e16fb66abb01d03729db9a0114cd2c9a062",
+      "genome_build": "GRCh37",
+      "status": "downloaded"
+    },
+    {
+      "source_id": "eqtlgen_significant_cis",
+      "role": "instrument_screening",
+      "url": "https://download.gcc.rug.nl/downloads/eqtlgen/cis-eqtl/2019-12-11-cis-eQTLsFDR0.05-ProbeLevel-CohortInfoRemoved-BonferroniAdded.txt.gz",
+      "expected_content_length": 322775879,
+      "genome_build": "GRCh37",
+      "status": "downloaded_verified"
+    },
+    {
+      "source_id": "eqtlgen_full_cis",
+      "role": "primary_exposure_and_colocalization",
+      "url": "https://download.gcc.rug.nl/downloads/eqtlgen/cis-eqtl/2019-12-11-cis-eQTLsFDR-ProbeLevel-CohortInfoRemoved-BonferroniAdded.txt.gz",
+      "expected_content_length": 3880187026,
+      "genome_build": "GRCh37",
+      "status": "downloaded_verified"
+    },
+    {
+      "source_id": "eqtlgen_smr_besd",
+      "role": "smr_heidi",
+      "url": "https://download.gcc.rug.nl/downloads/eqtlgen/cis-eqtl/SMR_formatted/cis-eQTL-SMR_20191212.tar.gz",
+      "expected_content_length": 1372512049,
+      "genome_build": "GRCh37",
+      "status": "downloaded_verified"
+    },
+    {
+      "source_id": "eqtlgen_allele_frequency",
+      "role": "harmonization_and_steiger",
+      "url": "https://download.gcc.rug.nl/downloads/eqtlgen/cis-eqtl/2018-07-18_SNP_AF_for_AlleleB_combined_allele_counts_and_MAF_pos_added.txt.gz",
+      "expected_content_length": 240045342,
+      "genome_build": "GRCh37",
+      "status": "downloaded_verified"
+    },
+    {
+      "source_id": "morris_2019_ebmd",
+      "role": "primary_outcome",
+      "url": "https://ftp.ebi.ac.uk/pub/databases/gwas/summary_statistics/GCST006001-GCST007000/GCST006979/Biobank2-British-Bmd-As-C-Gwas-SumStats.txt.gz",
+      "expected_content_length": 477256721,
+      "genome_build": "GRCh37",
+      "status": "verified_not_downloaded"
+    },
+    {
+      "source_id": "morris_2019_fracture",
+      "role": "primary_outcome",
+      "url": "https://ftp.ebi.ac.uk/pub/databases/gwas/summary_statistics/GCST006001-GCST007000/GCST006980/Biobank2-British-FracA-As-C-Gwas-SumStats.txt.gz",
+      "expected_content_length": 585319695,
+      "genome_build": "GRCh37",
+      "status": "verified_not_downloaded"
+    },
+    {
+      "source_id": "finngen_r13_osteoporosis_pathological_fracture",
+      "role": "external_sensitivity_outcome",
+      "url": "https://storage.googleapis.com/finngen-public-data-r13/summary_stats/finngen_R13_OSTEOPOROSIS_FRACTURE_FG.gz",
+      "expected_content_length": 799961692,
+      "genome_build": "GRCh38",
+      "status": "verified_not_downloaded"
+    },
+    {
+      "source_id": "gtex_v8_blood_eqtl_catalogue",
+      "role": "proxy_tissue_colocalization",
+      "dataset_id": "QTD000356",
+      "url": "https://ftp.ebi.ac.uk/pub/databases/spot/eQTL/sumstats/QTS000015/QTD000356/QTD000356.all.tsv.gz",
+      "index_url": "https://ftp.ebi.ac.uk/pub/databases/spot/eQTL/sumstats/QTS000015/QTD000356/QTD000356.all.tsv.gz.tbi",
+      "expected_content_length": 2797518844,
+      "sample_size": 670,
+      "genome_build": "GRCh38",
+      "release_lock": "QTS000015 GTEx v8 r7 metadata and exact FTP object",
+      "license": "CC BY 4.0",
+      "status": "verified_remote_tabix"
+    },
+    {
+      "source_id": "gtex_v8_muscle_eqtl_catalogue",
+      "role": "proxy_tissue_colocalization",
+      "dataset_id": "QTD000281",
+      "url": "https://ftp.ebi.ac.uk/pub/databases/spot/eQTL/sumstats/QTS000015/QTD000281/QTD000281.all.tsv.gz",
+      "index_url": "https://ftp.ebi.ac.uk/pub/databases/spot/eQTL/sumstats/QTS000015/QTD000281/QTD000281.all.tsv.gz.tbi",
+      "expected_content_length": 3166592679,
+      "sample_size": 702,
+      "genome_build": "GRCh38",
+      "release_lock": "QTS000015 GTEx v8 r7 metadata and exact FTP object",
+      "license": "CC BY 4.0",
+      "status": "verified_remote_tabix"
+    },
+    {
+      "source_id": "gtex_v8_fibroblast_eqtl_catalogue",
+      "role": "proxy_tissue_colocalization",
+      "dataset_id": "QTD000216",
+      "url": "https://ftp.ebi.ac.uk/pub/databases/spot/eQTL/sumstats/QTS000015/QTD000216/QTD000216.all.tsv.gz",
+      "index_url": "https://ftp.ebi.ac.uk/pub/databases/spot/eQTL/sumstats/QTS000015/QTD000216/QTD000216.all.tsv.gz.tbi",
+      "expected_content_length": 3161468217,
+      "sample_size": 483,
+      "genome_build": "GRCh38",
+      "release_lock": "QTS000015 GTEx v8 r7 metadata and exact FTP object",
+      "license": "CC BY 4.0",
+      "status": "verified_remote_tabix"
+    },
+    {
+      "source_id": "one_thousand_genomes_phase3_eur",
+      "role": "ld_reference",
+      "record_url": "https://zenodo.org/records/6614170",
+      "record_id": "6614170",
+      "ancestry": "EUR",
+      "genome_build": "GRCh37",
+      "license": "CC BY 4.0",
+      "files": [
+        {
+          "name": "1000G_EUR.bed",
+          "url": "https://zenodo.org/api/records/6614170/files/1000G_EUR.bed/content",
+          "local_path": "data/raw/idd/genetics/ld/1000G_EUR.bed",
+          "expected_content_length": 231387159,
+          "expected_md5": "a163c74ea92676c9ada76fe5eb3b2ec9",
+          "status": "downloaded_verified"
+        },
+        {
+          "name": "1000G_EUR.bim",
+          "url": "https://zenodo.org/api/records/6614170/files/1000G_EUR.bim/content",
+          "local_path": "data/raw/idd/genetics/ld/1000G_EUR.bim",
+          "expected_content_length": 51537337,
+          "expected_md5": "81b1ee40a05ef5be98ad3e496c71d708",
+          "status": "downloaded_verified"
+        },
+        {
+          "name": "1000G_EUR.fam",
+          "url": "https://zenodo.org/api/records/6614170/files/1000G_EUR.fam/content",
+          "local_path": "data/raw/idd/genetics/ld/1000G_EUR.fam",
+          "expected_content_length": 9557,
+          "expected_md5": "669a4260fda7a9e1dd7df374aff294ea",
+          "expected_rows": 503,
+          "status": "downloaded_verified"
+        },
+        {
+          "name": "1000G_EUR.afreq",
+          "url": "https://zenodo.org/api/records/6614170/files/1000G_EUR.afreq/content",
+          "local_path": "data/raw/idd/genetics/ld/1000G_EUR.afreq",
+          "expected_content_length": 56496658,
+          "expected_md5": "7746ab38e42c6abd5980c8ce57172327",
+          "status": "downloaded_verified"
+        }
+      ],
+      "status": "downloaded_verified"
+    }
+  ],
+  "deferred_sources": [
+    {
+      "source_id": "decode_and_ukb_ppp_pqtl",
+      "role": "future_protein_level_follow_up",
+      "status": "deferred_by_user_not_blocking",
+      "reason": "Controlled or account-dependent protein resources are outside the current eQTL-only scope."
+    }
+  ]
+}
