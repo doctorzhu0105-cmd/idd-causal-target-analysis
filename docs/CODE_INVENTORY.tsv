@@ -1,34 +1,51 @@
-path	phase	role	source_sha256
-py/mr_prepare_druggable_genes.py	input_preparation	Validate and extract the Finan 2017 druggable-gene universe	4c794c65f58db840894551508991da692e496ac82ac982b5ce887021a7b68d2d
-py/idd_acquire_scrna.py	data_acquisition	Download and integrity-check the registered GSE230809 archive	9e7ca16e6b4ab51b4056d72183914392931d07c1b7dbd8c168c5b3d40475df55
-py/idd_docking_assessment.py	docking_applicability	Apply structure, ligand, and direction gates before docking	522cf44a91daef616dc563d7d277158bbbfb5ed314856206e9995fce2f7ba5b5
-py/idd_drug_evidence.py	druggability	Collect and normalize public drug-target evidence	a1e93cf254f2982b45941d638d267702f980384daf284621afe3a6ba4e472b26
-py/idd_freeze_core.py	provenance	Freeze and verify the canonical evidence bundle	66b8582218c47a088b74b0c00370331652d6ae07c3d9d71b1f1f6034269f9bda
-py/idd_genetics_pipeline.py	causal_genetics	Extract, harmonize, clump, estimate MR, coloc, Steiger, and regional direction results	73d26236b0df5c6e6481feb13b4bdb40f14bbb7a3fb8f4310996b37276c6d2a6
-py/idd_genetics_screen.py	causal_genetics	Screen the druggable-gene universe using prepared eQTL and outcome extracts	7c19a072284ac7640db7805f95dfd619b0202c9e972c74ca1d1b1429502d1970
-py/idd_genetics_utils.py	causal_genetics	Shared statistical and allele-harmonization functions	9d2ea52851834f7bb7345c6336818f17a27870e78f2e374958cd4ead16c65f26
-py/idd_gtex_coloc.py	proxy_tissue_coloc	Query registered GTEx eQTL Catalogue datasets and run proxy-tissue colocalization	d8f1e98551507181aa5c72bdaf9f57a98704085492c57016a920da1a7321bb3a
-py/idd_make_handoff.py	target_prioritization	Generate the target handoff dossier from machine-readable results	710577e0c14d2556366759e5eaafb4b018d9ca7cdd0264e60f03dddc5e2efb3d
-py/idd_manuscript_analysis.py	report_generation	Generate tables and figures from frozen or versioned inputs	d76b9a28ca7b74a7f869805923f64136adf146673f234c2be7226ed23a2909ab
-py/idd_manuscript_verify.py	verification	Verify article-facing values and file consistency when manuscript assets are present	fe50e31a91d92dece638cfbb84e4b6e895970579af1113bd7537b2e4f4f8460b
-py/idd_rank_targets.py	target_prioritization	Integrate evidence and rank wet-lab candidates	1b4b9bbcdd3982e77cc00bad92f38710983eac235de56cc71c485f1c217ed5be
-py/idd_run_smr.py	causal_genetics	Run official SMR/HEIDI and parse outputs	e375622802475c87592cea5588477ac3eb4c89b5f5302fc7be0271b1c4100901
-py/idd_scrna_localization.py	single_cell	QC, cluster, and localize targets in GSE230809 cells	d93c8f2e5c7e8ff523a1ff324bd5df274040916877c51ad3623f2037b4e4d3ff
-py/idd_ukb_replication.py	derived_analysis	Evaluate candidates using public UKB-SAIGE phecode 722 summary statistics	395bb105a7132d07d52d9c27d8b18fe519f05f8f82d197ac0658fbe3f9772c46
-py/idd_validate_finngen.py	causal_genetics	Validate registered FinnGen source files	e13038a4b0bd4d65192c6605f10e5a900dbb8753f22060e832f6a08223647ffd
-R/idd_utils.R	bulk_transcriptomics	Shared GEO, limma, annotation, and atomic-output helpers	b4125f879b3e90a3c3ad778caead0da9dbd0415fc5749b1bb755b743ea8e1b9b
-R/idd_gate0_precheck.R	feasibility	Run the metadata and expression-signal go/no-go precheck	48571de7a352dafdf4f35ae514f8fece9b337a23b20749c1005e936fcc105701
-R/idd_bulk_analysis.R	bulk_transcriptomics	Run bulk DEG and exploratory WGCNA analyses	bc300d02227070142cfdad1597fc0e34b9067f3cda96c0f12bcc6655e8704932
-R/idd_manuscript_wgcna.R	derived_analysis	Run the corrected signed WGCNA manuscript analysis	ac49e32d05d41ffd826d08ff005b0e82a3d9cbb88f7bf59d7e7655c9102d8ac2
-R/idd_mr_presso.R	sensitivity_analysis	Run pinned MR-PRESSO sensitivity analyses	f601c9f7a0f16ba634be6a2de8469a5a983b2c88f5e53fb8530b0c62b3af1d16
-R/idd_official_coloc.R	method_crosscheck	Cross-check archived coloc results with official coloc::coloc.abf	ae636d1e30d026763bb677c2776931ef4d474c6aa7923ccb68b5fffdff151d01
-R/idd_coloc_susie.R	fine_mapping_diagnostic	Attempt coloc-SuSiE and preserve non-convergence diagnostics	f9c59258e9c8bdd8245cfe0c85376f6f8bb9e4fe0380d4ed984e42a505191bad
-tests/test_mr_prepare_druggable_genes.py	testing	Synthetic regression test for included analysis code	2f298df15e81b519a7c0373c3aa9dd95c373124c76478cc01cd4f7a914dc1533
-tests/test_idd_docking_assessment.py	testing	Synthetic regression test for included analysis code	9fdc32e68fa7a51569ab6c242d540704ccd666eae4ccacc660fc5acf5d809536
-tests/test_idd_freeze_core.py	testing	Synthetic regression test for included analysis code	8a8c89cb43e4af40ae1969b1b9c60a5023a44d653a14d9ea1963a3aa46d4e05d
-tests/test_idd_genetics_pipeline.py	testing	Synthetic regression test for included analysis code	01ca60284f960557cb446b29c27638cc1e00e249f053a98cea61777fc36e5637
-tests/test_idd_genetics_screen.py	testing	Synthetic regression test for included analysis code	d45c829a71a9eece209466a6f72c1f29174309a639f74fea24604033474d683b
-tests/test_idd_genetics_smr.py	testing	Synthetic regression test for included analysis code	b72f51d7999df4fc57330c1b35f04bedc80bcb4b51671a1445f727e982c92ba2
-tests/test_idd_genetics_utils.py	testing	Synthetic regression test for included analysis code	01b2ac4df8268f6365f10cb92b4fd2b13d87c976a914f02b189812f7aeb0ef73
-tests/test_idd_gtex_coloc.py	testing	Synthetic regression test for included analysis code	37961efdf54f20147b590818b06e34dc80263ab3c8adab1124a1507928daea3e
-tests/test_idd_rank_targets.py	testing	Synthetic regression test for included analysis code	369530f3f7ce9a1306523a4bb7b2f2ab1fff231938031ec21c5ee9d1c9bab675
+"path"	"phase"	"role"	"source_sha256"
+"analysis_p0_correlated_mr_20260814/scripts/coloc_prior_sensitivity.py"	"sensitivity_analysis"	"Registered raw-region colocalization-prior sensitivity orchestration"	"508ad4d44df7a7e1dff1d0aeb0c1cf5dd07fd0b2df2498dcc270b0b2b5846e66"
+"analysis_p0_correlated_mr_20260814/scripts/coloc_prior_sensitivity.R"	"sensitivity_analysis"	"Registered coloc.abf prior grid implementation"	"b5abd1cc5f4a3754ce833690fb94cdf8e8360022882051f1b5b1d216963aa6ec"
+"analysis_p0_correlated_mr_20260814/scripts/compute_leverage_metrics.py"	"correlated_cis_mr"	"Generalized-IVW hat-matrix leverage diagnostics"	"7492f6130657eab0edada7a0790f1e34b386308e8d04420133fc49a8907ee9fa"
+"analysis_p0_correlated_mr_20260814/scripts/conditional_f_statistic.py"	"correlated_cis_mr"	"Joint exposure-information and strength diagnostics"	"ef3194c0779b53a75ee1eeb7c479cfe8f6a3d13e613a03a75aed4d0c49b5742d"
+"analysis_p0_correlated_mr_20260814/scripts/correlated_mr.py"	"correlated_cis_mr"	"Signed-LD generalized IVW, generalized Q, oriented GLS MR-Egger and reduced-Omega LOO"	"6c3080456b707877ff024538bc14014c123046fe9b1678584040542a81af601a"
+"analysis_p0_correlated_mr_20260814/scripts/full_universe_analysis.py"	"correlated_cis_mr"	"Full-universe preparation, MR, multiplicity and LD-threshold diagnostics"	"642e088bdfea0442d07762ef400b116eb2886e89baede7c4ef897c20aaa1b593"
+"analysis_p0_correlated_mr_20260814/scripts/global_ablation.py"	"correlated_cis_mr"	"Historical 76-gene configuration ablation retained as secondary analysis"	"76f1163d9924bfe464194318782da8b5a83d4c22392c4052ddf45b0b79e4264b"
+"analysis_p0_correlated_mr_20260814/scripts/make_current_figure1.py"	"report_generation"	"Current Figure 1 renderer using historical-candidate wording"	"4a208e54b115381b2349e938f611da85b4348e53d6ca1ca1a32c1c6c6cbad2eb"
+"analysis_p0_correlated_mr_20260814/scripts/median_and_pc.py"	"sensitivity_analysis"	"Weighted-median descriptive analysis and PC-IVW sensitivity estimator"	"0292bb952b6aa3f5432439d96710c14b4c88843e075eafbbf9b15b3e06dcc960"
+"analysis_p0_correlated_mr_20260814/scripts/plink_ld.py"	"correlated_cis_mr"	"Allele-aligned signed LD reader for 1000G PLINK data"	"842d7d30a0eae5fb8cb5790a925fa2646ccb9aa1f522ef6773ec61e58ae3fbbf"
+"analysis_p0_correlated_mr_20260814/scripts/primary13_loo.py"	"correlated_cis_mr"	"Historical K>=2 downstream LOO construction; current table is neutral"	"96b8d42edb7292a2120d53e0c2e4acb953bc896ec8b85f8f528cda61e98ace49"
+"analysis_p0_correlated_mr_20260814/scripts/run_all_genes_endpoints.py"	"correlated_cis_mr"	"Correlated MR and LOO across registered gene-endpoint inputs"	"6a907bffbfd237a64d794b66cbc628807e6ac2d1742f9e56a13cacdf08319e76"
+"py/generate_master14_assets.py"	"report_generation"	"Current neutral evidence-matrix validator and Supplementary Figure S2 renderer"	"a767a6d8b3276f4daec482039547e32d1a136e2902642ad46c55ad719c73da44"
+"py/idd_acquire_scrna.py"	"data_acquisition"	"Download and integrity-check the registered GSE230809 archive"	"9e7ca16e6b4ab51b4056d72183914392931d07c1b7dbd8c168c5b3d40475df55"
+"py/idd_docking_assessment.py"	"docking_applicability"	"Apply structure, ligand, and direction gates before docking"	"522cf44a91daef616dc563d7d277158bbbfb5ed314856206e9995fce2f7ba5b5"
+"py/idd_drug_evidence.py"	"druggability"	"Collect and normalize public drug-target evidence"	"a1e93cf254f2982b45941d638d267702f980384daf284621afe3a6ba4e472b26"
+"py/idd_freeze_core.py"	"provenance"	"Freeze and verify the canonical evidence bundle"	"66b8582218c47a088b74b0c00370331652d6ae07c3d9d71b1f1f6034269f9bda"
+"py/idd_genetics_pipeline.py"	"causal_genetics"	"Extract, harmonize, clump, estimate MR, coloc, Steiger, and regional direction results"	"73d26236b0df5c6e6481feb13b4bdb40f14bbb7a3fb8f4310996b37276c6d2a6"
+"py/idd_genetics_screen.py"	"causal_genetics"	"Screen the druggable-gene universe using prepared eQTL and outcome extracts"	"7c19a072284ac7640db7805f95dfd619b0202c9e972c74ca1d1b1429502d1970"
+"py/idd_genetics_utils.py"	"causal_genetics"	"Shared statistical and allele-harmonization functions"	"9d2ea52851834f7bb7345c6336818f17a27870e78f2e374958cd4ead16c65f26"
+"py/idd_gtex_coloc.py"	"proxy_tissue_coloc"	"Query registered GTEx eQTL Catalogue datasets and run proxy-tissue colocalization"	"d8f1e98551507181aa5c72bdaf9f57a98704085492c57016a920da1a7321bb3a"
+"py/idd_make_handoff.py"	"target_prioritization"	"Generate the target handoff dossier from machine-readable results"	"710577e0c14d2556366759e5eaafb4b018d9ca7cdd0264e60f03dddc5e2efb3d"
+"py/idd_manuscript_analysis.py"	"report_generation"	"Generate tables and figures from frozen or versioned inputs"	"d76b9a28ca7b74a7f869805923f64136adf146673f234c2be7226ed23a2909ab"
+"py/idd_manuscript_verify.py"	"verification"	"Verify article-facing values and file consistency when manuscript assets are present"	"fe50e31a91d92dece638cfbb84e4b6e895970579af1113bd7537b2e4f4f8460b"
+"py/idd_rank_targets.py"	"target_prioritization"	"Integrate evidence and rank wet-lab candidates"	"1b4b9bbcdd3982e77cc00bad92f38710983eac235de56cc71c485f1c217ed5be"
+"py/idd_run_smr.py"	"causal_genetics"	"Run official SMR/HEIDI and parse outputs"	"e375622802475c87592cea5588477ac3eb4c89b5f5302fc7be0271b1c4100901"
+"py/idd_scrna_localization.py"	"single_cell"	"QC, cluster, and localize targets in GSE230809 cells"	"d93c8f2e5c7e8ff523a1ff324bd5df274040916877c51ad3623f2037b4e4d3ff"
+"py/idd_ukb_replication.py"	"derived_analysis"	"Evaluate candidates using public UKB-SAIGE phecode 722 summary statistics"	"395bb105a7132d07d52d9c27d8b18fe519f05f8f82d197ac0658fbe3f9772c46"
+"py/idd_validate_finngen.py"	"causal_genetics"	"Validate registered FinnGen source files"	"e13038a4b0bd4d65192c6605f10e5a900dbb8753f22060e832f6a08223647ffd"
+"py/master14_sensitivity.py"	"sensitivity_analysis"	"Public MASTER 1.4 multiplicity, LD-bootstrap, shrinkage and diagnostic primitives"	"6f2be4487ce0542d0343a0472029ea9e0c6e419796d5eb048a5dad8d502aa9df"
+"py/mr_prepare_druggable_genes.py"	"input_preparation"	"Validate and extract the Finan 2017 druggable-gene universe"	"4c794c65f58db840894551508991da692e496ac82ac982b5ce887021a7b68d2d"
+"R/idd_bulk_analysis.R"	"bulk_transcriptomics"	"Run bulk DEG and exploratory WGCNA analyses"	"bc300d02227070142cfdad1597fc0e34b9067f3cda96c0f12bcc6655e8704932"
+"R/idd_coloc_susie.R"	"fine_mapping_diagnostic"	"Attempt coloc-SuSiE and preserve non-convergence diagnostics"	"f9c59258e9c8bdd8245cfe0c85376f6f8bb9e4fe0380d4ed984e42a505191bad"
+"R/idd_gate0_precheck.R"	"feasibility"	"Run the metadata and expression-signal go/no-go precheck"	"48571de7a352dafdf4f35ae514f8fece9b337a23b20749c1005e936fcc105701"
+"R/idd_manuscript_wgcna.R"	"derived_analysis"	"Run the corrected signed WGCNA manuscript analysis"	"ac49e32d05d41ffd826d08ff005b0e82a3d9cbb88f7bf59d7e7655c9102d8ac2"
+"R/idd_mr_presso.R"	"sensitivity_analysis"	"Run pinned MR-PRESSO sensitivity analyses"	"f601c9f7a0f16ba634be6a2de8469a5a983b2c88f5e53fb8530b0c62b3af1d16"
+"R/idd_official_coloc.R"	"method_crosscheck"	"Cross-check archived coloc results with official coloc::coloc.abf"	"ae636d1e30d026763bb677c2776931ef4d474c6aa7923ccb68b5fffdff151d01"
+"R/idd_utils.R"	"bulk_transcriptomics"	"Shared GEO, limma, annotation, and atomic-output helpers"	"b4125f879b3e90a3c3ad778caead0da9dbd0415fc5749b1bb755b743ea8e1b9b"
+"tests/test_idd_docking_assessment.py"	"testing"	"Synthetic regression test for included analysis code"	"9fdc32e68fa7a51569ab6c242d540704ccd666eae4ccacc660fc5acf5d809536"
+"tests/test_idd_freeze_core.py"	"testing"	"Synthetic regression test for included analysis code"	"8a8c89cb43e4af40ae1969b1b9c60a5023a44d653a14d9ea1963a3aa46d4e05d"
+"tests/test_idd_genetics_pipeline.py"	"testing"	"Synthetic regression test for included analysis code"	"01ca60284f960557cb446b29c27638cc1e00e249f053a98cea61777fc36e5637"
+"tests/test_idd_genetics_screen.py"	"testing"	"Synthetic regression test for included analysis code"	"d45c829a71a9eece209466a6f72c1f29174309a639f74fea24604033474d683b"
+"tests/test_idd_genetics_smr.py"	"testing"	"Synthetic regression test for included analysis code"	"b72f51d7999df4fc57330c1b35f04bedc80bcb4b51671a1445f727e982c92ba2"
+"tests/test_idd_genetics_utils.py"	"testing"	"Synthetic regression test for included analysis code"	"01b2ac4df8268f6365f10cb92b4fd2b13d87c976a914f02b189812f7aeb0ef73"
+"tests/test_idd_gtex_coloc.py"	"testing"	"Synthetic regression test for included analysis code"	"37961efdf54f20147b590818b06e34dc80263ab3c8adab1124a1507928daea3e"
+"tests/test_idd_rank_targets.py"	"testing"	"Synthetic regression test for included analysis code"	"369530f3f7ce9a1306523a4bb7b2f2ab1fff231938031ec21c5ee9d1c9bab675"
+"tests/test_manifest_policy.py"	"testing"	"Deterministic manifest newline and .git-boundary regression tests"	"6a9f04492d092a752760a7ba4b71b4c5da18582fb8b815b1413b485394bc3e9d"
+"tests/test_master14_correlated_mr.py"	"testing"	"Signed-LD generalized IVW, generalized Q, oriented GLS MR-Egger and reduced-Omega LOO"	"2e73c5a2134b768c17bf2913307e21ebefe94bc312622c688ae81d2d767e29c3"
+"tests/test_master14_public_parity.py"	"testing"	"MASTER 1.4 public output and narrative parity tests"	"d09a43ef589671409d1195b8729f1d87bd1a6ae677f7fccf58629a2f3d3e581c"
+"tests/test_mr_prepare_druggable_genes.py"	"testing"	"Synthetic regression test for included analysis code"	"2f298df15e81b519a7c0373c3aa9dd95c373124c76478cc01cd4f7a914dc1533"

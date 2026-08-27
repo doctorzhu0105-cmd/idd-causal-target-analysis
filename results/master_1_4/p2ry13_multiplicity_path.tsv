@@ -1,0 +1,2 @@
+"gene"	"endpoint"	"K"	"raw_P"	"historical_15_row_q"	"global_BH"	"global_BY"	"endpoint_BH"	"endpoint_BY"	"K_ge_2_BH"	"K_ge_3_BH"	"K_ge_4_BH"	"boundary"
+"P2RY13"	"M13_LOWBACKPAIN"	"21"	"0.0004200995697615"	"0.0015753733865921"	"0.0711629131661108"	"0.6739640070318962"	"0.1169831238136326"	"0.979411342286584"	"0.0899592526972039"	"0.0883178557044753"	"0.0880170807763307"	"P2RY13 was not removed by K=1 exclusion and is not a rescued target."

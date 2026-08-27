@@ -1,3 +1,3 @@
-# Generated analysis outputs
+# Manuscript boundary
 
-Article text is intentionally absent. Some derived-analysis scripts write tables, figures, or QC files below this directory after the required upstream inputs are supplied.
+The manuscript and MASTER governance tree are intentionally absent. This repository is the public code, configuration, redistributable-output and provenance layer synchronized to MASTER 1.4.0; it must not be used as a parallel manuscript authority.

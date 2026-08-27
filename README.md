@@ -1,32 +1,51 @@
-# IDD causal target analysis
+# Correlated cis-MR analysis for intervertebral disc disease
 
-This repository contains the code-only reproducibility package for a translational bioinformatics workflow that prioritizes druggable and locally deliverable targets for intervertebral disc disorders.
+This repository is the public reproducibility and code layer synchronized to the locked scientific MASTER 1.4.0. It implements configuration-dependent cis-Mendelian randomization with correlated instruments and uses the intervertebral-disc-disease screen as an empirical test bed. The manuscript and its internal governance tree remain authoritative outside this repository.
 
-## Scope
+## Current reproducibility layer
 
-Included code covers bulk transcriptomics, exploratory WGCNA, druggable-genome cis-eQTL Mendelian randomization, colocalization, official SMR/HEIDI, Steiger and regional direction analyses, single-cell localization, drug-target evidence, docking applicability, target ranking, and deterministic table/figure generation.
+The MASTER 1.4 code and public outputs cover:
 
-This snapshot intentionally excludes raw data, processed source extracts, participant-level data, API-response caches, external executables, derived result tables, manuscript text, author contact information, and submission files. Source accessions, URLs, expected file metadata, analysis parameters, and environment locks are retained in `config/` and `environment/`.
+- signed-LD generalized IVW with NumPy's Moore-Penrose pseudoinverse;
+- generalized Cochran Q and multiplicative random-effects standard errors;
+- exposure-increasing GLS MR-Egger orientation;
+- leave-one-out refits using the reduced covariance matrix without re-pruning;
+- LD-threshold sweeps, effective dimension, leverage and joint exposure information;
+- global 7,284-row BH as the formal multiplicity reference, with endpoint, BY and K-family sensitivities;
+- the P2RY13 multiplicity-family example, which is not rescued by the current formal families;
+- 200-replicate same-panel LD-reference bootstrap, AKR1C2 re-pruning, matrix/missingness QC and shrinkage sensitivity;
+- colocalization-prior sensitivity;
+- the current neutral 13-row evidence matrix, Supplementary Figure S2 source and Figure 1 source/generator.
+
+Small, redistributable outputs are in `results/master_1_4/`. Their identities and upstream source hashes are recorded in `provenance/`.
+
+## Boundaries
+
+- This is not a manuscript authority tree and does not assign discovery tiers or validated-target labels.
+- The 13-row table is a K>=2 sensitivity subset with downstream evidence, not the formal multiplicity family.
+- The LD bootstrap resamples the same 503-person 1000 Genomes EUR panel. It measures reference-sample uncertainty conditional on the available panel, selected instruments and summary statistics; it is not independent-panel replication.
+- A known-truth simulation was deferred and is not represented as completed.
+- Raw eQTLGen, FinnGen, 1000 Genomes PLINK files, UKB caches, participant-level data and redistribution-uncertain extracts are not included.
+- Historical v1.0.0 modules remain for reproducibility of the earlier public workflow. They are secondary to the current correlated cis-MR layer and have not been rewritten or deleted.
 
 ## Quick start
 
 ```bash
 conda env create -f environment/environment.yml
 conda activate idd-causal-target-analysis
-python -m unittest discover -s tests -p "test_*.py"
+python -B -m unittest discover -s tests -p "test_*.py"
 python tools/verify_package.py --root .
 ```
 
-Restore the R environment from `environment/renv.lock` before running R analyses. See `docs/REPRODUCIBILITY.md` for staged commands and `docs/DATA_ACCESS.md` for the required external inputs.
+To render the current public assets outside the repository tree:
 
-## Important boundaries
+```bash
+python analysis_p0_correlated_mr_20260814/scripts/make_current_figure1.py --repo-root . --output-dir ../idd-master14-render
+python py/generate_master14_assets.py --repo-root . --output-dir ../idd-master14-render
+```
 
-- The package is code-only; a fresh clone cannot reproduce the numerical results until the registered public inputs and external tools are installed at the documented paths.
-- pQTL analyses were deferred and are not represented as completed.
-- The single-cell workflow supports descriptive localization and does not, by itself, establish a disease effect.
-- Docking is gated by target identity, intervention direction, human experimental structure, and ligand availability; `NOT_APPLICABLE` is an allowed outcome.
-- The coloc-SuSiE diagnostic preserves non-convergence rather than fabricating posterior probabilities.
+Full numerical reruns require the external inputs documented in `docs/DATA_ACCESS.md`. See `docs/REPRODUCIBILITY.md` for execution order and explicit reproducibility limits.
 
-## Repository status
+## Candidate status
 
-The code is released under the MIT License. The stable repository URL, release tag, archival DOI, and article citation remain pending until real deposition; they must not be invented in advance.
+This branch is an unreleased MASTER 1.4.0 synchronization candidate. No tag, GitHub Release or new Zenodo version has been created. The prior public baseline remains commit `67da2c560d01dc24f1b9d3769b30ede505df931f` / tag `v1.0.0`; this candidate is an ordinary forward update and does not rewrite that history.

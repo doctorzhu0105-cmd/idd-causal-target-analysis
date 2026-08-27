@@ -2,18 +2,25 @@ PYTHON ?= python
 RSCRIPT ?= Rscript
 PLINK ?= tools/idd/plink/plink.exe
 SMR ?= tools/idd/smr/smr-1.3.1-win-x86_64/smr-1.3.1-win.exe
+RENDER_OUT ?= ../idd-master14-render
 
 .DEFAULT_GOAL := help
-.PHONY: help test package-verify prepare-druggable gate0 bulk genetics-validate genetics-screen smr scrna drug rank gtex docking handoff freeze-verify wgcna-signed ukb-outcome mr-presso official-coloc coloc-susie tables-figures article-verify
+.PHONY: help test package-verify master14-assets master14-figure1 prepare-druggable gate0 bulk genetics-validate genetics-screen smr scrna drug rank gtex docking handoff freeze-verify wgcna-signed ukb-outcome mr-presso official-coloc coloc-susie tables-figures article-verify
 
 help:
-	@echo "Code-only release: run 'make test' first. Full analyses require the registered external inputs documented in docs/DATA_ACCESS.md."
+	@echo "MASTER 1.4 sync candidate: run 'make test' and 'make package-verify'. Full reruns require docs/DATA_ACCESS.md."
 
 test:
 	$(PYTHON) -B -m unittest discover -s tests -p "test_*.py"
 
 package-verify:
 	$(PYTHON) tools/verify_package.py --root .
+
+master14-assets:
+	$(PYTHON) py/generate_master14_assets.py --repo-root . --output-dir $(RENDER_OUT)
+
+master14-figure1:
+	$(PYTHON) analysis_p0_correlated_mr_20260814/scripts/make_current_figure1.py --repo-root . --output-dir $(RENDER_OUT)
 
 prepare-druggable:
 	$(PYTHON) py/mr_prepare_druggable_genes.py --repo-root .

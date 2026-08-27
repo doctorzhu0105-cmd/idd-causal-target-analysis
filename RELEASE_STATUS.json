@@ -1,13 +1,19 @@
 {
-  "package_date": "2026-07-20",
-  "scope": "code_only",
-  "raw_data_included": false,
-  "processed_data_included": false,
-  "derived_results_included": false,
-  "manuscript_included": false,
-  "personal_contact_information_included": false,
-  "license_status": "MIT",
-  "repository_url": null,
-  "archive_doi": null,
-  "audit_status": "presubmission_audit_passed"
+  "identity": "UNRELEASED_MASTER_1.4.0_SYNC_CANDIDATE",
+  "master_version": "1.4.0",
+  "release_state": "UNRELEASED_SYNC_CANDIDATE",
+  "git_tag": null,
+  "github_release": null,
+  "zenodo_version": null,
+  "package_date": "2026-08-27",
+  "repository_url": "https://github.com/doctorzhu0105-cmd/idd-causal-target-analysis",
+  "candidate_branch": "master-1.4-sync-candidate",
+  "manuscript_authority": false,
+  "raw_or_participant_level_data_included": false,
+  "prior_public_baseline": {
+    "commit": "67da2c560d01dc24f1b9d3769b30ede505df931f",
+    "tag": "v1.0.0",
+    "archive_doi": "10.5281/zenodo.21486871"
+  },
+  "note": "No future public release version has been selected and no public repository or archive has been modified."
 }

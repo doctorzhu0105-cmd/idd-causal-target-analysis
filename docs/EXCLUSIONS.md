@@ -1,11 +1,14 @@
-# Excluded material
+# Exclusions and boundaries
 
-The package selection is intentionally narrower than the working directory.
+The synchronization candidate excludes:
 
-- Historical osteoporosis and alternative-cohort pipelines were excluded because they did not generate the final IDD evidence chain.
-- The retired novelty hard-gate script was excluded because novelty was no longer an exclusion criterion.
-- DOCX/PDF packaging, reference-completion, peer-review history, and author-information utilities were excluded because they are not bioinformatics analysis code and may contain personal information.
-- Raw data, processed source extracts, current numerical result tables, images, frozen artifacts, and API caches were excluded pending source-specific redistribution review.
-- Third-party binaries and R/Python package libraries were excluded; only environment specifications are retained.
+- the manuscript MASTER governance tree, internal audits, unlock requests, approval evidence and agent handoffs;
+- manuscripts, submission packages and author contact details;
+- raw or participant-level eQTL, outcome, genotype, transcriptomic and single-cell data;
+- UKB and other controlled-access caches;
+- 1000 Genomes PLINK binaries and external executables;
+- API caches, credentials, secrets and redistribution-uncertain source extracts;
+- replicate-level Stage 3 bootstrap output and full million-row multiplicity tables when a small summary plus generator is sufficient;
+- any new release tag, GitHub Release or Zenodo version.
 
-These exclusions do not change the manuscript or the frozen working artifacts. They only define the upload candidate's scope.
+Included result tables are small derived summaries used for parity checks. Their inclusion does not make this repository the scientific manuscript authority.

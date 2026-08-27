@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Verify a code-only GitHub upload package without network access."""
+"""Verify the public reproducibility package without network access."""
 
 from __future__ import annotations
 
@@ -11,53 +11,25 @@ import json
 import re
 from pathlib import Path
 
+from build_manifest import TEXT_SUFFIXES, canonical_bytes, iter_package_files
 
-TEXT_SUFFIXES = {
-    "",
-    ".cff",
-    ".gitignore",
-    ".json",
-    ".lock",
-    ".md",
-    ".py",
-    ".r",
-    ".tsv",
-    ".txt",
-    ".yaml",
-    ".yml",
-}
+
 FORBIDDEN_SUFFIXES = {
-    ".bed",
-    ".bim",
-    ".docx",
-    ".exe",
-    ".fam",
-    ".gz",
-    ".h5ad",
-    ".pdf",
-    ".pkl",
-    ".png",
-    ".rds",
-    ".tiff",
-    ".xlsx",
+    ".bed", ".bim", ".docx", ".exe", ".fam", ".gz", ".h5ad", ".pdf",
+    ".pkl", ".png", ".rds", ".tiff", ".xlsx",
 }
 SENSITIVE_PATTERNS = {
     "personal_email": re.compile(r"\b[A-Z0-9._%+-]+@(?!example\.)[A-Z0-9.-]+\.[A-Z]{2,}\b", re.I),
     "local_user_path": re.compile(r"(?:[A-Z]:\\Users\\|D:\\研究生\\)", re.I),
     "private_key": re.compile(r"BEGIN (?:RSA |OPENSSH )?PRIVATE KEY", re.I),
     "credential_assignment": re.compile(
-        r"(?:api[_-]?key|access[_-]?token|client[_-]?secret|password)\s*[:=]\s*['\"][^'\"]+",
-        re.I,
+        r"(?:api[_-]?key|access[_-]?token|client[_-]?secret|password)\s*[:=]\s*['\"][^'\"]+", re.I
     ),
 }
 
 
-def sha256_file(path: Path) -> str:
-    digest = hashlib.sha256()
-    with path.open("rb") as handle:
-        for block in iter(lambda: handle.read(1024 * 1024), b""):
-            digest.update(block)
-    return digest.hexdigest()
+def canonical_sha256(path: Path) -> str:
+    return hashlib.sha256(canonical_bytes(path)).hexdigest()
 
 
 def parse_args() -> argparse.Namespace:
@@ -80,23 +52,19 @@ def main() -> int:
         failures.append("manifest_schema_invalid")
 
     listed = {row["path"] for row in rows}
-    actual = {
-        path.relative_to(root).as_posix()
-        for path in root.rglob("*")
-        if path.is_file() and path != manifest_path
-    }
+    actual_paths = iter_package_files(root, manifest_path)
+    actual = {path.relative_to(root).as_posix() for path in actual_paths}
     if listed != actual:
-        failures.append(
-            f"manifest_membership_mismatch:missing={sorted(listed - actual)}:unlisted={sorted(actual - listed)}"
-        )
+        failures.append(f"manifest_membership_mismatch:missing={sorted(listed - actual)}:unlisted={sorted(actual - listed)}")
 
     for row in rows:
         path = root / Path(row["path"])
         if not path.is_file():
             continue
-        if path.stat().st_size != int(row["bytes"]):
+        data = canonical_bytes(path)
+        if len(data) != int(row["bytes"]):
             failures.append(f"byte_mismatch:{row['path']}")
-        if sha256_file(path).lower() != row["sha256"].lower():
+        if hashlib.sha256(data).hexdigest().lower() != row["sha256"].lower():
             failures.append(f"sha256_mismatch:{row['path']}")
 
     for relative in sorted(actual):
@@ -112,24 +80,24 @@ def main() -> int:
             failures.append(f"file_exceeds_50_mib:{relative}")
         if path.suffix.lower() not in TEXT_SUFFIXES:
             continue
-        text = path.read_text(encoding="utf-8", errors="replace")
+        text = canonical_bytes(path).decode("utf-8", errors="replace")
         for label, pattern in SENSITIVE_PATTERNS.items():
             if label == "personal_email" and relative == "environment/renv.lock":
                 continue
             if pattern.search(text):
                 failures.append(f"{label}:{relative}")
 
-    for json_path in sorted(root.rglob("*.json")):
+    for relative in sorted(path for path in actual if path.lower().endswith(".json")):
         try:
-            json.loads(json_path.read_text(encoding="utf-8"))
+            json.loads((root / relative).read_text(encoding="utf-8"))
         except (json.JSONDecodeError, UnicodeDecodeError) as exc:
-            failures.append(f"invalid_json:{json_path.relative_to(root).as_posix()}:{exc}")
+            failures.append(f"invalid_json:{relative}:{exc}")
 
-    for python_path in sorted(root.rglob("*.py")):
+    for relative in sorted(path for path in actual if path.lower().endswith(".py")):
         try:
-            ast.parse(python_path.read_text(encoding="utf-8"), filename=str(python_path))
+            ast.parse((root / relative).read_text(encoding="utf-8"), filename=relative)
         except (SyntaxError, UnicodeDecodeError) as exc:
-            failures.append(f"invalid_python:{python_path.relative_to(root).as_posix()}:{exc}")
+            failures.append(f"invalid_python:{relative}:{exc}")
 
     local_modules = {path.stem for path in (root / "py").glob("*.py")}
     for python_path in sorted((root / "py").glob("*.py")):
@@ -141,17 +109,14 @@ def main() -> int:
             elif isinstance(node, ast.ImportFrom) and node.module:
                 imported_modules.add(node.module.split(".")[0])
         missing_local = sorted(
-            module
-            for module in imported_modules
-            if module.startswith(("idd_", "mr_")) and module not in local_modules
+            module for module in imported_modules
+            if module.startswith(("idd_", "mr_", "master14_")) and module not in local_modules
         )
         if missing_local:
-            failures.append(
-                f"missing_local_python_dependency:{python_path.relative_to(root).as_posix()}:{missing_local}"
-            )
+            failures.append(f"missing_local_python_dependency:{python_path.relative_to(root).as_posix()}:{missing_local}")
 
     makefile_text = (root / "Makefile").read_text(encoding="utf-8")
-    referenced_code = set(re.findall(r"(?:py|R|tools)/[A-Za-z0-9_.-]+\.(?:py|R)", makefile_text))
+    referenced_code = set(re.findall(r"(?:py|R|tools|analysis_p0_correlated_mr_20260814/scripts)/[A-Za-z0-9_.-]+\.(?:py|R)", makefile_text))
     missing_makefile_code = sorted(path for path in referenced_code if not (root / path).is_file())
     if missing_makefile_code:
         failures.append(f"missing_makefile_code:{missing_makefile_code}")
@@ -160,24 +125,51 @@ def main() -> int:
     with inventory_path.open(encoding="utf-8", newline="") as handle:
         inventory_rows = list(csv.DictReader(handle, delimiter="\t"))
     inventory_paths = {row["path"] for row in inventory_rows}
+    inventory_dirs = (root / "py", root / "R", root / "tests", root / "analysis_p0_correlated_mr_20260814" / "scripts")
     expected_inventory_paths = {
         path.relative_to(root).as_posix()
-        for directory in ("py", "R", "tests")
-        for path in (root / directory).glob("*")
+        for directory in inventory_dirs
+        for path in directory.glob("*")
         if path.is_file() and path.suffix.lower() in {".py", ".r"}
     }
     if inventory_paths != expected_inventory_paths:
-        failures.append(
-            "code_inventory_mismatch:"
-            f"missing={sorted(expected_inventory_paths - inventory_paths)}:"
-            f"extra={sorted(inventory_paths - expected_inventory_paths)}"
-        )
+        failures.append(f"code_inventory_mismatch:missing={sorted(expected_inventory_paths - inventory_paths)}:extra={sorted(inventory_paths - expected_inventory_paths)}")
 
-    expected_roots = {"R", "config", "data", "docs", "environment", "manuscript", "py", "tests", "tools"}
-    observed_roots = {path.name for path in root.iterdir() if path.is_dir()}
+    expected_roots = {
+        "R", "analysis_p0_correlated_mr_20260814", "config", "data", "docs",
+        "environment", "manuscript", "provenance", "py", "results", "tests", "tools",
+    }
+    observed_roots = {path.name for path in root.iterdir() if path.is_dir() and path.name != ".git"}
     missing_roots = sorted(expected_roots - observed_roots)
     if missing_roots:
         failures.append(f"missing_directories:{missing_roots}")
+
+    release = json.loads((root / "RELEASE_STATUS.json").read_text(encoding="utf-8"))
+    expected_release = {
+        "identity": "UNRELEASED_MASTER_1.4.0_SYNC_CANDIDATE",
+        "master_version": "1.4.0",
+        "release_state": "UNRELEASED_SYNC_CANDIDATE",
+        "git_tag": None,
+        "github_release": None,
+        "zenodo_version": None,
+    }
+    for key, expected in expected_release.items():
+        if release.get(key) != expected:
+            failures.append(f"release_status_mismatch:{key}:{release.get(key)!r}")
+
+    required_current = {
+        "results/master_1_4/table3_evidence_matrix.tsv",
+        "results/master_1_4/supplementary_figure_s2_source.tsv",
+        "results/master_1_4/multiplicity_summary.tsv",
+        "results/master_1_4/p2ry13_multiplicity_path.tsv",
+        "results/master_1_4/ld_reference_bootstrap_summary.tsv",
+        "provenance/ANALYSIS_VERSION.json",
+        "provenance/OUTPUT_HASHES.tsv",
+        "provenance/RELEASE_MANIFEST.tsv",
+        "provenance/REPRODUCIBILITY_SCOPE.md",
+    }
+    for relative in sorted(required_current - actual):
+        failures.append(f"missing_current_master14_surface:{relative}")
 
     status = {
         "status": "PASS" if not failures else "FAIL",
@@ -185,6 +177,7 @@ def main() -> int:
         "manifest_rows": len(rows),
         "failure_count": len(failures),
         "failures": failures,
+        "manifest_hash_policy": "LF-normalized text bytes; raw bytes for non-text files; .git excluded",
     }
     print(json.dumps(status, ensure_ascii=False))
     return 0 if not failures else 1

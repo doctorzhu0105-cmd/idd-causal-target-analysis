@@ -1,9 +1,11 @@
-# GitHub 上传清单
+# 同步候选复核清单
 
-1. 新建空仓库，建议名称为 `idd-causal-target-analysis`。
-2. 上传本目录内部的全部文件，不上传外层日期目录或 ZIP 本身。
-3. 在仓库根目录运行 `python tools/verify_package.py --root .`，结果必须为 `PASS`。
-4. 确认 `LICENSE`、`manifest.tsv`、`config/`、`environment/`、`py/`、`R/` 和 `tests/` 均存在。
-5. 不额外上传本机原始数据、处理结果、日志、论文、第三方软件或 API 缓存。
-6. 仓库真实创建后记录 URL；需要论文引用时，再固定 release tag 并通过实际归档生成 DOI。
-7. 将真实 URL 和 DOI 发回后，再更新文章的数据与代码可得性声明。
+本文件只描述未来作者批准后的操作；Stage 7A 不执行 push、tag、GitHub Release 或 Zenodo 更新。
+
+1. 在 clean clone 的候选分支运行 `python -B -m unittest discover -s tests -p "test_*.py"`。
+2. 运行 `python tools/verify_package.py --root .`，结果必须为 `PASS`。
+3. 核对 `RELEASE_STATUS.json` 仍为 `UNRELEASED_MASTER_1.4.0_SYNC_CANDIDATE`，且三个公开版本字段均为 `null`。
+4. 核对 `provenance/`、`results/master_1_4/`、当前 correlated cis-MR 代码、环境锁和 manifest 均在候选 commit 内。
+5. 确认没有原始/受限数据、UKB cache、1000G PLINK 二进制、作者信息、稿件治理文件或凭据。
+6. 仅在 GPT/作者明确批准后，将该普通前向 commit 推送至现有公开仓库；不得改写 `main` 历史或删除 `v1.0.0`。
+7. 后续 release/tag/Zenodo 版本号须另行决定。本候选未预选版本号，也不得把 MASTER `1.4.0` 自动当作公开 release 号。

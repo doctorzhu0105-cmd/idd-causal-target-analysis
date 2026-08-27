@@ -1,25 +1,20 @@
-# Data access and redistribution boundaries
+# External data access
 
-No source data are bundled. The exact registered URLs, expected sizes or checksums, genome builds, and local paths are stored in `config/idd_sources.json` and `config/mr_sources.json`.
+The repository deliberately excludes source and participant-level data. Users must obtain each input from its provider and comply with its terms.
 
-## Registered inputs
+## Current correlated cis-MR inputs
 
-- Bulk GEO series: GSE70362, GSE56081, GSE23130, GSE153761, GSE124272, and GSE150408.
-- Human disc single-cell source: GSE230809, including GSE229711 and GSE230808 subseries.
-- FinnGen R13 outcomes: M13_INTERVERTEB, M13_LOWBACKPAIN, and M13_SCIATICA.
-- eQTLGen: significant cis-eQTL, full cis-eQTL, allele-frequency, and official SMR BESD releases.
-- eQTL Catalogue GTEx v8 datasets: QTD000356, QTD000281, and QTD000216.
-- LD reference: 1000 Genomes Phase 3 EUR, GRCh37, 503 participants.
-- Independent outcome-cohort evaluation: public UKB-SAIGE phecode 722 aggregate summary statistics.
-- Druggable-gene universe: Finan 2017 supplementary Table S1.
-- Drug-target evidence: public Open Targets, DGIdb, and ChEMBL endpoints used by the scripted queries.
+Stage these inputs beneath `data/raw/` before a full rerun:
 
-## Not included
+- eQTLGen full cis-eQTL summary statistics and allele-frequency file;
+- FinnGen R13 summary statistics for `M13_INTERVERTEB`, `M13_LOWBACKPAIN` and `M13_SCIATICA`;
+- Finan et al. druggable-genome Table S1;
+- 1000 Genomes Phase 3 EUR PLINK `.bed/.bim/.fam` files, preserving signed allele orientation;
+- registered raw-region coloc inputs and SMR/HEIDI source files;
+- any UKB-SAIGE summary data required by the historical five-gene secondary analysis.
 
-- UK Biobank participant-level data.
-- Raw UKB-SAIGE API-response caches.
-- deCODE or UKB-PPP account-dependent pQTL data.
-- GEO matrices, scRNA archives, FinnGen files, eQTLGen files, GTEx summary files, and 1000G genotype files.
-- PLINK, SMR, or other third-party executables.
+The exact source registry and configuration conventions are in `config/`. File hashes in `provenance/` identify redistributable derivatives only; they do not grant redistribution rights for upstream inputs.
 
-Users must obtain each input from its registered provider and comply with that provider's terms. A public URL does not automatically grant redistribution rights for copied source files or large derived extracts.
+## Not redistributed
+
+No UKB cache, participant-level genotype/expression data, API response cache, credentials, third-party executable, raw eQTL/FinnGen extract or source file with uncertain redistribution permission is included. The public code accepts local paths; never commit those inputs to this repository.

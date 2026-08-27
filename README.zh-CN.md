@@ -1,14 +1,21 @@
-# 椎间盘疾病因果靶点分析代码
+# 椎间盘疾病相关 cis-MR 可复现代码
 
-本目录是用于 GitHub 公开的代码包，覆盖 bulk DEG/WGCNA、druggable-genome cis-eQTL MR、coloc、SMR/HEIDI、Steiger、区域方向分析、单细胞定位、药物证据、docking 适用性、靶点排序和图表派生。
+本仓库是与锁定科学 MASTER 1.4.0 同步的公开代码和可复现层。当前主线是配置依赖的 correlated cis-MR：signed LD、广义 IVW、广义 Q、暴露递增方向的 GLS MR-Egger、使用删减 Omega 且不重新剪枝的 LOO、有效维度/杠杆/联合信息诊断、多重检验族敏感性、同一 1000G EUR 面板的 LD bootstrap、LD shrinkage、coloc 先验敏感性，以及中性的 13 行证据矩阵与图件源数据。
 
-本包不包含论文、作者联系方式、投稿文件、原始或处理后源数据、API 缓存、第三方可执行文件以及当前数值结果。完整运行前需按 `docs/DATA_ACCESS.md` 从原始提供方获取数据，并遵守相应条款。
+边界如下：
 
-上传前运行：
+- 仓库不是稿件权威树，不给出 A/B/C/D 层级或“已验证靶点”结论。
+- 7,284 行全局 BH 是正式多重检验参照；13 行只是 K>=2 的下游证据敏感性子集。
+- 200 次 LD bootstrap 只反映同一 503 人参考面板的抽样不确定性，不是独立面板复现。
+- 已推迟已知真值模拟；不得写成已经完成。
+- 不公开 eQTLGen/FinnGen/UKB 缓存、1000G PLINK 原始文件、个体级数据或再分发权利不明确的提取物。
+- v1.0.0 旧模块保留用于历史复现，属于次级/历史范围。
+
+离线检查：
 
 ```bash
 python -B -m unittest discover -s tests -p "test_*.py"
 python tools/verify_package.py --root .
 ```
 
-代码采用 MIT License。真实 GitHub URL、release tag 和归档 DOI 只能在仓库实际发布和归档后填写，当前包不会预先编造这些信息。
+外部输入和执行顺序见 `docs/DATA_ACCESS.md` 与 `docs/REPRODUCIBILITY.md`。当前只是未发布的 MASTER 1.4.0 同步候选，没有创建 tag、GitHub Release 或新的 Zenodo 版本。

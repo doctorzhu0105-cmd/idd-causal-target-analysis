@@ -1,0 +1,194 @@
+# authority_status: AUTHORITATIVE — MASTER 1.3.0
+# generated_at_utc: 2026-08-26T15:19:42.128325+00:00
+# generating_script: audits/stage3_5_candidate_promotion_20260826/stage3_5_validation_promotion.py
+# generating_script_sha256: eee742b17b5efd1056d0a158ff2fb9559f7301ed949b7c1ce75564169b679a9b
+# validated_stage3_generator: audits/stage3_versionB_sensitivity_20260826/stage3_versionb_sensitivity.py
+# validated_stage3_generator_sha256: f4794c2b38a34fa3987ceb51f774ae8e5b9731cf4de13222892fab560f0c2875
+# random_seed: 20260826
+# bootstrap_replicates: 200
+# reference_sample_n: 503
+# missing_genotype_imputation: full-panel SNP mean once before individual resampling
+# dependency_versions: {"numpy": "2.4.6", "pandas": "2.3.3", "platform": "Windows-11-10.0.22631-SP0", "python": "3.12.10", "scipy": "1.18.0"}
+# imported_script_hashes: {"correlated_mr": "6c3080456b707877ff024538bc14014c123046fe9b1678584040542a81af601a", "plink_ld": "842d7d30a0eae5fb8cb5790a925fa2646ccb9aa1f522ef6773ec61e58ae3fbbf", "run_all_genes_endpoints": "6a907bffbfd237a64d794b66cbc628807e6ac2d1742f9e56a13cacdf08319e76"}
+# input: audits/stage3_versionB_sensitivity_20260826/stage3_versionb_sensitivity.py	f4794c2b38a34fa3987ceb51f774ae8e5b9731cf4de13222892fab560f0c2875
+# input: audits/stage3_versionB_sensitivity_20260826/STAGE3_CANDIDATE_OUTPUTS_MANIFEST.tsv	b7c76c9efd0d58aba4d20160a2b05d50f5f388919bc9a7ba81e7d37e6ea6df21
+# input: audits/stage3_versionB_sensitivity_20260826/LD_REFERENCE_BOOTSTRAP_RAW.tsv	5dc6b2ac580045495a2fe9f6a705e3b087ad0e91e2f4901ab00989a93db737ee
+# input: audits/stage3_versionB_sensitivity_20260826/LD_REFERENCE_BOOTSTRAP_SUMMARY.tsv	52821b33c4083e9b1f6ac14af234adbf15ffbb951ed0bedea6af14f29442d27b
+# input: 01_Analysis_Workspace/analysis_p0_correlated_mr_20260814/out/full_universe_eqtl.tsv.gz	8bbebaef31f702a3c9716b8204a88d88fc20e4019a3110ef36408e6131034314
+# input: 01_Analysis_Workspace/data/raw/idd/genetics/ld/1000G_EUR.bed	96da36833e797ceebcd5faf97bff4aa66cfdc0e3860a85a0d244e249f53a2463
+# input: 01_Analysis_Workspace/data/raw/idd/genetics/ld/1000G_EUR.bim	0375fd0274b00160f6b17a7d6b4759c1c236842b03067db9051364501478653e
+# input: 01_Analysis_Workspace/data/raw/idd/genetics/ld/1000G_EUR.fam	ccc5f19953f0f7debd096aaaf26aef11e49c8fad803abdfcd44f955ac9c5edc8
+SNP	gene	config	missing_genotype_count	missing_fraction	imputation_mean	missing_fraction_gt_1pct	missing_fraction_gt_5pct	imputation_timing	reference_sample_n
+rs117437924	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.001	0	0.0	0.07554671968190854	False	False	full-panel SNP mean computed once before individual resampling	503
+rs74111796	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.001	0	0.0	0.14512922465208747	False	False	full-panel SNP mean computed once before individual resampling	503
+rs7908994	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.001	0	0.0	0.2624254473161034	False	False	full-panel SNP mean computed once before individual resampling	503
+rs11252690	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.01	0	0.0	0.5944333996023857	False	False	full-panel SNP mean computed once before individual resampling	503
+rs11252719	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.01	0	0.0	0.04771371769383698	False	False	full-panel SNP mean computed once before individual resampling	503
+rs2924279	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.01	0	0.0	1.5328031809145128	False	False	full-panel SNP mean computed once before individual resampling	503
+rs3812663	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.01	0	0.0	0.13916500994035785	False	False	full-panel SNP mean computed once before individual resampling	503
+rs7097810	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.01	0	0.0	1.1729622266401591	False	False	full-panel SNP mean computed once before individual resampling	503
+rs73587799	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.01	0	0.0	0.23856858846918488	False	False	full-panel SNP mean computed once before individual resampling	503
+rs75509222	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.01	0	0.0	0.21669980119284293	False	False	full-panel SNP mean computed once before individual resampling	503
+rs7908994	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.01	0	0.0	0.2624254473161034	False	False	full-panel SNP mean computed once before individual resampling	503
+rs10508288	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.05	0	0.0	0.8151093439363817	False	False	full-panel SNP mean computed once before individual resampling	503
+rs10795212	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.05	0	0.0	0.7395626242544732	False	False	full-panel SNP mean computed once before individual resampling	503
+rs10795250	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.05	0	0.0	1.415506958250497	False	False	full-panel SNP mean computed once before individual resampling	503
+rs11252627	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.05	0	0.0	0.05765407554671968	False	False	full-panel SNP mean computed once before individual resampling	503
+rs11252719	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.05	0	0.0	0.04771371769383698	False	False	full-panel SNP mean computed once before individual resampling	503
+rs11252810	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.05	0	0.0	0.12326043737574553	False	False	full-panel SNP mean computed once before individual resampling	503
+rs11252840	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.05	0	0.0	0.2524850894632207	False	False	full-panel SNP mean computed once before individual resampling	503
+rs11253047	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.05	0	0.0	0.04970178926441352	False	False	full-panel SNP mean computed once before individual resampling	503
+rs17133585	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.05	0	0.0	0.06560636182902585	False	False	full-panel SNP mean computed once before individual resampling	503
+rs17133587	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.05	0	0.0	0.441351888667992	False	False	full-panel SNP mean computed once before individual resampling	503
+rs1869217	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.05	0	0.0	0.09741550695825049	False	False	full-panel SNP mean computed once before individual resampling	503
+rs1937868	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.05	0	0.0	0.18091451292246521	False	False	full-panel SNP mean computed once before individual resampling	503
+rs2801885	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.05	0	0.0	0.5308151093439364	False	False	full-panel SNP mean computed once before individual resampling	503
+rs2961579	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.05	0	0.0	0.5288270377733598	False	False	full-panel SNP mean computed once before individual resampling	503
+rs34140485	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.05	0	0.0	0.16898608349900596	False	False	full-panel SNP mean computed once before individual resampling	503
+rs4143631	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.05	0	0.0	0.588469184890656	False	False	full-panel SNP mean computed once before individual resampling	503
+rs4491123	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.05	0	0.0	1.7673956262425448	False	False	full-panel SNP mean computed once before individual resampling	503
+rs4880688	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.05	0	0.0	1.4294234592445327	False	False	full-panel SNP mean computed once before individual resampling	503
+rs58000287	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.05	0	0.0	0.06759443339960239	False	False	full-panel SNP mean computed once before individual resampling	503
+rs72769943	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.05	0	0.0	0.11928429423459244	False	False	full-panel SNP mean computed once before individual resampling	503
+rs75509222	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.05	0	0.0	0.21669980119284293	False	False	full-panel SNP mean computed once before individual resampling	503
+rs7906894	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.05	0	0.0	0.73558648111332	False	False	full-panel SNP mean computed once before individual resampling	503
+rs7908994	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.05	0	0.0	0.2624254473161034	False	False	full-panel SNP mean computed once before individual resampling	503
+rs9423376	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.05	0	0.0	1.2087475149105367	False	False	full-panel SNP mean computed once before individual resampling	503
+rs10508288	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.1	0	0.0	0.8151093439363817	False	False	full-panel SNP mean computed once before individual resampling	503
+rs10736991	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.1	0	0.0	1.952286282306163	False	False	full-panel SNP mean computed once before individual resampling	503
+rs10795212	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.1	0	0.0	0.7395626242544732	False	False	full-panel SNP mean computed once before individual resampling	503
+rs10904339	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.1	0	0.0	0.36182902584493043	False	False	full-panel SNP mean computed once before individual resampling	503
+rs11252627	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.1	0	0.0	0.05765407554671968	False	False	full-panel SNP mean computed once before individual resampling	503
+rs11252719	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.1	0	0.0	0.04771371769383698	False	False	full-panel SNP mean computed once before individual resampling	503
+rs11252840	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.1	0	0.0	0.2524850894632207	False	False	full-panel SNP mean computed once before individual resampling	503
+rs11252900	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.1	0	0.0	0.19284294234592445	False	False	full-panel SNP mean computed once before individual resampling	503
+rs11253047	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.1	0	0.0	0.04970178926441352	False	False	full-panel SNP mean computed once before individual resampling	503
+rs12570303	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.1	0	0.0	0.6282306163021869	False	False	full-panel SNP mean computed once before individual resampling	503
+rs17133585	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.1	0	0.0	0.06560636182902585	False	False	full-panel SNP mean computed once before individual resampling	503
+rs17133587	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.1	0	0.0	0.441351888667992	False	False	full-panel SNP mean computed once before individual resampling	503
+rs1869217	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.1	0	0.0	0.09741550695825049	False	False	full-panel SNP mean computed once before individual resampling	503
+rs2096422	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.1	0	0.0	0.6043737574552683	False	False	full-panel SNP mean computed once before individual resampling	503
+rs2904804	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.1	0	0.0	1.2266401590457257	False	False	full-panel SNP mean computed once before individual resampling	503
+rs2961599	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.1	0	0.0	1.3399602385685885	False	False	full-panel SNP mean computed once before individual resampling	503
+rs3100205	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.1	0	0.0	0.7037773359840954	False	False	full-panel SNP mean computed once before individual resampling	503
+rs34140485	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.1	0	0.0	0.16898608349900596	False	False	full-panel SNP mean computed once before individual resampling	503
+rs4143630	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.1	0	0.0	1.0636182902584492	False	False	full-panel SNP mean computed once before individual resampling	503
+rs4491123	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.1	0	0.0	1.7673956262425448	False	False	full-panel SNP mean computed once before individual resampling	503
+rs4500389	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.1	0	0.0	1.2147117296222665	False	False	full-panel SNP mean computed once before individual resampling	503
+rs4880688	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.1	0	0.0	1.4294234592445327	False	False	full-panel SNP mean computed once before individual resampling	503
+rs61830307	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.1	0	0.0	0.3121272365805169	False	False	full-panel SNP mean computed once before individual resampling	503
+rs66500137	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.1	0	0.0	0.1988071570576541	False	False	full-panel SNP mean computed once before individual resampling	503
+rs7097810	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.1	0	0.0	1.1729622266401591	False	False	full-panel SNP mean computed once before individual resampling	503
+rs72769943	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.1	0	0.0	0.11928429423459244	False	False	full-panel SNP mean computed once before individual resampling	503
+rs75509222	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.1	0	0.0	0.21669980119284293	False	False	full-panel SNP mean computed once before individual resampling	503
+rs7898263	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.1	0	0.0	1.6938369781312128	False	False	full-panel SNP mean computed once before individual resampling	503
+rs7908994	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.1	0	0.0	0.2624254473161034	False	False	full-panel SNP mean computed once before individual resampling	503
+rs7915338	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.1	0	0.0	1.2246520874751492	False	False	full-panel SNP mean computed once before individual resampling	503
+rs1005907	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.2	0	0.0	0.5288270377733598	False	False	full-panel SNP mean computed once before individual resampling	503
+rs10508288	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.2	0	0.0	0.8151093439363817	False	False	full-panel SNP mean computed once before individual resampling	503
+rs10795212	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.2	0	0.0	0.7395626242544732	False	False	full-panel SNP mean computed once before individual resampling	503
+rs10795250	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.2	0	0.0	1.415506958250497	False	False	full-panel SNP mean computed once before individual resampling	503
+rs10904339	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.2	0	0.0	0.36182902584493043	False	False	full-panel SNP mean computed once before individual resampling	503
+rs10904387	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.2	0	0.0	0.5387673956262425	False	False	full-panel SNP mean computed once before individual resampling	503
+rs111499350	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.2	0	0.0	0.08151093439363817	False	False	full-panel SNP mean computed once before individual resampling	503
+rs11252627	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.2	0	0.0	0.05765407554671968	False	False	full-panel SNP mean computed once before individual resampling	503
+rs11252719	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.2	0	0.0	0.04771371769383698	False	False	full-panel SNP mean computed once before individual resampling	503
+rs11252748	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.2	0	0.0	0.46322067594433397	False	False	full-panel SNP mean computed once before individual resampling	503
+rs11252810	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.2	0	0.0	0.12326043737574553	False	False	full-panel SNP mean computed once before individual resampling	503
+rs11252840	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.2	0	0.0	0.2524850894632207	False	False	full-panel SNP mean computed once before individual resampling	503
+rs11252861	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.2	0	0.0	0.8966202783300199	False	False	full-panel SNP mean computed once before individual resampling	503
+rs11252900	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.2	0	0.0	0.19284294234592445	False	False	full-panel SNP mean computed once before individual resampling	503
+rs11253047	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.2	0	0.0	0.04970178926441352	False	False	full-panel SNP mean computed once before individual resampling	503
+rs11816204	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.2	0	0.0	0.5506958250497018	False	False	full-panel SNP mean computed once before individual resampling	503
+rs11818567	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.2	0	0.0	0.17296222664015903	False	False	full-panel SNP mean computed once before individual resampling	503
+rs12570303	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.2	0	0.0	0.6282306163021869	False	False	full-panel SNP mean computed once before individual resampling	503
+rs17133585	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.2	0	0.0	0.06560636182902585	False	False	full-panel SNP mean computed once before individual resampling	503
+rs17133587	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.2	0	0.0	0.441351888667992	False	False	full-panel SNP mean computed once before individual resampling	503
+rs1869217	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.2	0	0.0	0.09741550695825049	False	False	full-panel SNP mean computed once before individual resampling	503
+rs1901649	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.2	0	0.0	0.4592445328031809	False	False	full-panel SNP mean computed once before individual resampling	503
+rs2096422	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.2	0	0.0	0.6043737574552683	False	False	full-panel SNP mean computed once before individual resampling	503
+rs2924264	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.2	0	0.0	0.5447316103379721	False	False	full-panel SNP mean computed once before individual resampling	503
+rs2924279	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.2	0	0.0	1.5328031809145128	False	False	full-panel SNP mean computed once before individual resampling	503
+rs2961579	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.2	0	0.0	0.5288270377733598	False	False	full-panel SNP mean computed once before individual resampling	503
+rs2961617	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.2	0	0.0	1.4532803180914513	False	False	full-panel SNP mean computed once before individual resampling	503
+rs313500	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.2	0	0.0	1.7077534791252484	False	False	full-panel SNP mean computed once before individual resampling	503
+rs34140485	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.2	0	0.0	0.16898608349900596	False	False	full-panel SNP mean computed once before individual resampling	503
+rs3812663	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.2	0	0.0	0.13916500994035785	False	False	full-panel SNP mean computed once before individual resampling	503
+rs4143630	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.2	0	0.0	1.0636182902584492	False	False	full-panel SNP mean computed once before individual resampling	503
+rs4491123	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.2	0	0.0	1.7673956262425448	False	False	full-panel SNP mean computed once before individual resampling	503
+rs58000287	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.2	0	0.0	0.06759443339960239	False	False	full-panel SNP mean computed once before individual resampling	503
+rs61830307	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.2	0	0.0	0.3121272365805169	False	False	full-panel SNP mean computed once before individual resampling	503
+rs66500137	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.2	0	0.0	0.1988071570576541	False	False	full-panel SNP mean computed once before individual resampling	503
+rs7082231	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.2	0	0.0	0.2823061630218688	False	False	full-panel SNP mean computed once before individual resampling	503
+rs7083869	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.2	0	0.0	0.38767395626242546	False	False	full-panel SNP mean computed once before individual resampling	503
+rs72769943	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.2	0	0.0	0.11928429423459244	False	False	full-panel SNP mean computed once before individual resampling	503
+rs73587799	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.2	0	0.0	0.23856858846918488	False	False	full-panel SNP mean computed once before individual resampling	503
+rs74111796	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.2	0	0.0	0.14512922465208747	False	False	full-panel SNP mean computed once before individual resampling	503
+rs7475343	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.2	0	0.0	0.28628230616302186	False	False	full-panel SNP mean computed once before individual resampling	503
+rs75509222	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.2	0	0.0	0.21669980119284293	False	False	full-panel SNP mean computed once before individual resampling	503
+rs76207412	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.2	0	0.0	0.04771371769383698	False	False	full-panel SNP mean computed once before individual resampling	503
+rs77114067	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.2	0	0.0	0.12524850894632206	False	False	full-panel SNP mean computed once before individual resampling	503
+rs7901384	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.2	0	0.0	1.0874751491053678	False	False	full-panel SNP mean computed once before individual resampling	503
+rs7906894	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.2	0	0.0	0.73558648111332	False	False	full-panel SNP mean computed once before individual resampling	503
+rs7908994	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.2	0	0.0	0.2624254473161034	False	False	full-panel SNP mean computed once before individual resampling	503
+rs7915338	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.2	0	0.0	1.2246520874751492	False	False	full-panel SNP mean computed once before individual resampling	503
+rs9888112	AKR1C2	AKR1C2|M13_INTERVERTEB|r2<0.2	0	0.0	0.42147117296222664	False	False	full-panel SNP mean computed once before individual resampling	503
+rs116682995	BMP6	BMP6|M13_INTERVERTEB|r2<0.1	0	0.0	0.05964214711729622	False	False	full-panel SNP mean computed once before individual resampling	503
+rs11759532	BMP6	BMP6|M13_INTERVERTEB|r2<0.1	0	0.0	0.7833001988071571	False	False	full-panel SNP mean computed once before individual resampling	503
+rs11962800	BMP6	BMP6|M13_INTERVERTEB|r2<0.1	0	0.0	0.2524850894632207	False	False	full-panel SNP mean computed once before individual resampling	503
+rs198354	BMP6	BMP6|M13_INTERVERTEB|r2<0.1	0	0.0	0.588469184890656	False	False	full-panel SNP mean computed once before individual resampling	503
+rs2327013	BMP6	BMP6|M13_INTERVERTEB|r2<0.1	0	0.0	0.3836978131212724	False	False	full-panel SNP mean computed once before individual resampling	503
+rs3812162	BMP6	BMP6|M13_INTERVERTEB|r2<0.1	0	0.0	0.9681908548707754	False	False	full-panel SNP mean computed once before individual resampling	503
+rs443861	BMP6	BMP6|M13_INTERVERTEB|r2<0.1	0	0.0	1.1312127236580516	False	False	full-panel SNP mean computed once before individual resampling	503
+rs62386966	BMP6	BMP6|M13_INTERVERTEB|r2<0.1	0	0.0	0.19681908548707752	False	False	full-panel SNP mean computed once before individual resampling	503
+rs7745400	BMP6	BMP6|M13_INTERVERTEB|r2<0.1	0	0.0	0.9184890656063618	False	False	full-panel SNP mean computed once before individual resampling	503
+rs932659	BMP6	BMP6|M13_INTERVERTEB|r2<0.1	0	0.0	0.3757455268389662	False	False	full-panel SNP mean computed once before individual resampling	503
+rs10455438	NT5E	NT5E|M13_LOWBACKPAIN|r2<0.1	0	0.0	0.7256461232604374	False	False	full-panel SNP mean computed once before individual resampling	503
+rs113952718	NT5E	NT5E|M13_LOWBACKPAIN|r2<0.1	0	0.0	0.24254473161033796	False	False	full-panel SNP mean computed once before individual resampling	503
+rs116986900	NT5E	NT5E|M13_LOWBACKPAIN|r2<0.1	0	0.0	0.06560636182902585	False	False	full-panel SNP mean computed once before individual resampling	503
+rs12201128	NT5E	NT5E|M13_LOWBACKPAIN|r2<0.1	0	0.0	0.7137176938369781	False	False	full-panel SNP mean computed once before individual resampling	503
+rs12205975	NT5E	NT5E|M13_LOWBACKPAIN|r2<0.1	0	0.0	0.2286282306163022	False	False	full-panel SNP mean computed once before individual resampling	503
+rs12211925	NT5E	NT5E|M13_LOWBACKPAIN|r2<0.1	0	0.0	0.2664015904572565	False	False	full-panel SNP mean computed once before individual resampling	503
+rs12527778	NT5E	NT5E|M13_LOWBACKPAIN|r2<0.1	0	0.0	0.24055666003976142	False	False	full-panel SNP mean computed once before individual resampling	503
+rs1322858	NT5E	NT5E|M13_LOWBACKPAIN|r2<0.1	0	0.0	0.13518886679920478	False	False	full-panel SNP mean computed once before individual resampling	503
+rs1536277	NT5E	NT5E|M13_LOWBACKPAIN|r2<0.1	0	0.0	0.4433399602385686	False	False	full-panel SNP mean computed once before individual resampling	503
+rs16876230	NT5E	NT5E|M13_LOWBACKPAIN|r2<0.1	0	0.0	0.07157057654075547	False	False	full-panel SNP mean computed once before individual resampling	503
+rs16877003	NT5E	NT5E|M13_LOWBACKPAIN|r2<0.1	0	0.0	0.1073558648111332	False	False	full-panel SNP mean computed once before individual resampling	503
+rs2154020	NT5E	NT5E|M13_LOWBACKPAIN|r2<0.1	0	0.0	0.17693836978131214	False	False	full-panel SNP mean computed once before individual resampling	503
+rs220400	NT5E	NT5E|M13_LOWBACKPAIN|r2<0.1	0	0.0	1.7773359840954275	False	False	full-panel SNP mean computed once before individual resampling	503
+rs2816581	NT5E	NT5E|M13_LOWBACKPAIN|r2<0.1	0	0.0	1.3041749502982107	False	False	full-panel SNP mean computed once before individual resampling	503
+rs313163	NT5E	NT5E|M13_LOWBACKPAIN|r2<0.1	0	0.0	0.11928429423459244	False	False	full-panel SNP mean computed once before individual resampling	503
+rs313242	NT5E	NT5E|M13_LOWBACKPAIN|r2<0.1	0	0.0	1.7813121272365806	False	False	full-panel SNP mean computed once before individual resampling	503
+rs4487548	NT5E	NT5E|M13_LOWBACKPAIN|r2<0.1	0	0.0	0.28628230616302186	False	False	full-panel SNP mean computed once before individual resampling	503
+rs4620088	NT5E	NT5E|M13_LOWBACKPAIN|r2<0.1	0	0.0	0.6043737574552683	False	False	full-panel SNP mean computed once before individual resampling	503
+rs6454463	NT5E	NT5E|M13_LOWBACKPAIN|r2<0.1	0	0.0	0.6083499005964215	False	False	full-panel SNP mean computed once before individual resampling	503
+rs72907145	NT5E	NT5E|M13_LOWBACKPAIN|r2<0.1	0	0.0	0.13320079522862824	False	False	full-panel SNP mean computed once before individual resampling	503
+rs75004713	NT5E	NT5E|M13_LOWBACKPAIN|r2<0.1	0	0.0	0.08349900596421471	False	False	full-panel SNP mean computed once before individual resampling	503
+rs75193545	NT5E	NT5E|M13_LOWBACKPAIN|r2<0.1	0	0.0	0.06958250497017893	False	False	full-panel SNP mean computed once before individual resampling	503
+rs7741380	NT5E	NT5E|M13_LOWBACKPAIN|r2<0.1	0	0.0	0.658051689860835	False	False	full-panel SNP mean computed once before individual resampling	503
+rs7761485	NT5E	NT5E|M13_LOWBACKPAIN|r2<0.1	0	0.0	0.7713717693836978	False	False	full-panel SNP mean computed once before individual resampling	503
+rs7765374	NT5E	NT5E|M13_LOWBACKPAIN|r2<0.1	0	0.0	1.1550695825049702	False	False	full-panel SNP mean computed once before individual resampling	503
+rs78962227	NT5E	NT5E|M13_LOWBACKPAIN|r2<0.1	0	0.0	0.05168986083499006	False	False	full-panel SNP mean computed once before individual resampling	503
+rs80171244	NT5E	NT5E|M13_LOWBACKPAIN|r2<0.1	0	0.0	0.055666003976143144	False	False	full-panel SNP mean computed once before individual resampling	503
+rs9359606	NT5E	NT5E|M13_LOWBACKPAIN|r2<0.1	0	0.0	0.22664015904572565	False	False	full-panel SNP mean computed once before individual resampling	503
+rs944666	NT5E	NT5E|M13_LOWBACKPAIN|r2<0.1	0	0.0	0.852882703777336	False	False	full-panel SNP mean computed once before individual resampling	503
+rs9450282	NT5E	NT5E|M13_LOWBACKPAIN|r2<0.1	0	0.0	1.341948310139165	False	False	full-panel SNP mean computed once before individual resampling	503
+rs974247	NT5E	NT5E|M13_LOWBACKPAIN|r2<0.1	0	0.0	0.10536779324055666	False	False	full-panel SNP mean computed once before individual resampling	503
+rs11231168	SLC3A2	SLC3A2|M13_INTERVERTEB|r2<0.1	0	0.0	0.8588469184890656	False	False	full-panel SNP mean computed once before individual resampling	503
+rs2507820	SLC3A2	SLC3A2|M13_INTERVERTEB|r2<0.1	0	0.0	0.4870775347912525	False	False	full-panel SNP mean computed once before individual resampling	503
+rs114296424	UTP11L	UTP11L|M13_SCIATICA|r2<0.1	0	0.0	0.10536779324055666	False	False	full-panel SNP mean computed once before individual resampling	503
+rs12095900	UTP11L	UTP11L|M13_SCIATICA|r2<0.1	0	0.0	0.08946322067594434	False	False	full-panel SNP mean computed once before individual resampling	503
+rs12127877	UTP11L	UTP11L|M13_SCIATICA|r2<0.1	0	0.0	0.3817097415506958	False	False	full-panel SNP mean computed once before individual resampling	503
+rs12130112	UTP11L	UTP11L|M13_SCIATICA|r2<0.1	0	0.0	0.40556660039761433	False	False	full-panel SNP mean computed once before individual resampling	503
+rs12404717	UTP11L	UTP11L|M13_SCIATICA|r2<0.1	0	0.0	0.3538767395626243	False	False	full-panel SNP mean computed once before individual resampling	503
+rs12725716	UTP11L	UTP11L|M13_SCIATICA|r2<0.1	0	0.0	0.0437375745526839	False	False	full-panel SNP mean computed once before individual resampling	503
+rs28411352	UTP11L	UTP11L|M13_SCIATICA|r2<0.1	0	0.0	0.5009940357852882	False	False	full-panel SNP mean computed once before individual resampling	503
+rs28580141	UTP11L	UTP11L|M13_SCIATICA|r2<0.1	0	0.0	0.06560636182902585	False	False	full-panel SNP mean computed once before individual resampling	503
+rs41268247	UTP11L	UTP11L|M13_SCIATICA|r2<0.1	0	0.0	0.073558648111332	False	False	full-panel SNP mean computed once before individual resampling	503
+rs4634868	UTP11L	UTP11L|M13_SCIATICA|r2<0.1	0	0.0	0.510934393638171	False	False	full-panel SNP mean computed once before individual resampling	503
+rs535056	UTP11L	UTP11L|M13_SCIATICA|r2<0.1	0	0.0	0.9403578528827038	False	False	full-panel SNP mean computed once before individual resampling	503
+rs61776719	UTP11L	UTP11L|M13_SCIATICA|r2<0.1	0	0.0	1.065606361829026	False	False	full-panel SNP mean computed once before individual resampling	503
+rs75240370	UTP11L	UTP11L|M13_SCIATICA|r2<0.1	0	0.0	0.17892644135188868	False	False	full-panel SNP mean computed once before individual resampling	503
+rs3796314	WNT7A	WNT7A|M13_INTERVERTEB|r2<0.1	0	0.0	0.31610337972166996	False	False	full-panel SNP mean computed once before individual resampling	503
+rs6775581	WNT7A	WNT7A|M13_INTERVERTEB|r2<0.1	0	0.0	1.1312127236580516	False	False	full-panel SNP mean computed once before individual resampling	503
+rs9872360	WNT7A	WNT7A|M13_INTERVERTEB|r2<0.1	0	0.0	1.3240556660039762	False	False	full-panel SNP mean computed once before individual resampling	503
