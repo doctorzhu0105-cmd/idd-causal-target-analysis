@@ -1,4 +1,5 @@
 "path"	"sha256"	"bytes"	"role"	"master_version"
+".gitattributes"	"5c5f38556062fd49a3793ab97ea5fbd6d914f130ee9fe42a72a03883646ec089"	"817"	"governed_checkout_policy"	"1.4.0"
 "analysis_p0_correlated_mr_20260814/scripts/coloc_prior_sensitivity.py"	"508ad4d44df7a7e1dff1d0aeb0c1cf5dd07fd0b2df2498dcc270b0b2b5846e66"	"4113"	"current_code"	"1.4.0"
 "analysis_p0_correlated_mr_20260814/scripts/coloc_prior_sensitivity.R"	"b5abd1cc5f4a3754ce833690fb94cdf8e8360022882051f1b5b1d216963aa6ec"	"4859"	"current_code"	"1.4.0"
 "analysis_p0_correlated_mr_20260814/scripts/compute_leverage_metrics.py"	"7492f6130657eab0edada7a0790f1e34b386308e8d04420133fc49a8907ee9fa"	"6933"	"current_code"	"1.4.0"
@@ -28,3 +29,4 @@
 "results/master_1_4/supplementary_figure_s2_source_manifest.tsv"	"0799c0e1212238972554125653b47934d89156f507dda93e802c94fe1d59264e"	"1145"	"redistributable_master_output"	"1.4.0"
 "results/master_1_4/supplementary_figure_s2_source.tsv"	"9f7b8b9728f9292d436e5405f2e33ed37926cc342d780822de6636cb6e7c76f6"	"1555"	"redistributable_master_output"	"1.4.0"
 "results/master_1_4/table3_evidence_matrix.tsv"	"0ca02752ed4fb4ae2620f4cc766dbb9407011ac25663e0d419ab551ef99aa006"	"5843"	"redistributable_master_output"	"1.4.0"
+"tests/test_governed_eol_policy.py"	"83ce6fffa19290f74de06492bf5ff16f72ea5c06b52afcb1fa9e2d37ff01cf15"	"2116"	"governed_checkout_test"	"1.4.0"

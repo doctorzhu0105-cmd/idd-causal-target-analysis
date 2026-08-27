@@ -44,6 +44,7 @@
 "tests/test_idd_genetics_smr.py"	"testing"	"Synthetic regression test for included analysis code"	"b72f51d7999df4fc57330c1b35f04bedc80bcb4b51671a1445f727e982c92ba2"
 "tests/test_idd_genetics_utils.py"	"testing"	"Synthetic regression test for included analysis code"	"01b2ac4df8268f6365f10cb92b4fd2b13d87c976a914f02b189812f7aeb0ef73"
 "tests/test_idd_gtex_coloc.py"	"testing"	"Synthetic regression test for included analysis code"	"37961efdf54f20147b590818b06e34dc80263ab3c8adab1124a1507928daea3e"
+"tests/test_governed_eol_policy.py"	"testing"	"Raw-byte governed-output checkout policy regression test"	"83ce6fffa19290f74de06492bf5ff16f72ea5c06b52afcb1fa9e2d37ff01cf15"
 "tests/test_idd_rank_targets.py"	"testing"	"Synthetic regression test for included analysis code"	"369530f3f7ce9a1306523a4bb7b2f2ab1fff231938031ec21c5ee9d1c9bab675"
 "tests/test_manifest_policy.py"	"testing"	"Deterministic manifest newline and .git-boundary regression tests"	"6a9f04492d092a752760a7ba4b71b4c5da18582fb8b815b1413b485394bc3e9d"
 "tests/test_master14_correlated_mr.py"	"testing"	"Signed-LD generalized IVW, generalized Q, oriented GLS MR-Egger and reduced-Omega LOO"	"2e73c5a2134b768c17bf2913307e21ebefe94bc312622c688ae81d2d767e29c3"

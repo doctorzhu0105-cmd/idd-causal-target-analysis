@@ -1,0 +1,14 @@
+/results/master_1_4/ablation_leverage.tsv -text
+/results/master_1_4/coloc_prior_sensitivity_summary.tsv -text
+/results/master_1_4/conditional_strength.tsv -text
+/results/master_1_4/effective_instrument_count.tsv -text
+/results/master_1_4/ld_bootstrap_matrix_qc.tsv -text
+/results/master_1_4/ld_bootstrap_missingness_qc.tsv -text
+/results/master_1_4/ld_bootstrap_repruning_akr1c2.tsv -text
+/results/master_1_4/ld_reference_bootstrap_summary.tsv -text
+/results/master_1_4/ld_shrinkage_sensitivity.tsv -text
+/results/master_1_4/pcivw_truncation_sensitivity.tsv -text
+/results/master_1_4/primary13_egger_orientation_comparison.tsv -text
+/results/master_1_4/supplementary_figure_s2_source_manifest.tsv -text
+/results/master_1_4/supplementary_figure_s2_source.tsv -text
+/results/master_1_4/table3_evidence_matrix.tsv -text
