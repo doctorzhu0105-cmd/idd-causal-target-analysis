@@ -1,19 +1,19 @@
 {
-  "identity": "UNRELEASED_MASTER_1.4.0_SYNC_CANDIDATE",
-  "master_version": "1.4.0",
-  "release_state": "UNRELEASED_SYNC_CANDIDATE",
-  "git_tag": null,
-  "github_release": null,
-  "zenodo_version": null,
-  "package_date": "2026-08-27",
+  "identity": "V1.2.0_CATALOGUE_EXTENSION_RELEASE_CONTENT",
+  "master_version": "1.5.0",
+  "release_state": "VERSIONED_RELEASE_CONTENT",
+  "git_tag": "v1.2.0",
+  "github_release": "https://github.com/doctorzhu0105-cmd/idd-causal-target-analysis/releases/tag/v1.2.0",
+  "zenodo_version": "RESOLVED_BY_PUBLICATION_RECORD",
+  "package_date": "2026-08-30",
   "repository_url": "https://github.com/doctorzhu0105-cmd/idd-causal-target-analysis",
-  "candidate_branch": "master-1.4-sync-candidate",
   "manuscript_authority": false,
   "raw_or_participant_level_data_included": false,
-  "prior_public_baseline": {
-    "commit": "67da2c560d01dc24f1b9d3769b30ede505df931f",
-    "tag": "v1.0.0",
-    "archive_doi": "10.5281/zenodo.21486871"
+  "prior_release": {
+    "commit": "717f0ea5e01d866e3922b925b497073404959195",
+    "tag": "v1.1.0",
+    "archive_doi": "10.5281/zenodo.22126475",
+    "concept_doi": "10.5281/zenodo.21486870"
   },
-  "note": "No future public release version has been selected and no public repository or archive has been modified."
+  "note": "The version-specific Zenodo DOI is recorded in the external publication audit because it is assigned after this immutable release content is committed."
 }

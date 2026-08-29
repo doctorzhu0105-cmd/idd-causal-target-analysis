@@ -1,0 +1,13 @@
+contrast	predictor	parameterization	precision_outcome	N	spearman_rho	P	predictor_median	precision_gain_median	status
+r2_0.001_to_0.1	nominal_K	absolute_gain	precision_gain_percent=-SE_percent_change	7284	0.2772097281979145	1.235356863046058e-128	5.0	3.4243196961896483	MATCHED_PARAMETERIZATION
+r2_0.001_to_0.1	nominal_K	relative_percent_gain	precision_gain_percent=-SE_percent_change	7284	0.17767853526718885	9.87071797880535e-53	300.0	3.4243196961896483	MATCHED_PARAMETERIZATION
+r2_0.001_to_0.1	nominal_K	fold_gain	precision_gain_percent=-SE_percent_change	7284	0.17767853526718885	9.87071797880535e-53	4.0	3.4243196961896483	MATCHED_PARAMETERIZATION
+r2_0.001_to_0.1	nominal_K	log_ratio	precision_gain_percent=-SE_percent_change	7284	0.17767853526718885	9.87071797880535e-53	1.3862943611198906	3.4243196961896483	MATCHED_PARAMETERIZATION
+r2_0.001_to_0.1	effective_K	absolute_gain	precision_gain_percent=-SE_percent_change	7284	0.2787874377490249	3.855387121712516e-130	3.9225348689553545	3.4243196961896483	MATCHED_PARAMETERIZATION
+r2_0.001_to_0.1	effective_K	relative_percent_gain	precision_gain_percent=-SE_percent_change	7284	0.17123192676701468	4.771649368370511e-49	254.76206318678	3.4243196961896483	MATCHED_PARAMETERIZATION
+r2_0.001_to_0.1	effective_K	fold_gain	precision_gain_percent=-SE_percent_change	7284	0.17123192676701468	4.771649368370511e-49	3.5476206318678	3.4243196961896483	MATCHED_PARAMETERIZATION
+r2_0.001_to_0.1	effective_K	log_ratio	precision_gain_percent=-SE_percent_change	7284	0.17123192676701468	4.771649368370511e-49	1.2662766209602987	3.4243196961896483	MATCHED_PARAMETERIZATION
+r2_0.001_to_0.1	joint_exposure_chi_square	absolute_gain	precision_gain_percent=-SE_percent_change	7284	0.4005100609661964	7.942247346940232e-279	84.19675642564678	3.4243196961896483	MATCHED_PARAMETERIZATION
+r2_0.001_to_0.1	joint_exposure_chi_square	relative_percent_gain	precision_gain_percent=-SE_percent_change	7284	0.4386532119674944	0.0	16.38444232918517	3.4243196961896483	MATCHED_PARAMETERIZATION
+r2_0.001_to_0.1	joint_exposure_chi_square	fold_gain	precision_gain_percent=-SE_percent_change	7284	0.4386532119674944	0.0	1.1638444232918517	3.4243196961896483	MATCHED_PARAMETERIZATION
+r2_0.001_to_0.1	joint_exposure_chi_square	log_ratio	precision_gain_percent=-SE_percent_change	7284	0.4386532119674944	0.0	0.15172868125498185	3.4243196961896483	MATCHED_PARAMETERIZATION

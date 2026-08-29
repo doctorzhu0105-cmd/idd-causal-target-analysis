@@ -146,12 +146,12 @@ def main() -> int:
 
     release = json.loads((root / "RELEASE_STATUS.json").read_text(encoding="utf-8"))
     expected_release = {
-        "identity": "UNRELEASED_MASTER_1.4.0_SYNC_CANDIDATE",
-        "master_version": "1.4.0",
-        "release_state": "UNRELEASED_SYNC_CANDIDATE",
-        "git_tag": None,
-        "github_release": None,
-        "zenodo_version": None,
+        "identity": "V1.2.0_CATALOGUE_EXTENSION_RELEASE_CONTENT",
+        "master_version": "1.5.0",
+        "release_state": "VERSIONED_RELEASE_CONTENT",
+        "git_tag": "v1.2.0",
+        "github_release": "https://github.com/doctorzhu0105-cmd/idd-causal-target-analysis/releases/tag/v1.2.0",
+        "zenodo_version": "RESOLVED_BY_PUBLICATION_RECORD",
     }
     for key, expected in expected_release.items():
         if release.get(key) != expected:
@@ -167,9 +167,16 @@ def main() -> int:
         "provenance/OUTPUT_HASHES.tsv",
         "provenance/RELEASE_MANIFEST.tsv",
         "provenance/REPRODUCIBILITY_SCOPE.md",
+        "provenance/RELEASE_MANIFEST_v1.2.0.tsv",
+        "provenance/RELEASE_MANIFEST_v1.2.0.json",
+        "results/master_1_5/CATALOGUE_EFFECTIVE_K.tsv",
+        "results/master_1_5/CATALOGUE_GIVW_LD_LADDER.tsv",
+        "results/master_1_5/CATALOGUE_JOINT_EXPOSURE_INFORMATION.tsv",
+        "results/master_1_5/CATALOGUE_PRECISION_PAIRED_CHANGES.tsv",
+        "results/master_1_5/K1_SECOND_ORDER_MULTIPLICITY_REPLICATION.tsv",
     }
     for relative in sorted(required_current - actual):
-        failures.append(f"missing_current_master14_surface:{relative}")
+        failures.append(f"missing_current_release_surface:{relative}")
 
     status = {
         "status": "PASS" if not failures else "FAIL",

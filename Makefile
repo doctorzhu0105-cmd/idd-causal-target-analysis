@@ -3,12 +3,14 @@ RSCRIPT ?= Rscript
 PLINK ?= tools/idd/plink/plink.exe
 SMR ?= tools/idd/smr/smr-1.3.1-win-x86_64/smr-1.3.1-win.exe
 RENDER_OUT ?= ../idd-master14-render
+MASTER15_OUT ?= ../idd-master15-regenerated
+MASTER15_RENDER_OUT ?= ../idd-master15-render
 
 .DEFAULT_GOAL := help
-.PHONY: help test package-verify master14-assets master14-figure1 prepare-druggable gate0 bulk genetics-validate genetics-screen smr scrna drug rank gtex docking handoff freeze-verify wgcna-signed ukb-outcome mr-presso official-coloc coloc-susie tables-figures article-verify
+.PHONY: help test package-verify release-manifest master14-assets master14-figure1 master15-derivatives master15-figure1 prepare-druggable gate0 bulk genetics-validate genetics-screen smr scrna drug rank gtex docking handoff freeze-verify wgcna-signed ukb-outcome mr-presso official-coloc coloc-susie tables-figures article-verify
 
 help:
-	@echo "MASTER 1.4 sync candidate: run 'make test' and 'make package-verify'. Full reruns require docs/DATA_ACCESS.md."
+	@echo "v1.2.0 reproducibility layer: run 'make test' and 'make package-verify'. Full reruns require docs/DATA_ACCESS.md."
 
 test:
 	$(PYTHON) -B -m unittest discover -s tests -p "test_*.py"
@@ -16,11 +18,20 @@ test:
 package-verify:
 	$(PYTHON) tools/verify_package.py --root .
 
+release-manifest:
+	$(PYTHON) tools/build_release_manifest.py
+
 master14-assets:
 	$(PYTHON) py/generate_master14_assets.py --repo-root . --output-dir $(RENDER_OUT)
 
 master14-figure1:
 	$(PYTHON) analysis_p0_correlated_mr_20260814/scripts/make_current_figure1.py --repo-root . --output-dir $(RENDER_OUT)
+
+master15-derivatives:
+	$(PYTHON) analysis_p0_correlated_mr_20260814/scripts/catalogue_extension.py --results-dir results/master_1_5 --output-dir $(MASTER15_OUT)
+
+master15-figure1:
+	$(PYTHON) analysis_p0_correlated_mr_20260814/scripts/make_master15_figure1.py --repo-root . --output-dir $(MASTER15_RENDER_OUT)
 
 prepare-druggable:
 	$(PYTHON) py/mr_prepare_druggable_genes.py --repo-root .

@@ -1,0 +1,971 @@
+{
+  "release": "v1.2.0",
+  "hash_mode": "LF-canonicalized text and raw bytes for non-text files",
+  "excluded_from_membership": [
+    "manifest.tsv",
+    "provenance/RELEASE_MANIFEST_v1.2.0.json",
+    "provenance/RELEASE_MANIFEST_v1.2.0.tsv"
+  ],
+  "files": [
+    {
+      "relative_path": ".gitattributes",
+      "bytes": 1926,
+      "sha256": "2227c4ac2468c8e82b8bcccd01800fa572d1ebb13482aad45e8167bc9ef16864",
+      "role": "repository_support_file",
+      "source_authority": "PUBLIC_REPOSITORY",
+      "redistribution_class": "PUBLIC_REPOSITORY_CONTENT"
+    },
+    {
+      "relative_path": "analysis_p0_correlated_mr_20260814/scripts/catalogue_compute.py",
+      "bytes": 12031,
+      "sha256": "8923732738a3eb9e396b3b154540e8c22ec80e6458c4417faf50b21122c3cdf4",
+      "role": "executable_code_or_test",
+      "source_authority": "PUBLIC_REPOSITORY",
+      "redistribution_class": "MIT_CODE"
+    },
+    {
+      "relative_path": "analysis_p0_correlated_mr_20260814/scripts/catalogue_extension.py",
+      "bytes": 10802,
+      "sha256": "48b25f5780fb827e0d44ac215d06fb655901cbc1ec892d619861fd0ac59d1ef6",
+      "role": "executable_code_or_test",
+      "source_authority": "PUBLIC_REPOSITORY",
+      "redistribution_class": "MIT_CODE"
+    },
+    {
+      "relative_path": "analysis_p0_correlated_mr_20260814/scripts/coloc_prior_sensitivity.py",
+      "bytes": 4113,
+      "sha256": "508ad4d44df7a7e1dff1d0aeb0c1cf5dd07fd0b2df2498dcc270b0b2b5846e66",
+      "role": "executable_code_or_test",
+      "source_authority": "PUBLIC_REPOSITORY",
+      "redistribution_class": "MIT_CODE"
+    },
+    {
+      "relative_path": "analysis_p0_correlated_mr_20260814/scripts/coloc_prior_sensitivity.R",
+      "bytes": 4859,
+      "sha256": "b5abd1cc5f4a3754ce833690fb94cdf8e8360022882051f1b5b1d216963aa6ec",
+      "role": "executable_code_or_test",
+      "source_authority": "PUBLIC_REPOSITORY",
+      "redistribution_class": "MIT_CODE"
+    },
+    {
+      "relative_path": "analysis_p0_correlated_mr_20260814/scripts/compute_leverage_metrics.py",
+      "bytes": 6933,
+      "sha256": "7492f6130657eab0edada7a0790f1e34b386308e8d04420133fc49a8907ee9fa",
+      "role": "executable_code_or_test",
+      "source_authority": "PUBLIC_REPOSITORY",
+      "redistribution_class": "MIT_CODE"
+    },
+    {
+      "relative_path": "analysis_p0_correlated_mr_20260814/scripts/conditional_f_statistic.py",
+      "bytes": 5384,
+      "sha256": "ef3194c0779b53a75ee1eeb7c479cfe8f6a3d13e613a03a75aed4d0c49b5742d",
+      "role": "executable_code_or_test",
+      "source_authority": "PUBLIC_REPOSITORY",
+      "redistribution_class": "MIT_CODE"
+    },
+    {
+      "relative_path": "analysis_p0_correlated_mr_20260814/scripts/correlated_mr.py",
+      "bytes": 6440,
+      "sha256": "6c3080456b707877ff024538bc14014c123046fe9b1678584040542a81af601a",
+      "role": "executable_code_or_test",
+      "source_authority": "PUBLIC_REPOSITORY",
+      "redistribution_class": "MIT_CODE"
+    },
+    {
+      "relative_path": "analysis_p0_correlated_mr_20260814/scripts/full_universe_analysis.py",
+      "bytes": 33324,
+      "sha256": "642e088bdfea0442d07762ef400b116eb2886e89baede7c4ef897c20aaa1b593",
+      "role": "executable_code_or_test",
+      "source_authority": "PUBLIC_REPOSITORY",
+      "redistribution_class": "MIT_CODE"
+    },
+    {
+      "relative_path": "analysis_p0_correlated_mr_20260814/scripts/global_ablation.py",
+      "bytes": 36298,
+      "sha256": "76f1163d9924bfe464194318782da8b5a83d4c22392c4052ddf45b0b79e4264b",
+      "role": "executable_code_or_test",
+      "source_authority": "PUBLIC_REPOSITORY",
+      "redistribution_class": "MIT_CODE"
+    },
+    {
+      "relative_path": "analysis_p0_correlated_mr_20260814/scripts/make_current_figure1.py",
+      "bytes": 7095,
+      "sha256": "4a208e54b115381b2349e938f611da85b4348e53d6ca1ca1a32c1c6c6cbad2eb",
+      "role": "executable_code_or_test",
+      "source_authority": "PUBLIC_REPOSITORY",
+      "redistribution_class": "MIT_CODE"
+    },
+    {
+      "relative_path": "analysis_p0_correlated_mr_20260814/scripts/make_master15_figure1.py",
+      "bytes": 5567,
+      "sha256": "734add3c2196882f08d422ae23d2200b63eee61487499dd02ef374bef95f9b64",
+      "role": "executable_code_or_test",
+      "source_authority": "PUBLIC_REPOSITORY",
+      "redistribution_class": "MIT_CODE"
+    },
+    {
+      "relative_path": "analysis_p0_correlated_mr_20260814/scripts/median_and_pc.py",
+      "bytes": 4454,
+      "sha256": "0292bb952b6aa3f5432439d96710c14b4c88843e075eafbbf9b15b3e06dcc960",
+      "role": "executable_code_or_test",
+      "source_authority": "PUBLIC_REPOSITORY",
+      "redistribution_class": "MIT_CODE"
+    },
+    {
+      "relative_path": "analysis_p0_correlated_mr_20260814/scripts/plink_ld.py",
+      "bytes": 4854,
+      "sha256": "842d7d30a0eae5fb8cb5790a925fa2646ccb9aa1f522ef6773ec61e58ae3fbbf",
+      "role": "executable_code_or_test",
+      "source_authority": "PUBLIC_REPOSITORY",
+      "redistribution_class": "MIT_CODE"
+    },
+    {
+      "relative_path": "analysis_p0_correlated_mr_20260814/scripts/primary13_loo.py",
+      "bytes": 9069,
+      "sha256": "96b8d42edb7292a2120d53e0c2e4acb953bc896ec8b85f8f528cda61e98ace49",
+      "role": "executable_code_or_test",
+      "source_authority": "PUBLIC_REPOSITORY",
+      "redistribution_class": "MIT_CODE"
+    },
+    {
+      "relative_path": "analysis_p0_correlated_mr_20260814/scripts/run_all_genes_endpoints.py",
+      "bytes": 6909,
+      "sha256": "6a907bffbfd237a64d794b66cbc628807e6ac2d1742f9e56a13cacdf08319e76",
+      "role": "executable_code_or_test",
+      "source_authority": "PUBLIC_REPOSITORY",
+      "redistribution_class": "MIT_CODE"
+    },
+    {
+      "relative_path": "config/idd_analysis.json",
+      "bytes": 3519,
+      "sha256": "60e059a53cd27761482e34f377af6fd269009d90efd4a1e8f7439041d8ff1e98",
+      "role": "documentation_or_provenance",
+      "source_authority": "PUBLIC_REPOSITORY",
+      "redistribution_class": "PUBLIC_DOCUMENTATION_OR_METADATA"
+    },
+    {
+      "relative_path": "config/idd_docking_structures.json",
+      "bytes": 1084,
+      "sha256": "b8933c3ccb7294e9787bfc2aa91ae00cf4773f4f3b6d3062f2fe955ee7d970c3",
+      "role": "documentation_or_provenance",
+      "source_authority": "PUBLIC_REPOSITORY",
+      "redistribution_class": "PUBLIC_DOCUMENTATION_OR_METADATA"
+    },
+    {
+      "relative_path": "config/idd_sources.json",
+      "bytes": 3047,
+      "sha256": "714a5a79abb02e6b1b8f596c9f1feab6c6641f1edaa802f56b8a287edcddfb83",
+      "role": "documentation_or_provenance",
+      "source_authority": "PUBLIC_REPOSITORY",
+      "redistribution_class": "PUBLIC_DOCUMENTATION_OR_METADATA"
+    },
+    {
+      "relative_path": "config/mr_analysis.json",
+      "bytes": 5269,
+      "sha256": "c05eccee36fcc9e92de6d349e773c895f122dd9375c45d6ff98f93f3cf708230",
+      "role": "documentation_or_provenance",
+      "source_authority": "PUBLIC_REPOSITORY",
+      "redistribution_class": "PUBLIC_DOCUMENTATION_OR_METADATA"
+    },
+    {
+      "relative_path": "config/mr_sources.json",
+      "bytes": 7014,
+      "sha256": "da5a9f7bb4823edfbf23b25ebc97a7981906e4aed6d8411e5ebfd0737aa550e5",
+      "role": "documentation_or_provenance",
+      "source_authority": "PUBLIC_REPOSITORY",
+      "redistribution_class": "PUBLIC_DOCUMENTATION_OR_METADATA"
+    },
+    {
+      "relative_path": "data/README.md",
+      "bytes": 179,
+      "sha256": "be835dea83534ac99d576881998fa9992c580a06ba5945969e2f18fb6ec15283",
+      "role": "documentation_or_provenance",
+      "source_authority": "PUBLIC_REPOSITORY",
+      "redistribution_class": "PUBLIC_DOCUMENTATION_OR_METADATA"
+    },
+    {
+      "relative_path": "docs/CODE_INVENTORY.tsv",
+      "bytes": 10590,
+      "sha256": "d83c8fe465ceb3675b2a8d339f50b31aac356efbc5bf73483143b0f6b1e56c78",
+      "role": "documentation_or_provenance",
+      "source_authority": "PUBLIC_REPOSITORY",
+      "redistribution_class": "PUBLIC_DOCUMENTATION_OR_METADATA"
+    },
+    {
+      "relative_path": "docs/DATA_ACCESS.md",
+      "bytes": 1514,
+      "sha256": "3d8f55030f6fe12342d40d6b83d032816c28091a012eda2128bc8ec0440daac9",
+      "role": "documentation_or_provenance",
+      "source_authority": "PUBLIC_REPOSITORY",
+      "redistribution_class": "PUBLIC_DOCUMENTATION_OR_METADATA"
+    },
+    {
+      "relative_path": "docs/EXCLUSIONS.md",
+      "bytes": 1008,
+      "sha256": "9c01c8468a32d054bdb3b405956623d1725a822bd58f7b49b79b3780599f9ea4",
+      "role": "documentation_or_provenance",
+      "source_authority": "PUBLIC_REPOSITORY",
+      "redistribution_class": "PUBLIC_DOCUMENTATION_OR_METADATA"
+    },
+    {
+      "relative_path": "docs/RELEASE_NOTES_MASTER_1_4_SYNC_CANDIDATE.md",
+      "bytes": 1095,
+      "sha256": "d3c8d1bfa55631a186772cd8e8da6e170dde18d167afd0d88e4e45010c55bd63",
+      "role": "documentation_or_provenance",
+      "source_authority": "PUBLIC_REPOSITORY",
+      "redistribution_class": "PUBLIC_DOCUMENTATION_OR_METADATA"
+    },
+    {
+      "relative_path": "docs/RELEASE_NOTES_v1.2.0.md",
+      "bytes": 1146,
+      "sha256": "5dfa6e542b73e5c0b8c5b577ae1f1457d68b3811db4a559c907c0c7c911f5e66",
+      "role": "documentation_or_provenance",
+      "source_authority": "PUBLIC_REPOSITORY",
+      "redistribution_class": "PUBLIC_DOCUMENTATION_OR_METADATA"
+    },
+    {
+      "relative_path": "docs/REPRODUCIBILITY.md",
+      "bytes": 4114,
+      "sha256": "820c81e53a3fc7a1a4d2dc7c5de421a5a9ccd8518c16685900ba02478abd8a8e",
+      "role": "documentation_or_provenance",
+      "source_authority": "PUBLIC_REPOSITORY",
+      "redistribution_class": "PUBLIC_DOCUMENTATION_OR_METADATA"
+    },
+    {
+      "relative_path": "environment/environment.yml",
+      "bytes": 578,
+      "sha256": "3651b25dd9ed63432c822a23f186a4607ae7fe79c034a4c19098a838369fd9f1",
+      "role": "configuration_or_environment",
+      "source_authority": "PUBLIC_REPOSITORY",
+      "redistribution_class": "PUBLIC_CONFIGURATION"
+    },
+    {
+      "relative_path": "environment/renv.lock",
+      "bytes": 381707,
+      "sha256": "35fb6a1b08209d1eed5afadb84adc53cfadea2b5c55ad0385f8be5537e4ddd13",
+      "role": "configuration_or_environment",
+      "source_authority": "PUBLIC_REPOSITORY",
+      "redistribution_class": "PUBLIC_CONFIGURATION"
+    },
+    {
+      "relative_path": "environment/requirements.txt",
+      "bytes": 280,
+      "sha256": "2c401b1ae57a67945e4ba6a2b1115b3fd8cfbbf116f4c0e2861e6985deaf4964",
+      "role": "configuration_or_environment",
+      "source_authority": "PUBLIC_REPOSITORY",
+      "redistribution_class": "PUBLIC_CONFIGURATION"
+    },
+    {
+      "relative_path": "LICENSE",
+      "bytes": 1086,
+      "sha256": "23fc30bec0cb8f42e608b9ccd640d5cf6afe44596a9a750ac95fcdc23334217e",
+      "role": "repository_support_file",
+      "source_authority": "PUBLIC_REPOSITORY",
+      "redistribution_class": "PUBLIC_REPOSITORY_CONTENT"
+    },
+    {
+      "relative_path": "Makefile",
+      "bytes": 3019,
+      "sha256": "a4954e7274e795c9f9a47d649edac30545d1cedfe29d5fc0073f08cbbb7cd67d",
+      "role": "repository_support_file",
+      "source_authority": "PUBLIC_REPOSITORY",
+      "redistribution_class": "PUBLIC_REPOSITORY_CONTENT"
+    },
+    {
+      "relative_path": "manuscript/README.md",
+      "bytes": 272,
+      "sha256": "09148358bdee174ea313126194a58d47efe4cb283b0a71d52ab0d3844a66826b",
+      "role": "documentation_or_provenance",
+      "source_authority": "PUBLIC_REPOSITORY",
+      "redistribution_class": "PUBLIC_DOCUMENTATION_OR_METADATA"
+    },
+    {
+      "relative_path": "provenance/ANALYSIS_VERSION.json",
+      "bytes": 879,
+      "sha256": "3db451f437b6a46f07dfcbcafea652c5b96f2d6d5394adc78e74c21d4f775e0b",
+      "role": "documentation_or_provenance",
+      "source_authority": "PUBLIC_REPOSITORY",
+      "redistribution_class": "PUBLIC_DOCUMENTATION_OR_METADATA"
+    },
+    {
+      "relative_path": "provenance/OUTPUT_HASHES.tsv",
+      "bytes": 12393,
+      "sha256": "8dbddd25e2e909d90b6f638dd0a55f9255bd82587de6801fb079f2f3bf5685ce",
+      "role": "documentation_or_provenance",
+      "source_authority": "PUBLIC_REPOSITORY",
+      "redistribution_class": "PUBLIC_DOCUMENTATION_OR_METADATA"
+    },
+    {
+      "relative_path": "provenance/RELEASE_MANIFEST.tsv",
+      "bytes": 5051,
+      "sha256": "d8780312dea5584953f60b2d060a5781416205dfc17bcd7d57bc76c2b25a411d",
+      "role": "documentation_or_provenance",
+      "source_authority": "PUBLIC_REPOSITORY",
+      "redistribution_class": "PUBLIC_DOCUMENTATION_OR_METADATA"
+    },
+    {
+      "relative_path": "provenance/REPRODUCIBILITY_SCOPE.md",
+      "bytes": 1555,
+      "sha256": "9f146bfc0a5afdf003db8c94b9b18fbb817f2feb0a308ef137c33277e4f4af35",
+      "role": "documentation_or_provenance",
+      "source_authority": "PUBLIC_REPOSITORY",
+      "redistribution_class": "PUBLIC_DOCUMENTATION_OR_METADATA"
+    },
+    {
+      "relative_path": "py/generate_master14_assets.py",
+      "bytes": 4084,
+      "sha256": "a767a6d8b3276f4daec482039547e32d1a136e2902642ad46c55ad719c73da44",
+      "role": "executable_code_or_test",
+      "source_authority": "PUBLIC_REPOSITORY",
+      "redistribution_class": "MIT_CODE"
+    },
+    {
+      "relative_path": "py/idd_acquire_scrna.py",
+      "bytes": 3503,
+      "sha256": "9e7ca16e6b4ab51b4056d72183914392931d07c1b7dbd8c168c5b3d40475df55",
+      "role": "executable_code_or_test",
+      "source_authority": "PUBLIC_REPOSITORY",
+      "redistribution_class": "MIT_CODE"
+    },
+    {
+      "relative_path": "py/idd_docking_assessment.py",
+      "bytes": 4326,
+      "sha256": "522cf44a91daef616dc563d7d277158bbbfb5ed314856206e9995fce2f7ba5b5",
+      "role": "executable_code_or_test",
+      "source_authority": "PUBLIC_REPOSITORY",
+      "redistribution_class": "MIT_CODE"
+    },
+    {
+      "relative_path": "py/idd_drug_evidence.py",
+      "bytes": 20733,
+      "sha256": "a1e93cf254f2982b45941d638d267702f980384daf284621afe3a6ba4e472b26",
+      "role": "executable_code_or_test",
+      "source_authority": "PUBLIC_REPOSITORY",
+      "redistribution_class": "MIT_CODE"
+    },
+    {
+      "relative_path": "py/idd_freeze_core.py",
+      "bytes": 20646,
+      "sha256": "66b8582218c47a088b74b0c00370331652d6ae07c3d9d71b1f1f6034269f9bda",
+      "role": "executable_code_or_test",
+      "source_authority": "PUBLIC_REPOSITORY",
+      "redistribution_class": "MIT_CODE"
+    },
+    {
+      "relative_path": "py/idd_genetics_pipeline.py",
+      "bytes": 42634,
+      "sha256": "73d26236b0df5c6e6481feb13b4bdb40f14bbb7a3fb8f4310996b37276c6d2a6",
+      "role": "executable_code_or_test",
+      "source_authority": "PUBLIC_REPOSITORY",
+      "redistribution_class": "MIT_CODE"
+    },
+    {
+      "relative_path": "py/idd_genetics_screen.py",
+      "bytes": 13151,
+      "sha256": "7c19a072284ac7640db7805f95dfd619b0202c9e972c74ca1d1b1429502d1970",
+      "role": "executable_code_or_test",
+      "source_authority": "PUBLIC_REPOSITORY",
+      "redistribution_class": "MIT_CODE"
+    },
+    {
+      "relative_path": "py/idd_genetics_utils.py",
+      "bytes": 14950,
+      "sha256": "9d2ea52851834f7bb7345c6336818f17a27870e78f2e374958cd4ead16c65f26",
+      "role": "executable_code_or_test",
+      "source_authority": "PUBLIC_REPOSITORY",
+      "redistribution_class": "MIT_CODE"
+    },
+    {
+      "relative_path": "py/idd_gtex_coloc.py",
+      "bytes": 13396,
+      "sha256": "d8f1e98551507181aa5c72bdaf9f57a98704085492c57016a920da1a7321bb3a",
+      "role": "executable_code_or_test",
+      "source_authority": "PUBLIC_REPOSITORY",
+      "redistribution_class": "MIT_CODE"
+    },
+    {
+      "relative_path": "py/idd_make_handoff.py",
+      "bytes": 17207,
+      "sha256": "710577e0c14d2556366759e5eaafb4b018d9ca7cdd0264e60f03dddc5e2efb3d",
+      "role": "executable_code_or_test",
+      "source_authority": "PUBLIC_REPOSITORY",
+      "redistribution_class": "MIT_CODE"
+    },
+    {
+      "relative_path": "py/idd_manuscript_analysis.py",
+      "bytes": 92122,
+      "sha256": "d76b9a28ca7b74a7f869805923f64136adf146673f234c2be7226ed23a2909ab",
+      "role": "executable_code_or_test",
+      "source_authority": "PUBLIC_REPOSITORY",
+      "redistribution_class": "MIT_CODE"
+    },
+    {
+      "relative_path": "py/idd_manuscript_verify.py",
+      "bytes": 28703,
+      "sha256": "fe50e31a91d92dece638cfbb84e4b6e895970579af1113bd7537b2e4f4f8460b",
+      "role": "executable_code_or_test",
+      "source_authority": "PUBLIC_REPOSITORY",
+      "redistribution_class": "MIT_CODE"
+    },
+    {
+      "relative_path": "py/idd_rank_targets.py",
+      "bytes": 26730,
+      "sha256": "1b4b9bbcdd3982e77cc00bad92f38710983eac235de56cc71c485f1c217ed5be",
+      "role": "executable_code_or_test",
+      "source_authority": "PUBLIC_REPOSITORY",
+      "redistribution_class": "MIT_CODE"
+    },
+    {
+      "relative_path": "py/idd_run_smr.py",
+      "bytes": 17306,
+      "sha256": "e375622802475c87592cea5588477ac3eb4c89b5f5302fc7be0271b1c4100901",
+      "role": "executable_code_or_test",
+      "source_authority": "PUBLIC_REPOSITORY",
+      "redistribution_class": "MIT_CODE"
+    },
+    {
+      "relative_path": "py/idd_scrna_localization.py",
+      "bytes": 23316,
+      "sha256": "d93c8f2e5c7e8ff523a1ff324bd5df274040916877c51ad3623f2037b4e4d3ff",
+      "role": "executable_code_or_test",
+      "source_authority": "PUBLIC_REPOSITORY",
+      "redistribution_class": "MIT_CODE"
+    },
+    {
+      "relative_path": "py/idd_ukb_replication.py",
+      "bytes": 24831,
+      "sha256": "395bb105a7132d07d52d9c27d8b18fe519f05f8f82d197ac0658fbe3f9772c46",
+      "role": "executable_code_or_test",
+      "source_authority": "PUBLIC_REPOSITORY",
+      "redistribution_class": "MIT_CODE"
+    },
+    {
+      "relative_path": "py/idd_validate_finngen.py",
+      "bytes": 6601,
+      "sha256": "e13038a4b0bd4d65192c6605f10e5a900dbb8753f22060e832f6a08223647ffd",
+      "role": "executable_code_or_test",
+      "source_authority": "PUBLIC_REPOSITORY",
+      "redistribution_class": "MIT_CODE"
+    },
+    {
+      "relative_path": "py/master14_sensitivity.py",
+      "bytes": 5873,
+      "sha256": "6f2be4487ce0542d0343a0472029ea9e0c6e419796d5eb048a5dad8d502aa9df",
+      "role": "executable_code_or_test",
+      "source_authority": "PUBLIC_REPOSITORY",
+      "redistribution_class": "MIT_CODE"
+    },
+    {
+      "relative_path": "py/mr_prepare_druggable_genes.py",
+      "bytes": 4778,
+      "sha256": "4c794c65f58db840894551508991da692e496ac82ac982b5ce887021a7b68d2d",
+      "role": "executable_code_or_test",
+      "source_authority": "PUBLIC_REPOSITORY",
+      "redistribution_class": "MIT_CODE"
+    },
+    {
+      "relative_path": "R/idd_bulk_analysis.R",
+      "bytes": 7980,
+      "sha256": "bc300d02227070142cfdad1597fc0e34b9067f3cda96c0f12bcc6655e8704932",
+      "role": "executable_code_or_test",
+      "source_authority": "PUBLIC_REPOSITORY",
+      "redistribution_class": "MIT_CODE"
+    },
+    {
+      "relative_path": "R/idd_coloc_susie.R",
+      "bytes": 16937,
+      "sha256": "f9c59258e9c8bdd8245cfe0c85376f6f8bb9e4fe0380d4ed984e42a505191bad",
+      "role": "executable_code_or_test",
+      "source_authority": "PUBLIC_REPOSITORY",
+      "redistribution_class": "MIT_CODE"
+    },
+    {
+      "relative_path": "R/idd_gate0_precheck.R",
+      "bytes": 3139,
+      "sha256": "48571de7a352dafdf4f35ae514f8fece9b337a23b20749c1005e936fcc105701",
+      "role": "executable_code_or_test",
+      "source_authority": "PUBLIC_REPOSITORY",
+      "redistribution_class": "MIT_CODE"
+    },
+    {
+      "relative_path": "R/idd_manuscript_wgcna.R",
+      "bytes": 6329,
+      "sha256": "ac49e32d05d41ffd826d08ff005b0e82a3d9cbb88f7bf59d7e7655c9102d8ac2",
+      "role": "executable_code_or_test",
+      "source_authority": "PUBLIC_REPOSITORY",
+      "redistribution_class": "MIT_CODE"
+    },
+    {
+      "relative_path": "R/idd_mr_presso.R",
+      "bytes": 4924,
+      "sha256": "f601c9f7a0f16ba634be6a2de8469a5a983b2c88f5e53fb8530b0c62b3af1d16",
+      "role": "executable_code_or_test",
+      "source_authority": "PUBLIC_REPOSITORY",
+      "redistribution_class": "MIT_CODE"
+    },
+    {
+      "relative_path": "R/idd_official_coloc.R",
+      "bytes": 7384,
+      "sha256": "ae636d1e30d026763bb677c2776931ef4d474c6aa7923ccb68b5fffdff151d01",
+      "role": "executable_code_or_test",
+      "source_authority": "PUBLIC_REPOSITORY",
+      "redistribution_class": "MIT_CODE"
+    },
+    {
+      "relative_path": "R/idd_utils.R",
+      "bytes": 5544,
+      "sha256": "b4125f879b3e90a3c3ad778caead0da9dbd0415fc5749b1bb755b743ea8e1b9b",
+      "role": "executable_code_or_test",
+      "source_authority": "PUBLIC_REPOSITORY",
+      "redistribution_class": "MIT_CODE"
+    },
+    {
+      "relative_path": "README.md",
+      "bytes": 3436,
+      "sha256": "d84a82ba36849edfb8feb8816e4263306917fb5cd4f1cf8705a851862499bf1d",
+      "role": "documentation_or_provenance",
+      "source_authority": "PUBLIC_REPOSITORY",
+      "redistribution_class": "PUBLIC_DOCUMENTATION_OR_METADATA"
+    },
+    {
+      "relative_path": "README.zh-CN.md",
+      "bytes": 1217,
+      "sha256": "d4ff7c60038a9b593b6a21f4bd145530e64bfad540d28dd9e4af0e74365523fa",
+      "role": "documentation_or_provenance",
+      "source_authority": "PUBLIC_REPOSITORY",
+      "redistribution_class": "PUBLIC_DOCUMENTATION_OR_METADATA"
+    },
+    {
+      "relative_path": "RELEASE_STATUS.json",
+      "bytes": 888,
+      "sha256": "d53f16ff377beda9605732e2e04494b558c4f85758ad2d815d33a53f1299cabd",
+      "role": "documentation_or_provenance",
+      "source_authority": "PUBLIC_REPOSITORY",
+      "redistribution_class": "PUBLIC_DOCUMENTATION_OR_METADATA"
+    },
+    {
+      "relative_path": "results/master_1_4/ablation_leverage.tsv",
+      "bytes": 525,
+      "sha256": "569feac3696d7929d740599740cbbe3b35eb38c870e28c7f347c6957234c33fc",
+      "role": "preserved_v1_1_output",
+      "source_authority": "MASTER_1.4.0_PUBLIC_LAYER",
+      "redistribution_class": "REDISTRIBUTABLE_DERIVED_OUTPUT"
+    },
+    {
+      "relative_path": "results/master_1_4/coloc_prior_sensitivity_summary.tsv",
+      "bytes": 4999,
+      "sha256": "299c8fe199181015d04f7636eafb756ab569107ee55b5db4aa098d596fc0f768",
+      "role": "preserved_v1_1_output",
+      "source_authority": "MASTER_1.4.0_PUBLIC_LAYER",
+      "redistribution_class": "REDISTRIBUTABLE_DERIVED_OUTPUT"
+    },
+    {
+      "relative_path": "results/master_1_4/conditional_strength.tsv",
+      "bytes": 8087,
+      "sha256": "8a1f686352f518da6b1b5a2125caa808f453d071e3a6b7ba5d25139d97d88292",
+      "role": "preserved_v1_1_output",
+      "source_authority": "MASTER_1.4.0_PUBLIC_LAYER",
+      "redistribution_class": "REDISTRIBUTABLE_DERIVED_OUTPUT"
+    },
+    {
+      "relative_path": "results/master_1_4/effective_instrument_count.tsv",
+      "bytes": 11287,
+      "sha256": "6d8ebfb772ce2dae5cc48e4d2336c556d72b7cc46054cf50ba89f212418de9dc",
+      "role": "preserved_v1_1_output",
+      "source_authority": "MASTER_1.4.0_PUBLIC_LAYER",
+      "redistribution_class": "REDISTRIBUTABLE_DERIVED_OUTPUT"
+    },
+    {
+      "relative_path": "results/master_1_4/figure1_source.tsv",
+      "bytes": 1259521,
+      "sha256": "4cf0ddd8de53bbdbf8351192ec3532102f25f1b60c02675d92f2b3f2d6c1379c",
+      "role": "preserved_v1_1_output",
+      "source_authority": "MASTER_1.4.0_PUBLIC_LAYER",
+      "redistribution_class": "REDISTRIBUTABLE_DERIVED_OUTPUT"
+    },
+    {
+      "relative_path": "results/master_1_4/ld_bootstrap_matrix_qc.tsv",
+      "bytes": 4747,
+      "sha256": "cae1fbfff09ec11b4cc2c9fd0eccae7508d19076cefa02f1d0e31666777f3a3d",
+      "role": "preserved_v1_1_output",
+      "source_authority": "MASTER_1.4.0_PUBLIC_LAYER",
+      "redistribution_class": "REDISTRIBUTABLE_DERIVED_OUTPUT"
+    },
+    {
+      "relative_path": "results/master_1_4/ld_bootstrap_missingness_qc.tsv",
+      "bytes": 28527,
+      "sha256": "d6f479f0096f343b60bd0cd392ea3a9a477b19a76801386f3f8d935b54442393",
+      "role": "preserved_v1_1_output",
+      "source_authority": "MASTER_1.4.0_PUBLIC_LAYER",
+      "redistribution_class": "REDISTRIBUTABLE_DERIVED_OUTPUT"
+    },
+    {
+      "relative_path": "results/master_1_4/ld_bootstrap_repruning_akr1c2.tsv",
+      "bytes": 479608,
+      "sha256": "f0d9405d4511318e07ada4ec170cf0d1d5ecf85eeacdc84877a3873392d953dd",
+      "role": "preserved_v1_1_output",
+      "source_authority": "MASTER_1.4.0_PUBLIC_LAYER",
+      "redistribution_class": "REDISTRIBUTABLE_DERIVED_OUTPUT"
+    },
+    {
+      "relative_path": "results/master_1_4/ld_reference_bootstrap_summary.tsv",
+      "bytes": 15162,
+      "sha256": "21814cc57b0c9f41fd8e833d4577df23505fcfdc2bdf5c4dd47e06b65add31d2",
+      "role": "preserved_v1_1_output",
+      "source_authority": "MASTER_1.4.0_PUBLIC_LAYER",
+      "redistribution_class": "REDISTRIBUTABLE_DERIVED_OUTPUT"
+    },
+    {
+      "relative_path": "results/master_1_4/ld_shrinkage_sensitivity.tsv",
+      "bytes": 17016,
+      "sha256": "fd2f77a5cdf0b902d402d9c2a03e253b70a3dcac3a7fd20d6ec8143cabe0bdd5",
+      "role": "preserved_v1_1_output",
+      "source_authority": "MASTER_1.4.0_PUBLIC_LAYER",
+      "redistribution_class": "REDISTRIBUTABLE_DERIVED_OUTPUT"
+    },
+    {
+      "relative_path": "results/master_1_4/multiplicity_summary.tsv",
+      "bytes": 491,
+      "sha256": "7919e050c549e51a50cc3be07476cf5688bd3fd87277ea56c4140ea574dea159",
+      "role": "preserved_v1_1_output",
+      "source_authority": "MASTER_1.4.0_PUBLIC_LAYER",
+      "redistribution_class": "REDISTRIBUTABLE_DERIVED_OUTPUT"
+    },
+    {
+      "relative_path": "results/master_1_4/p2ry13_multiplicity_path.tsv",
+      "bytes": 442,
+      "sha256": "74024dc88176178b72493ded7797a5b3aa0a43826c536d760deeadcbd5b51883",
+      "role": "preserved_v1_1_output",
+      "source_authority": "MASTER_1.4.0_PUBLIC_LAYER",
+      "redistribution_class": "REDISTRIBUTABLE_DERIVED_OUTPUT"
+    },
+    {
+      "relative_path": "results/master_1_4/pcivw_truncation_sensitivity.tsv",
+      "bytes": 7147,
+      "sha256": "4a01c80a79ec56f0d95855a9b0b7b6abe143a000b54b6262e3a608e13b76a383",
+      "role": "preserved_v1_1_output",
+      "source_authority": "MASTER_1.4.0_PUBLIC_LAYER",
+      "redistribution_class": "REDISTRIBUTABLE_DERIVED_OUTPUT"
+    },
+    {
+      "relative_path": "results/master_1_4/primary13_egger_orientation_comparison.tsv",
+      "bytes": 2180,
+      "sha256": "7c66d49dc67a474ada5cab4cea6120c440e8114c076d9be9405b0ea4824c6c13",
+      "role": "preserved_v1_1_output",
+      "source_authority": "MASTER_1.4.0_PUBLIC_LAYER",
+      "redistribution_class": "REDISTRIBUTABLE_DERIVED_OUTPUT"
+    },
+    {
+      "relative_path": "results/master_1_4/supplementary_figure_s2_source.tsv",
+      "bytes": 1555,
+      "sha256": "9f7b8b9728f9292d436e5405f2e33ed37926cc342d780822de6636cb6e7c76f6",
+      "role": "preserved_v1_1_output",
+      "source_authority": "MASTER_1.4.0_PUBLIC_LAYER",
+      "redistribution_class": "REDISTRIBUTABLE_DERIVED_OUTPUT"
+    },
+    {
+      "relative_path": "results/master_1_4/supplementary_figure_s2_source_manifest.tsv",
+      "bytes": 1145,
+      "sha256": "0799c0e1212238972554125653b47934d89156f507dda93e802c94fe1d59264e",
+      "role": "preserved_v1_1_output",
+      "source_authority": "MASTER_1.4.0_PUBLIC_LAYER",
+      "redistribution_class": "REDISTRIBUTABLE_DERIVED_OUTPUT"
+    },
+    {
+      "relative_path": "results/master_1_4/table3_evidence_matrix.tsv",
+      "bytes": 5843,
+      "sha256": "0ca02752ed4fb4ae2620f4cc766dbb9407011ac25663e0d419ab551ef99aa006",
+      "role": "preserved_v1_1_output",
+      "source_authority": "MASTER_1.4.0_PUBLIC_LAYER",
+      "redistribution_class": "REDISTRIBUTABLE_DERIVED_OUTPUT"
+    },
+    {
+      "relative_path": "results/master_1_5/AKR1C1_AKR1C2_CATALOGUE_POSITION.tsv",
+      "bytes": 754,
+      "sha256": "5b6517a954c50ae24836bbe65d83c0104bfc223b38587381c66b5271a43882f1",
+      "role": "governed_master_1_5_output",
+      "source_authority": "MASTER_1.5.0_SCIENTIFIC_CANDIDATE",
+      "redistribution_class": "REDISTRIBUTABLE_DERIVED_OUTPUT"
+    },
+    {
+      "relative_path": "results/master_1_5/CATALOGUE_EFFECTIVE_K.tsv",
+      "bytes": 1418934,
+      "sha256": "4aa0faea5cb0215705c2de3a128ca5dc858d6a42823a4d4c38ee07d948032c26",
+      "role": "governed_master_1_5_output",
+      "source_authority": "MASTER_1.5.0_SCIENTIFIC_CANDIDATE",
+      "redistribution_class": "REDISTRIBUTABLE_DERIVED_OUTPUT"
+    },
+    {
+      "relative_path": "results/master_1_5/CATALOGUE_EXPOSURE_PAIRED_CHANGE_SUMMARY.tsv",
+      "bytes": 2140,
+      "sha256": "b71a92657707d773bdca29f5d0219f2fda03a4f6f94070ea3b520ae2b40cce9d",
+      "role": "governed_master_1_5_output",
+      "source_authority": "MASTER_1.5.0_SCIENTIFIC_CANDIDATE",
+      "redistribution_class": "REDISTRIBUTABLE_DERIVED_OUTPUT"
+    },
+    {
+      "relative_path": "results/master_1_5/CATALOGUE_EXPOSURE_PAIRED_CHANGES.tsv",
+      "bytes": 1256911,
+      "sha256": "12650a8c253a03f529d0fe03e95206c495db373e45e9c1a419e05d6d2d390c56",
+      "role": "governed_master_1_5_output",
+      "source_authority": "MASTER_1.5.0_SCIENTIFIC_CANDIDATE",
+      "redistribution_class": "REDISTRIBUTABLE_DERIVED_OUTPUT"
+    },
+    {
+      "relative_path": "results/master_1_5/CATALOGUE_GIVW_LD_LADDER.tsv",
+      "bytes": 12418968,
+      "sha256": "9d95d1944219baa21dffe7024514ec836c0c9e860035ae818c101dd1ea6c7148",
+      "role": "governed_master_1_5_output",
+      "source_authority": "MASTER_1.5.0_SCIENTIFIC_CANDIDATE",
+      "redistribution_class": "REDISTRIBUTABLE_DERIVED_OUTPUT"
+    },
+    {
+      "relative_path": "results/master_1_5/CATALOGUE_JOINT_EXPOSURE_INFORMATION.tsv",
+      "bytes": 1111085,
+      "sha256": "36e630cde2cc06b30864e52174aba7b4dce2c89fc9610a6026792b14cc846496",
+      "role": "governed_master_1_5_output",
+      "source_authority": "MASTER_1.5.0_SCIENTIFIC_CANDIDATE",
+      "redistribution_class": "REDISTRIBUTABLE_DERIVED_OUTPUT"
+    },
+    {
+      "relative_path": "results/master_1_5/CATALOGUE_LEVERAGE_PAIRED_CHANGES.tsv",
+      "bytes": 765428,
+      "sha256": "e73e552d798d8b1f52888aa3892d388d80858ecd9fed38900e251e3f051287c5",
+      "role": "governed_master_1_5_output",
+      "source_authority": "MASTER_1.5.0_SCIENTIFIC_CANDIDATE",
+      "redistribution_class": "REDISTRIBUTABLE_DERIVED_OUTPUT"
+    },
+    {
+      "relative_path": "results/master_1_5/CATALOGUE_LEVERAGE_PAIRED_SUMMARY.tsv",
+      "bytes": 719,
+      "sha256": "b1b992d0249ee061f5f787d0108c562df928f345ca9b984a09cc3426c2be345d",
+      "role": "governed_master_1_5_output",
+      "source_authority": "MASTER_1.5.0_SCIENTIFIC_CANDIDATE",
+      "redistribution_class": "REDISTRIBUTABLE_DERIVED_OUTPUT"
+    },
+    {
+      "relative_path": "results/master_1_5/CATALOGUE_PRECISION_PAIRED_CHANGE_SUMMARY.tsv",
+      "bytes": 8366,
+      "sha256": "37e59c38104092f01d7512c9892a75df6de804c0ed5e39d285ac14f74dcc6b31",
+      "role": "governed_master_1_5_output",
+      "source_authority": "MASTER_1.5.0_SCIENTIFIC_CANDIDATE",
+      "redistribution_class": "REDISTRIBUTABLE_DERIVED_OUTPUT"
+    },
+    {
+      "relative_path": "results/master_1_5/CATALOGUE_PRECISION_PAIRED_CHANGES.tsv",
+      "bytes": 6544176,
+      "sha256": "4fec99e0a72895e0184df817d4ee035228a22660e840f5feb2eb7d3f8711032e",
+      "role": "governed_master_1_5_output",
+      "source_authority": "MASTER_1.5.0_SCIENTIFIC_CANDIDATE",
+      "redistribution_class": "REDISTRIBUTABLE_DERIVED_OUTPUT"
+    },
+    {
+      "relative_path": "results/master_1_5/ENDPOINT_STRATIFIED_INFORMATION_PRECISION.tsv",
+      "bytes": 446,
+      "sha256": "885455dd1651d12f9da82ba4d19d18ed90933e9bc32e4cfccf50b8169919d057",
+      "role": "governed_master_1_5_output",
+      "source_authority": "MASTER_1.5.0_SCIENTIFIC_CANDIDATE",
+      "redistribution_class": "REDISTRIBUTABLE_DERIVED_OUTPUT"
+    },
+    {
+      "relative_path": "results/master_1_5/HISTORICAL_CANDIDATE_FULL_THRESHOLD_COMPARISON.tsv",
+      "bytes": 2460,
+      "sha256": "abfbdc7715eb7abc4053455c65564e97721a68f57624ac28d3fd14fcfbfd0723",
+      "role": "governed_master_1_5_output",
+      "source_authority": "MASTER_1.5.0_SCIENTIFIC_CANDIDATE",
+      "redistribution_class": "REDISTRIBUTABLE_DERIVED_OUTPUT"
+    },
+    {
+      "relative_path": "results/master_1_5/INFORMATION_PRECISION_MATCHED_ASSOCIATION.tsv",
+      "bytes": 2383,
+      "sha256": "ace1bb2c6b471f2d48d1d2b11996eca23b55e5b123b460b1bc6717fcdfc5971f",
+      "role": "governed_master_1_5_output",
+      "source_authority": "MASTER_1.5.0_SCIENTIFIC_CANDIDATE",
+      "redistribution_class": "REDISTRIBUTABLE_DERIVED_OUTPUT"
+    },
+    {
+      "relative_path": "results/master_1_5/K1_MULTIPLICITY_MEMBERSHIP_CHANGES.tsv",
+      "bytes": 3025,
+      "sha256": "b3843b13de9275452ad33a3c91d29a069c571ef9e9ce1d61e55edd9aa6adb357",
+      "role": "governed_master_1_5_output",
+      "source_authority": "MASTER_1.5.0_SCIENTIFIC_CANDIDATE",
+      "redistribution_class": "REDISTRIBUTABLE_DERIVED_OUTPUT"
+    },
+    {
+      "relative_path": "results/master_1_5/K1_SECOND_ORDER_MULTIPLICITY_REPLICATION.tsv",
+      "bytes": 3218906,
+      "sha256": "80001fe5e981197ffd5211e4685d7c1b51a0fcf6d99fa99d2dae433e6743e5f0",
+      "role": "governed_master_1_5_output",
+      "source_authority": "MASTER_1.5.0_SCIENTIFIC_CANDIDATE",
+      "redistribution_class": "REDISTRIBUTABLE_DERIVED_OUTPUT"
+    },
+    {
+      "relative_path": "results/master_1_5/K1_SECOND_ORDER_SE_SENSITIVITY.tsv",
+      "bytes": 316313,
+      "sha256": "b8c9bb6a816e5d1e3ed21fc308529583bcdb78c4ebc8505164412e482c42c304",
+      "role": "governed_master_1_5_output",
+      "source_authority": "MASTER_1.5.0_SCIENTIFIC_CANDIDATE",
+      "redistribution_class": "REDISTRIBUTABLE_DERIVED_OUTPUT"
+    },
+    {
+      "relative_path": "results/master_1_5/NULL_CONSTRUCTION_AUDIT.tsv",
+      "bytes": 1040,
+      "sha256": "1a724369a2a393b170804252124c66bcfd89afd61667e29b6c1f049d367d6987",
+      "role": "governed_master_1_5_output",
+      "source_authority": "MASTER_1.5.0_SCIENTIFIC_CANDIDATE",
+      "redistribution_class": "REDISTRIBUTABLE_DERIVED_OUTPUT"
+    },
+    {
+      "relative_path": "tests/test_governed_eol_policy.py",
+      "bytes": 2755,
+      "sha256": "25ed0638677a7994b7c263b67c1d79ba4e5c0c24ac1053e6fd22d04457d00238",
+      "role": "executable_code_or_test",
+      "source_authority": "PUBLIC_REPOSITORY",
+      "redistribution_class": "MIT_CODE"
+    },
+    {
+      "relative_path": "tests/test_idd_docking_assessment.py",
+      "bytes": 1087,
+      "sha256": "9fdc32e68fa7a51569ab6c242d540704ccd666eae4ccacc660fc5acf5d809536",
+      "role": "executable_code_or_test",
+      "source_authority": "PUBLIC_REPOSITORY",
+      "redistribution_class": "MIT_CODE"
+    },
+    {
+      "relative_path": "tests/test_idd_freeze_core.py",
+      "bytes": 4033,
+      "sha256": "8a8c89cb43e4af40ae1969b1b9c60a5023a44d653a14d9ea1963a3aa46d4e05d",
+      "role": "executable_code_or_test",
+      "source_authority": "PUBLIC_REPOSITORY",
+      "redistribution_class": "MIT_CODE"
+    },
+    {
+      "relative_path": "tests/test_idd_genetics_pipeline.py",
+      "bytes": 5073,
+      "sha256": "01ca60284f960557cb446b29c27638cc1e00e249f053a98cea61777fc36e5637",
+      "role": "executable_code_or_test",
+      "source_authority": "PUBLIC_REPOSITORY",
+      "redistribution_class": "MIT_CODE"
+    },
+    {
+      "relative_path": "tests/test_idd_genetics_screen.py",
+      "bytes": 2147,
+      "sha256": "d45c829a71a9eece209466a6f72c1f29174309a639f74fea24604033474d683b",
+      "role": "executable_code_or_test",
+      "source_authority": "PUBLIC_REPOSITORY",
+      "redistribution_class": "MIT_CODE"
+    },
+    {
+      "relative_path": "tests/test_idd_genetics_smr.py",
+      "bytes": 3198,
+      "sha256": "b72f51d7999df4fc57330c1b35f04bedc80bcb4b51671a1445f727e982c92ba2",
+      "role": "executable_code_or_test",
+      "source_authority": "PUBLIC_REPOSITORY",
+      "redistribution_class": "MIT_CODE"
+    },
+    {
+      "relative_path": "tests/test_idd_genetics_utils.py",
+      "bytes": 6156,
+      "sha256": "01b2ac4df8268f6365f10cb92b4fd2b13d87c976a914f02b189812f7aeb0ef73",
+      "role": "executable_code_or_test",
+      "source_authority": "PUBLIC_REPOSITORY",
+      "redistribution_class": "MIT_CODE"
+    },
+    {
+      "relative_path": "tests/test_idd_gtex_coloc.py",
+      "bytes": 1662,
+      "sha256": "37961efdf54f20147b590818b06e34dc80263ab3c8adab1124a1507928daea3e",
+      "role": "executable_code_or_test",
+      "source_authority": "PUBLIC_REPOSITORY",
+      "redistribution_class": "MIT_CODE"
+    },
+    {
+      "relative_path": "tests/test_idd_rank_targets.py",
+      "bytes": 5724,
+      "sha256": "369530f3f7ce9a1306523a4bb7b2f2ab1fff231938031ec21c5ee9d1c9bab675",
+      "role": "executable_code_or_test",
+      "source_authority": "PUBLIC_REPOSITORY",
+      "redistribution_class": "MIT_CODE"
+    },
+    {
+      "relative_path": "tests/test_manifest_policy.py",
+      "bytes": 1255,
+      "sha256": "6a9f04492d092a752760a7ba4b71b4c5da18582fb8b815b1413b485394bc3e9d",
+      "role": "executable_code_or_test",
+      "source_authority": "PUBLIC_REPOSITORY",
+      "redistribution_class": "MIT_CODE"
+    },
+    {
+      "relative_path": "tests/test_master14_correlated_mr.py",
+      "bytes": 3512,
+      "sha256": "2e73c5a2134b768c17bf2913307e21ebefe94bc312622c688ae81d2d767e29c3",
+      "role": "executable_code_or_test",
+      "source_authority": "PUBLIC_REPOSITORY",
+      "redistribution_class": "MIT_CODE"
+    },
+    {
+      "relative_path": "tests/test_master14_public_parity.py",
+      "bytes": 5782,
+      "sha256": "eea4aaa650507a9c84bf05b2e20a9d32cc64cf7273cb13f46ac70f807070122a",
+      "role": "executable_code_or_test",
+      "source_authority": "PUBLIC_REPOSITORY",
+      "redistribution_class": "MIT_CODE"
+    },
+    {
+      "relative_path": "tests/test_master15_catalogue_extension.py",
+      "bytes": 8567,
+      "sha256": "9ca86781304fa8f88883e1d90336dd31c1723056332f3b85a7d3d477cac66a84",
+      "role": "executable_code_or_test",
+      "source_authority": "PUBLIC_REPOSITORY",
+      "redistribution_class": "MIT_CODE"
+    },
+    {
+      "relative_path": "tests/test_mr_prepare_druggable_genes.py",
+      "bytes": 2055,
+      "sha256": "2f298df15e81b519a7c0373c3aa9dd95c373124c76478cc01cd4f7a914dc1533",
+      "role": "executable_code_or_test",
+      "source_authority": "PUBLIC_REPOSITORY",
+      "redistribution_class": "MIT_CODE"
+    },
+    {
+      "relative_path": "tests/test_release_manifest_v120.py",
+      "bytes": 1971,
+      "sha256": "942bcd328bec65a41cd27e775103d2cc886893f090ee8a7f5ddd7b6d525900ce",
+      "role": "executable_code_or_test",
+      "source_authority": "PUBLIC_REPOSITORY",
+      "redistribution_class": "MIT_CODE"
+    },
+    {
+      "relative_path": "tools/build_manifest.py",
+      "bytes": 1857,
+      "sha256": "731df3ff79a94d9d23a9f73f1faf29d46f18450eb006f09c1b3050f3c53fbf72",
+      "role": "executable_code_or_test",
+      "source_authority": "PUBLIC_REPOSITORY",
+      "redistribution_class": "MIT_CODE"
+    },
+    {
+      "relative_path": "tools/build_release_manifest.py",
+      "bytes": 2964,
+      "sha256": "515442a1e7fc810a699cd1439a779f55fa793c6a3635781761a4b099a18521f4",
+      "role": "executable_code_or_test",
+      "source_authority": "PUBLIC_REPOSITORY",
+      "redistribution_class": "MIT_CODE"
+    },
+    {
+      "relative_path": "tools/verify_package.py",
+      "bytes": 8814,
+      "sha256": "91975509a3136db798539a2bfc4bcc70ddf3222a653c7a67d2202c4ecd6adb2a",
+      "role": "executable_code_or_test",
+      "source_authority": "PUBLIC_REPOSITORY",
+      "redistribution_class": "MIT_CODE"
+    },
+    {
+      "relative_path": "UPLOAD_GUIDE.zh-CN.md",
+      "bytes": 997,
+      "sha256": "a860c1cd83d777ecb6ee593393b94640919338f30f70f7b9d2e1cf42cff1d5ac",
+      "role": "documentation_or_provenance",
+      "source_authority": "PUBLIC_REPOSITORY",
+      "redistribution_class": "PUBLIC_DOCUMENTATION_OR_METADATA"
+    }
+  ]
+}

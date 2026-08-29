@@ -32,13 +32,15 @@ class Master14PublicParityTests(unittest.TestCase):
         cls.results = ROOT / "results" / "master_1_4"
         cls.version = json.loads((ROOT / "provenance" / "ANALYSIS_VERSION.json").read_text(encoding="utf-8"))
 
-    def test_master_identity_is_locked_1_4_0(self) -> None:
-        self.assertEqual(self.version["master_version"], "1.4.0")
+    def test_current_identity_and_preserved_master14_layer(self) -> None:
+        self.assertEqual(self.version["master_version"], "1.5.0")
+        self.assertEqual(self.version["master_status"], "SCIENTIFICALLY_FROZEN_PENDING_PUBLIC_RELEASE")
         self.assertEqual(
             self.version["master_hash"],
-            "d5bb9062efbd170abd7b9380673a423e5cc54bd94de6f50c48092b503a512006",
+            "95b0e28b7ff686671426223574b8a9ce490417bb3b2e71c0c448622d6fb9b6ea",
         )
         self.assertEqual(self.version["provenance_unresolved"], 0)
+        self.assertTrue((self.results / "figure1_source.tsv").is_file())
 
     def test_multiplicity_expected_counts(self) -> None:
         data = pd.read_csv(self.results / "multiplicity_summary.tsv", sep="\t")

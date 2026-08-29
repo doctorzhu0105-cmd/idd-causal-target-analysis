@@ -1,6 +1,6 @@
 # Reproducibility guide
 
-## 1. Environment
+## Environment and offline gates
 
 ```bash
 conda env create -f environment/environment.yml
@@ -9,35 +9,78 @@ python -B -m unittest discover -s tests -p "test_*.py"
 python tools/verify_package.py --root .
 ```
 
-The Python lock records Python 3.12.10, NumPy 2.4.6, pandas 2.3.3, SciPy 1.18.0 and Matplotlib 3.11.0. Restore R packages from `environment/renv.lock`. PLINK 1.9 and SMR 1.3.1 are external executables and are not redistributed.
+The Python environment records Python, NumPy, pandas, SciPy, and Matplotlib versions. Restore R dependencies from `environment/renv.lock`. PLINK and SMR are external executables and are not redistributed.
 
-## 2. Current public assets
+## Included v1.2.0 results
 
-`results/master_1_4/` contains small redistributable derivatives. Generate the current Figure 1 and the neutral evidence assets outside the repository tree:
+`results/master_1_5/` contains byte-governed derived outputs for:
+
+- five-threshold Effective K and joint exposure information;
+- the row-complete generalized-IVW ladder, including explicit failure-status rows;
+- exposure, precision, and leverage paired changes and summaries;
+- matched and endpoint-stratified information-precision associations;
+- the corrected historical-candidate comparison;
+- K=1 second-order uncertainty and multiplicity propagation;
+- AKR1C1/AKR1C2 positioning and null-construction diagnostics.
+
+`provenance/OUTPUT_HASHES.tsv` records byte identity to the governed scientific candidate. `provenance/RELEASE_MANIFEST_v1.2.0.tsv` and its JSON equivalent record every release file, role, authority, and redistribution class.
+
+## Regenerate included derivatives
+
+The deterministic postprocessor derives the exposure/precision pair tables, summaries, matched associations, and endpoint associations from the included five-threshold source tables:
 
 ```bash
-python analysis_p0_correlated_mr_20260814/scripts/make_current_figure1.py --repo-root . --output-dir ../idd-master14-render
-python py/generate_master14_assets.py --repo-root . --output-dir ../idd-master14-render
+python analysis_p0_correlated_mr_20260814/scripts/catalogue_extension.py \
+  --results-dir results/master_1_5 \
+  --output-dir ../idd-master15-regenerated
 ```
 
-The evidence-asset command verifies that the public Table 3 has 13 rows, contains the registered fields and has no tier/grade encoding. It verifies that its derived forest source is value-identical to the promoted Supplementary Figure S2 source.
+Render Figure 1 without filtering zero-gain observations:
 
-## 3. Prepared-input order
+```bash
+python analysis_p0_correlated_mr_20260814/scripts/make_master15_figure1.py \
+  --repo-root . \
+  --output-dir ../idd-master15-render
+```
 
-After obtaining the external inputs and staging them at the paths in `docs/DATA_ACCESS.md`:
+Panel B must receive 2,438 rows, including 392 zero nominal-K gains and 377 zero joint-information gains. Panel C must receive 7,284 rows, including 1,125 zero joint-information and precision gains. The symlog axes preserve zero coordinates.
 
-1. Run `full_universe_analysis.py prepare` to produce filtered exposure and endpoint extracts.
-2. Run `full_universe_analysis.py mr`, then `fdr`, `adequacy` and `m5` as applicable.
-3. Run `compute_leverage_metrics.py` and `conditional_f_statistic.py`.
-4. Run the correlated MR and LOO paths with `correlated_mr.py`, `run_all_genes_endpoints.py` and `primary13_loo.py`.
-5. Use `py/master14_sensitivity.py` for BH/BY families, effective dimension, leverage, same-panel LD bootstrap primitives and deterministic shrinkage.
-6. Run `coloc_prior_sensitivity.py` with the registered raw-region configuration.
-7. Compare newly generated summaries with `provenance/OUTPUT_HASHES.tsv` and the included MASTER 1.4 derivatives.
+## Full catalogue recomputation
 
-The original Stage 3 governed runner is not published wholesale because it embeds private MASTER paths, handoff text and authority-lock checks. The public module extracts its scientific functions; exact upstream source hashes are retained in `provenance/ANALYSIS_VERSION.json`.
+The public `catalogue_compute.py` accepts explicit paths and contains no manuscript, submission, package, handoff, or internal audit dependency. Its required arguments identify:
 
-## 4. Limits
+- the feasibility JSON containing the 2,479 eligible Ensembl IDs;
+- prepared eQTLGen batches;
+- prepared FinnGen endpoint tables;
+- the 1000 Genomes EUR PLINK BIM/BED files;
+- an external work directory.
 
-A fresh clone supports syntax, synthetic-regression, manifest and included-output parity checks. It does not claim full end-to-end numerical reproduction without the external eQTL, outcome and LD inputs. The bootstrap uses the same reference panel and is not independent replication. Simulation remains deferred.
+Example interface:
 
-The older `py/`, `R/` and Makefile targets are retained as the historical v1.0.0 workflow. They are not the authority for current manuscript-facing correlated cis-MR results.
+```bash
+python analysis_p0_correlated_mr_20260814/scripts/catalogue_compute.py \
+  --repo-root . \
+  --feasibility-json /authorized/feasibility.json \
+  --eqtl-batch-dir /authorized/eqtl_batches \
+  --outcome-dir /authorized/finngen_outcomes \
+  --bim /authorized/1000G_EUR.bim \
+  --bed /authorized/1000G_EUR.bed \
+  --work-dir ../idd-master15-work
+```
+
+Inputs must first be prepared with the v1.1.0 public scripts and provider-specific conventions. Users are responsible for access and terms. The public release does not claim a full rerun without those external inputs.
+
+## Verification order
+
+1. Run all unit tests.
+2. Run `tools/verify_package.py`.
+3. Regenerate derivatives into a new external directory.
+4. Compare keys and numeric values against `results/master_1_5/`.
+5. Render Figure 1 and confirm the source row counts and zero-preservation assertions.
+6. For a full external-input rerun, compare the five-threshold GIVW, Effective K, and joint-information tables to the governed output hashes.
+
+The K=1 second-order calculation is `sqrt(SE^2 + beta^2 / min_F)` for K=1 rows only, followed by global BH/BY recomputation over the unchanged 7,284-row family. The observed BH membership changes from 26 to 18 and BY from 5 to 2; four K>=2 BH losses arise through rank propagation.
+
+## Limits
+
+The associations between information changes and precision changes are descriptive. No scalar adequacy score was optimized. The same-panel bootstrap is not independent replication. The included null diagnostics are not known-truth simulation. No raw or participant-level third-party data are bundled.

@@ -1,20 +1,29 @@
 # External data access
 
-The repository deliberately excludes source and participant-level data. Users must obtain each input from its provider and comply with its terms.
+The repository excludes source and participant-level data. Users must obtain each input from its provider and comply with the applicable terms.
 
-## Current correlated cis-MR inputs
+## Required provider inputs
 
-Stage these inputs beneath `data/raw/` before a full rerun:
-
-- eQTLGen full cis-eQTL summary statistics and allele-frequency file;
-- FinnGen R13 summary statistics for `M13_INTERVERTEB`, `M13_LOWBACKPAIN` and `M13_SCIATICA`;
+- eQTLGen Phase I cis-eQTL summary statistics and allele-frequency material;
+- FinnGen R13 summary statistics for `M13_INTERVERTEB`, `M13_LOWBACKPAIN`, and `M13_SCIATICA`;
 - Finan et al. druggable-genome Table S1;
 - 1000 Genomes Phase 3 EUR PLINK `.bed/.bim/.fam` files, preserving signed allele orientation;
-- registered raw-region coloc inputs and SMR/HEIDI source files;
-- any UKB-SAIGE summary data required by the historical five-gene secondary analysis.
+- registered raw-region colocalization and SMR/HEIDI inputs when those secondary analyses are rerun;
+- UKB-SAIGE summary data only for the historical secondary analysis and only under its access terms.
 
-The exact source registry and configuration conventions are in `config/`. File hashes in `provenance/` identify redistributable derivatives only; they do not grant redistribution rights for upstream inputs.
+Configuration and provider URLs are recorded under `config/`. The new catalogue entry point requires explicit local paths and never assumes a private project directory.
 
-## Not redistributed
+## Redistribution boundary
 
-No UKB cache, participant-level genotype/expression data, API response cache, credentials, third-party executable, raw eQTL/FinnGen extract or source file with uncertain redistribution permission is included. The public code accepts local paths; never commit those inputs to this repository.
+The v1.2.0 gene-level output tables are analytical derivatives. They do not contain SNP identifiers, genomic coordinates, alleles, EAF, source-level beta/SE rows, participant identifiers, or participant records. Their inclusion does not grant rights to the upstream inputs.
+
+Not redistributed:
+
+- eQTLGen or FinnGen source extracts;
+- 1000 Genomes PLINK files;
+- UKB caches or controlled-access content;
+- GEO matrices or API caches;
+- participant-level data;
+- credentials, cookies, or third-party executables.
+
+Users must regenerate restricted-input-dependent components locally after authorized access.

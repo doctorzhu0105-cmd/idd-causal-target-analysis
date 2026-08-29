@@ -1,28 +1,21 @@
 {
-  "schema_version": "repo_a_master_1_4_sync_v1",
-  "master_version": "1.4.0",
-  "master_status": "LOCKED",
-  "master_hash": "d5bb9062efbd170abd7b9380673a423e5cc54bd94de6f50c48092b503a512006",
-  "shared_core_manuscript_sha256": "84602ee26725224452dbce47a4538730a9840877316f233666b3dda5fb9086ca",
-  "shared_narrative_composite_sha256": "1945e865a09d34fd66a82d2ed004197191b708637481fb2147ad781833fa553e",
-  "authority_source_count": 99,
-  "claim_count": 397,
+  "schema_version": "repo_a_master_1_5_release_v1",
+  "master_version": "1.5.0",
+  "master_status": "SCIENTIFICALLY_FROZEN_PENDING_PUBLIC_RELEASE",
+  "master_hash": "95b0e28b7ff686671426223574b8a9ce490417bb3b2e71c0c448622d6fb9b6ea",
+  "shared_core_hash": "0ba24fd04f81c128ff5ec1c76e2f26bca07d7b8f166130852db92aaf50bc061d",
+  "shared_core_manuscript_sha256": "a29ace7538b80631a3197b4af3fbd7b633bbd65521afda6736e126b6921d5721",
+  "authority_source_count": 128,
+  "claim_count": 431,
   "provenance_unresolved": 0,
   "analysis_freeze": {
+    "eligible_genes": 2479,
+    "ld_reference_matched_genes": 2438,
+    "endpoints": 3,
+    "ld_thresholds": [0.001, 0.01, 0.05, 0.1, 0.2],
     "formal_multiplicity_family": "7284 estimable gene-endpoint rows",
-    "bootstrap_seed": 20260826,
-    "bootstrap_replicates": 200,
     "ld_reference_sample_n": 503
   },
-  "upstream_script_sha256": {
-    "correlated_mr.py": "6c3080456b707877ff024538bc14014c123046fe9b1678584040542a81af601a",
-    "full_universe_analysis.py": "642e088bdfea0442d07762ef400b116eb2886e89baede7c4ef897c20aaa1b593",
-    "compute_leverage_metrics.py": "7492f6130657eab0edada7a0790f1e34b386308e8d04420133fc49a8907ee9fa",
-    "plink_ld.py": "842d7d30a0eae5fb8cb5790a925fa2646ccb9aa1f522ef6773ec61e58ae3fbbf",
-    "run_all_genes_endpoints.py": "6a907bffbfd237a64d794b66cbc628807e6ac2d1742f9e56a13cacdf08319e76",
-    "stage3_versionb_sensitivity.py": "f4794c2b38a34fa3987ceb51f774ae8e5b9731cf4de13222892fab560f0c2875",
-    "stage5_table3_s2_generator.py": "1c17664783cb7e048ad61c9c3d7a3568440b577c87a9071162290dd04f9c4d58",
-    "figure1_source_generator.py": "038271695ba3955aaeb527f44865817f6d32dd1863d6dbd844555b8cf7509296"
-  },
-  "public_release_state": "UNRELEASED_SYNC_CANDIDATE"
+  "public_release_version": "v1.2.0",
+  "public_release_state": "VERSIONED_RELEASE_CONTENT"
 }

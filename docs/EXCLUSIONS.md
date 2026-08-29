@@ -1,14 +1,14 @@
 # Exclusions and boundaries
 
-The synchronization candidate excludes:
+This release excludes:
 
-- the manuscript MASTER governance tree, internal audits, unlock requests, approval evidence and agent handoffs;
-- manuscripts, submission packages and author contact details;
-- raw or participant-level eQTL, outcome, genotype, transcriptomic and single-cell data;
-- UKB and other controlled-access caches;
+- the manuscript MASTER governance tree, internal audits, handoffs, reviewer simulations, and approval evidence;
+- manuscripts, submission packages, submission history, author contact details, and active-submission state;
+- raw or participant-level eQTL, outcome, genotype, transcriptomic, and single-cell data;
+- source-level eQTLGen, FinnGen, UKB, GEO, ChEMBL, and other provider extracts or caches;
 - 1000 Genomes PLINK binaries and external executables;
-- API caches, credentials, secrets and redistribution-uncertain source extracts;
-- replicate-level Stage 3 bootstrap output and full million-row multiplicity tables when a small summary plus generator is sufficient;
-- any new release tag, GitHub Release or Zenodo version.
+- credentials, tokens, cookies, machine-specific paths, and temporary files;
+- internal terminology-provenance records that contain local governance paths;
+- any claim that v1.2.0 is a new estimator, estimator validation, independent replication, or therapeutic-target validation.
 
-Included result tables are small derived summaries used for parity checks. Their inclusion does not make this repository the scientific manuscript authority.
+The included full catalogue tables are derived model outputs without variant-level or participant-level records. Failure rows remain explicit. Historical v1.0.0 and v1.1.0 content is preserved and is not rewritten.

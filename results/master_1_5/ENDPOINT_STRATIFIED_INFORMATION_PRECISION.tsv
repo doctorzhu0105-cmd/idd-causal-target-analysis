@@ -1,0 +1,4 @@
+endpoint	endpoint_label	N	nominal_K_relative_rho	effective_K_relative_rho	joint_information_relative_rho	joint_gt_nominal
+M13_INTERVERTEB	Other intervertebral disc disorders	2428	0.12281333740090211	0.11496901995825172	0.4024438027966377	True
+M13_LOWBACKPAIN	Low back pain	2428	0.18403059886219386	0.17747954384627393	0.4483619486697231	True
+M13_SCIATICA	Sciatica with lumbago	2428	0.22784014421617463	0.22294165628973073	0.4669617130564762	True

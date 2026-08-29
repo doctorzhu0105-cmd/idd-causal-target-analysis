@@ -1,21 +1,26 @@
 # 椎间盘疾病相关 cis-MR 可复现代码
 
-本仓库是与锁定科学 MASTER 1.4.0 同步的公开代码和可复现层。当前主线是配置依赖的 correlated cis-MR：signed LD、广义 IVW、广义 Q、暴露递增方向的 GLS MR-Egger、使用删减 Omega 且不重新剪枝的 LOO、有效维度/杠杆/联合信息诊断、多重检验族敏感性、同一 1000G EUR 面板的 LD bootstrap、LD shrinkage、coloc 先验敏感性，以及中性的 13 行证据矩阵与图件源数据。
+本仓库是科学 MASTER 1.5.0 候选对应的公开代码与可再分发派生结果层，不是稿件权威树。
 
-边界如下：
+v1.2.0 在 v1.1.0 correlated cis-MR 复现层基础上增加：
 
-- 仓库不是稿件权威树，不给出 A/B/C/D 层级或“已验证靶点”结论。
-- 7,284 行全局 BH 是正式多重检验参照；13 行只是 K>=2 的下游证据敏感性子集。
-- 200 次 LD bootstrap 只反映同一 503 人参考面板的抽样不确定性，不是独立面板复现。
-- 已推迟已知真值模拟；不得写成已经完成。
-- 不公开 eQTLGen/FinnGen/UKB 缓存、1000G PLINK 原始文件、个体级数据或再分发权利不明确的提取物。
-- v1.0.0 旧模块保留用于历史复现，属于次级/历史范围。
+- 2,479 个基因、5 个 LD 阈值的 Effective K 与联合暴露信息；
+- 3 个 FinnGen 结局的 5 阈值广义 IVW 梯度；
+- 暴露信息、精度和广义杠杆的配对变化；
+- 匹配参数化及分结局的信息-精度关联；
+- AKR1C1/AKR1C2 在全目录中的位置；
+- K=1 二阶标准误敏感性和全局 BH/BY 排名传播；
+- 修订 Figure 1 的确定性源表与生成脚本。
 
-离线检查：
+这些结果是配置依赖的描述性分析，不是新估计器、估计器验证、独立复现或治疗靶点验证。
+
+仓库不包含 eQTLGen、FinnGen、1000 Genomes、UKB 的原始文件、缓存或个体数据。公开的逐基因表仅含模型派生结果，不含 SNP、等位基因、坐标、源数据效应量、EAF 或参与者记录。
+
+离线验证：
 
 ```bash
 python -B -m unittest discover -s tests -p "test_*.py"
 python tools/verify_package.py --root .
 ```
 
-外部输入和执行顺序见 `docs/DATA_ACCESS.md` 与 `docs/REPRODUCIBILITY.md`。当前只是未发布的 MASTER 1.4.0 同步候选，没有创建 tag、GitHub Release 或新的 Zenodo 版本。
+外部输入、完整重算接口和边界见 `docs/DATA_ACCESS.md` 与 `docs/REPRODUCIBILITY.md`。
