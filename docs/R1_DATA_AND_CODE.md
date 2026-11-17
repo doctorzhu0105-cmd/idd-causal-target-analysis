@@ -1,0 +1,11 @@
+# R1 data and code scope
+
+v1.2.0 remains the latest verified public release at the time this local candidate was prepared. Historical release files, tags and their Git history are retained. v1.3.0 is planned; no new DOI, commit, tag or release URL is invented.
+
+The R1 evidence population starts with 7,437 planned gene-endpoint keys: 7,284 matched and 153 nonmatched. The matched set contains 1,074 K1-to-K1, 2,529 K1-to-multivariate and 3,681 multivariate-to-multivariate transitions. A key match is distinct from exact SNP-set identity.
+
+Within the 7,284, 6,087 complete precision comparisons were historically serialized as matrix-based results. A further 1,068 K1-to-K1 comparisons were conditionally reconstructed using archived C3 input and scalar checks; C3 remains COMPUTED_UNVERIFIED and the current results are not historical serialized matrix outputs. Thus the combined historical/conditional framework has 7,155 evaluable and 129 incomplete comparisons with matched-set precision UNKNOWN. The latter comprise 54 empty common sets, 51 non-empty sets with missing high-threshold cache, and 24 non-empty sets with missing low-threshold cache. Six K1 keys remain UNKNOWN. The 150 membership comparisons with missing records belong to a separate configuration population, not the 129. Within the historical 6,087 only, 25 random-effects and 6 fixed-effect classifications changed.
+
+The 1,068 numeric rows are withheld pending data-provider and file-level redistribution checks. Their withheld status does not assert that reuse is prohibited. No raw or participant-level data, allele/SNP files, restricted LD matrices or internal reports are included in the new R1 addition. The existing historic public results are retained; MIT applies to software and does not grant third-party data rights. Any source data access is subject to provider terms.
+
+The 7,437-row S6/S16 coverage serialization with its state field is distinct from the historical 7,284-row multiplicity P/q/BH/BY attachment. Historical reference identity is not a blanket license for newly reconstructed derived data. The four QWEN components are independent numerical verifiers of supplied saved inputs. Complete original MR/GWAS/LD recreation, all historical execution chains, and an end-to-end reproduction have not been established.

@@ -1,0 +1,17 @@
+measure	n	boundary
+planned_gene_endpoint_keys	7437	Primary threshold pair
+matched_gene_endpoint_keys	7284	Key match does not establish identical SNP membership
+nonmatched_gene_endpoint_keys	153	Separate from matched 7284
+K1_to_K1	1074	Among 7284 matched keys
+K1_to_Kge2	2529	Among 7284 matched keys
+Kge2_to_Kge2	3681	Among 7284 matched keys
+historically_saved_matrix_complete	6087	Historical complete precision comparisons
+conditional_singleton_reconstruction	1068	C3 COMPUTED_UNVERIFIED; not historical matrix output
+combined_conditional_evaluable	7155	6087 historical plus 1068 conditional; denominator 7284
+incomplete	129	Matched-set precision UNKNOWN: 54 empty, 51 nonempty high-cache missing, 24 nonempty low-cache missing
+empty_common_set	54	Among 129; six unresolved K1 keys are included
+nonempty_high_threshold_cache_missing	51	Among 129
+nonempty_low_threshold_cache_missing	24	Among 129
+missing_membership_configurations	150	Separate configuration population, not part of 129
+RE_direction_changes	25	Among historical 6087 only
+FE_direction_changes	6	Among historical 6087 only

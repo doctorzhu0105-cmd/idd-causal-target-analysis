@@ -1,0 +1,5 @@
+{
+  "effective_k": "catalogue/CATALOGUE_EFFECTIVE_K.tsv",
+  "exposure": "catalogue/CATALOGUE_EXPOSURE_PAIRED_CHANGES.tsv",
+  "precision": "catalogue/CATALOGUE_PRECISION_PAIRED_CHANGES.tsv"
+}

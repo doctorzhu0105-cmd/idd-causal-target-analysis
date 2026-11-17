@@ -1,12 +1,22 @@
 # Correlated cis-MR analysis for intervertebral disc disease
 
-This repository is the public code and redistributable-results layer for the scientific MASTER 1.5.0 candidate. It evaluates how LD-pruning configuration changes nominal instrument count, LD effective dimensionality, joint exposure information, generalized-IVW precision, and leverage across a 2,479-gene catalogue and three FinnGen endpoints. The manuscript governance tree remains authoritative outside this repository.
+The public repository contains code and redistributable-results layers for correlated cis-MR. MASTER 1.5.0 is the historical label for the v1.2.0 catalogue layer, not the R1 revision release number. It evaluates how LD-pruning configuration changes nominal instrument count, LD effective dimensionality, joint exposure information, generalized-IVW precision, and leverage across a 2,479-gene catalogue and three FinnGen endpoints. The manuscript governance tree remains authoritative outside this repository.
 
-## Release layers
+## R1 v1.3.0 candidate
+
+This working tree prepares an R1 update. At preparation, v1.2.0 is the latest verified public release; v1.3.0 is a planned version and no new release identity or DOI is asserted here. The author-provided release draft is not a published release.
+
+The R1 matched-set comparison has 6,087 historically complete matrix-based comparisons and 1,068 additional scalar comparisons conditionally reconstructed from archived C3 inputs. The C3 state remains COMPUTED_UNVERIFIED. Together they yield 7,155 of 7,284 evaluable pairs in a combined historical and conditional framework, not 7,155 historical matrix outputs. Of the remaining 129 incomplete pairs (matched-set precision UNKNOWN), 54 have empty common sets, 51 have non-empty sets with a missing high-threshold cache, and 24 have non-empty sets with a missing low-threshold cache. The 150 missing membership configurations are a separate population. The 25 random-effects and 6 fixed-effect direction changes refer only to the historical 6,087.
+
+The four QWEN programs in revision_r1/code/verification are independent validators of previously saved inputs, not original analysis generators. R1 code, an aggregate evidence census and a synthetic fixture are included; third-party inputs, restricted matrices, internal reports and the 1,068-row derived table are not redistributed. The latter remains pending a file-level redistribution review. See revision_r1/README.md and docs/R1_DATA_AND_CODE.md for exact scope. No full end-to-end historical reproduction is claimed.
+
+The root manifest.tsv describes the current working-tree snapshot using LF-normalized text hashes. The historical provenance/RELEASE_MANIFEST.tsv refers to the earlier MASTER 1.4.0 layer, and provenance/RELEASE_MANIFEST_v1.2.0.tsv and its JSON companion are immutable v1.2.0 snapshots; none is the current full-tree membership manifest.
+
+## Historical release layers
 
 ### v1.2.0
 
-The current release adds the catalogue-wide configuration, information, and precision extension:
+The v1.2.0 release added the catalogue-wide configuration, information, and precision extension:
 
 - Effective K and joint exposure information at five LD thresholds;
 - a five-threshold generalized-IVW ladder;

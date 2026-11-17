@@ -27,3 +27,8 @@ Not redistributed:
 - credentials, cookies, or third-party executables.
 
 Users must regenerate restricted-input-dependent components locally after authorized access.
+
+
+## R1 candidate
+
+The planned R1 additions include an aggregate census and a synthetic software fixture. They do not include C3 source inputs, raw or participant-level data, restricted matrices, or the 1,068-row conditional reconstruction, whose file-level redistribution conditions remain unverified. Software MIT licensing does not itself grant permission to redistribute provider data or data-derived outputs.

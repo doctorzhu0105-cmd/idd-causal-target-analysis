@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "Please cite the project software; this file targets version 1.3.0, whose publication is verified separately."
+type: software
+title: "Configuration-dependent instrument adequacy, exposure information and precision in cis-Mendelian randomization: a catalogue-wide empirical evaluation"
+version: 1.3.0
+authors:
+  - family-names: Zhu
+    given-names: Lingfeng
+  - family-names: Dong
+    given-names: Yang
+  - family-names: Gu
+    given-names: Haoran
+  - family-names: Yang
+    given-names: Jin
+repository-code: "https://github.com/doctorzhu0105-cmd/idd-causal-target-analysis"
+license: MIT

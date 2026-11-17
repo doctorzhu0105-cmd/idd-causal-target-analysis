@@ -54,4 +54,4 @@
 "analysis_p0_correlated_mr_20260814/scripts/catalogue_extension.py"	"report_generation"	"Deterministic paired-change and information-precision derivative generator"	"48b25f5780fb827e0d44ac215d06fb655901cbc1ec892d619861fd0ac59d1ef6"
 "analysis_p0_correlated_mr_20260814/scripts/make_master15_figure1.py"	"report_generation"	"Zero-preserving MASTER 1.5 Figure 1 renderer"	"734add3c2196882f08d422ae23d2200b63eee61487499dd02ef374bef95f9b64"
 "tests/test_master15_catalogue_extension.py"	"testing"	"MASTER 1.5 catalogue hashes formulas pair regeneration rank propagation and zero-row regression tests"	"9ca86781304fa8f88883e1d90336dd31c1723056332f3b85a7d3d477cac66a84"
-"tests/test_release_manifest_v120.py"	"testing"	"v1.2.0 release manifest membership hash and redistribution regression tests"	"942bcd328bec65a41cd27e775103d2cc886893f090ee8a7f5ddd7b6d525900ce"
+"tests/test_release_manifest_v120.py"	"testing"	"v1.2.0 release manifest membership hash and redistribution regression tests"	"f40bc7caebb71c8d2956402465b8602442a219fe4f4089e06490fbe5842ea98c"
