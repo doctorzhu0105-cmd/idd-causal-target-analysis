@@ -146,16 +146,24 @@ def main() -> int:
 
     release = json.loads((root / "RELEASE_STATUS.json").read_text(encoding="utf-8"))
     expected_release = {
-        "identity": "V1.2.0_CATALOGUE_EXTENSION_RELEASE_CONTENT",
-        "master_version": "1.5.0",
-        "release_state": "VERSIONED_RELEASE_CONTENT",
-        "git_tag": "v1.2.0",
-        "github_release": "https://github.com/doctorzhu0105-cmd/idd-causal-target-analysis/releases/tag/v1.2.0",
-        "zenodo_version": "RESOLVED_BY_PUBLICATION_RECORD",
+        "identity": "V1.3.0_R1_REPOSITORY_UPDATE_CANDIDATE",
+        "target_version": "1.3.0",
+        "release_state": "LOCAL_PREPARATION_NOT_PUBLISHED",
+        "git_tag": None,
+        "github_release": None,
+        "zenodo_version_doi": None,
     }
     for key, expected in expected_release.items():
         if release.get(key) != expected:
             failures.append(f"release_status_mismatch:{key}:{release.get(key)!r}")
+    historical = release.get("last_verified_public_release", {})
+    for key, expected in {
+        "git_tag": "v1.2.0",
+        "commit": "a056dbc4684df6ee28dbce73de761ea21090fdf0",
+        "zenodo_version_doi": "10.5281/zenodo.22164256",
+    }.items():
+        if historical.get(key) != expected:
+            failures.append(f"historical_release_mismatch:{key}:{historical.get(key)!r}")
 
     required_current = {
         "results/master_1_4/table3_evidence_matrix.tsv",
