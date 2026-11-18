@@ -1,10 +1,10 @@
 # Changelog
 
-## v1.3.1 — release candidate (not yet published)
+## v1.3.1 — maintenance update
 
 - Use `verify-ab`, `verify-psd`, `verify-r37` and `verify-rho` for saved-input verification, with matching script/config names and aligned output labels.
 - Synchronize entry points, documentation, tests and manifests. Estimators, thresholds, scientific results and data-access limits are unchanged.
-- No new release tag, version DOI or publication date has been assigned.
+- For citation, use the date on [GitHub Releases](https://github.com/doctorzhu0105-cmd/idd-causal-target-analysis/releases) and the version DOI on the matching record in the [R1 archive on Zenodo](https://doi.org/10.5281/zenodo.24312890).
 
 ## v1.3.0 — R1 software, published 17 November 2026
 

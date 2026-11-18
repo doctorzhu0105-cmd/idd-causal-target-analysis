@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-message: "This is an unpublished v1.3.1 maintenance candidate. To cite the published v1.3.0 R1 software, use its version DOI 10.5281/zenodo.24312891."
+message: "Cite the software version used. For v1.3.1 release details, see GitHub Releases; for the version DOI, use the corresponding record in the R1 Zenodo series (https://doi.org/10.5281/zenodo.24312890)."
 type: software
 title: "Configuration-dependent instrument adequacy, exposure information and precision in cis-Mendelian randomization: a catalogue-wide empirical evaluation"
 version: 1.3.1

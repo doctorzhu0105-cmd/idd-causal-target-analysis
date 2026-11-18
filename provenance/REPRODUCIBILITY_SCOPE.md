@@ -22,6 +22,6 @@ The v1.2.0 tables contain gene-level model outputs and diagnostics. They contain
 The information-precision analyses are descriptive, the K=1 calculation is a sensitivity analysis, and the null diagnostics are not known-truth simulation. Previous v1.0.0 and v1.1.0 reproducibility material remains intact.
 
 
-## Scope of the published R1 software and maintenance candidate
+## Scope of the R1 software and the v1.3.1 maintenance update
 
-The revision_r1 code and aggregate census are a bounded R1 extension. The four numerical verification programs verify previously saved inputs; they do not generate the original catalogue. The 1,068 C3-derived singleton values are conditional, their underlying C3 state remains COMPUTED_UNVERIFIED, and the keyed data and source inputs are not redistributed in this candidate. This addition does not establish end-to-end historical reproduction.
+The revision_r1 code and aggregate census are a bounded R1 extension. The four numerical verification programs verify previously saved inputs; they do not generate the original catalogue. The 1,068 C3-derived singleton values are conditional, their underlying C3 state remains COMPUTED_UNVERIFIED, and the keyed data and source inputs are not redistributed with the software. This addition does not establish end-to-end historical reproduction.

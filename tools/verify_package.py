@@ -161,27 +161,32 @@ def main() -> int:
         failures.append(f"missing_directories:{missing_roots}")
 
     release = json.loads((root / "RELEASE_STATUS.json").read_text(encoding="utf-8"))
-    expected_release = {
-        "identity": "V1.3.1_R1_MAINTENANCE_CANDIDATE",
-        "target_version": "1.3.1",
-        "release_state": "RELEASE_CANDIDATE",
-        "publication_status": "NOT_YET_PUBLISHED",
-        "git_tag": None,
-        "github_release": None,
-        "zenodo_version_doi": None,
-    }
-    for key, expected in expected_release.items():
-        if release.get(key) != expected:
-            failures.append(f"release_status_mismatch:{key}:{release.get(key)!r}")
-    historical = release.get("last_verified_public_release", {})
-    for key, expected in {
-        "git_tag": "v1.3.0",
-        "commit": "6ada8319292387c63e27346d22ffd847708ef71e",
-        "zenodo_version_doi": "10.5281/zenodo.24312891",
-        "zenodo_concept_doi": "10.5281/zenodo.24312890",
-    }.items():
-        if historical.get(key) != expected:
-            failures.append(f"historical_release_mismatch:{key}:{historical.get(key)!r}")
+    if (release.get("version"), release.get("update_type")) != ("1.3.1", "maintenance"):
+        failures.append("maintenance_version_mismatch")
+    records = release.get("publication_records", {})
+    if records.get("github_releases") != "https://github.com/doctorzhu0105-cmd/idd-causal-target-analysis/releases":
+        failures.append("github_release_directory_mismatch")
+    if records.get("r1_zenodo_series") != "https://doi.org/10.5281/zenodo.24312890":
+        failures.append("r1_zenodo_series_mismatch")
+
+    # The snapshot is a dated observation, not a constraint on later publication.
+    snapshot = release.get("preparation_snapshot", {})
+    if snapshot.get("as_of") != "2026-11-18":
+        failures.append("preparation_snapshot_date_mismatch")
+    for field in ("git_tag", "github_release", "zenodo_version_doi", "published_at"):
+        if field not in snapshot or snapshot[field] is not None:
+            failures.append(f"unexpected_preparation_identity:{field}")
+
+    historical = release.get("historical_releases", {})
+    for tag, commit, version_doi, concept_doi in (
+        ("v1.3.0", "6ada8319292387c63e27346d22ffd847708ef71e", "10.5281/zenodo.24312891", "10.5281/zenodo.24312890"),
+        ("v1.2.0", "a056dbc4684df6ee28dbce73de761ea21090fdf0", "10.5281/zenodo.22164256", "10.5281/zenodo.21486870"),
+    ):
+        row = historical.get(tag, {})
+        if (row.get("git_tag"), row.get("commit"), row.get("zenodo_version_doi"), row.get("zenodo_concept_doi")) != (
+            tag, commit, version_doi, concept_doi
+        ):
+            failures.append(f"historical_release_mismatch:{tag}")
 
     required_current = {
         "results/master_1_4/table3_evidence_matrix.tsv",

@@ -45,7 +45,7 @@ class ReleaseManifestV120Tests(unittest.TestCase):
         maintenance_versions = {
             "Makefile": (
                 (3019, "a4954e7274e795c9f9a47d649edac30545d1cedfe29d5fc0073f08cbbb7cd67d"),
-                (3137, "d74aad70fe128e10e0601274d87e8df0f28d0bcd8736eb298c9452feb83df510"),
+                (3134, "4705bfe07f4466faa382dc6df3e04d06faf22fc38aee145f1077d06b2c776def"),
             ),
             "py/idd_manuscript_verify.py": (
                 (28703, "fe50e31a91d92dece638cfbb84e4b6e895970579af1113bd7537b2e4f4f8460b"),

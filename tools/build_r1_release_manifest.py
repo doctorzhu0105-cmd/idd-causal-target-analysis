@@ -1,4 +1,4 @@
-"""Build the v1.3.1 candidate inventory without touching prior release manifests.
+"""Build the v1.3.1 maintenance inventory without touching prior release manifests.
 
 File sizes and SHA-256 correspond to canonical LF text, or to raw binary bytes,
 using the same policy as the root package manifest. Exclude only Git metadata,

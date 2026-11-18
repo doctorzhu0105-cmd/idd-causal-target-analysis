@@ -87,7 +87,7 @@ The K=1 second-order calculation is `sqrt(SE^2 + beta^2 / min_F)` for K=1 rows o
 The associations between information changes and precision changes are descriptive. No scalar adequacy score was optimized. The same-panel bootstrap is not independent replication. The included null diagnostics are not known-truth simulation. No raw or participant-level third-party data are bundled.
 
 
-## R1 components and v1.3.1 maintenance candidate
+## R1 components and v1.3.1 maintenance update
 
 The components under revision_r1 are bounded code and verification tools for authorized supplied inputs. The R1 singleton census separates 6,087 historical complete comparisons from 1,068 conditionally reconstructed scalar comparisons, whose C3 source state remains COMPUTED_UNVERIFIED. The keyed numeric derivative and underlying third-party inputs are not distributed pending file-level rights review. Four independent numerical programs verify saved inputs; they are not original historical generators. No complete original-data-to-manuscript replay is claimed.
 

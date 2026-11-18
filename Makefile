@@ -10,7 +10,7 @@ MASTER15_RENDER_OUT ?= ../idd-master15-render
 .PHONY: help test package-verify release-manifest master14-assets master14-figure1 master15-derivatives master15-figure1 prepare-druggable gate0 bulk genetics-validate genetics-screen smr scrna drug rank gtex docking handoff freeze-verify wgcna-signed ukb-outcome mr-presso official-coloc coloc-susie tables-figures article-verify
 
 help:
-	@echo "v1.3.1 maintenance candidate: run 'make test' and 'make package-verify'. Full reruns require docs/DATA_ACCESS.md."
+	@echo "v1.3.1 maintenance update: run 'make test' and 'make package-verify'. Full reruns require docs/DATA_ACCESS.md."
 
 test:
 	$(PYTHON) -B -m unittest discover -s tests -p "test_*.py"

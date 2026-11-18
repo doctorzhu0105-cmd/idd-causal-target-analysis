@@ -6,14 +6,24 @@ import unittest
 ROOT = Path(__file__).resolve().parents[2]
 
 class CandidateScopeTests(unittest.TestCase):
-    def test_release_status_is_not_published(self):
+    def test_version_metadata_and_dated_preparation_observation(self):
         status = json.loads((ROOT / "RELEASE_STATUS.json").read_text(encoding="utf-8"))
-        self.assertEqual(status["target_version"], "1.3.1")
-        self.assertEqual(status["release_state"], "RELEASE_CANDIDATE")
-        self.assertEqual(status["publication_status"], "NOT_YET_PUBLISHED")
-        self.assertIsNone(status["git_tag"])
-        self.assertIsNone(status["zenodo_version_doi"])
-        self.assertEqual(status["last_verified_public_release"]["git_tag"], "v1.3.0")
+        self.assertEqual((status["version"], status["update_type"]), ("1.3.1", "maintenance"))
+        snapshot = status["preparation_snapshot"]
+        self.assertEqual(snapshot["as_of"], "2026-11-18")
+        for field in ("git_tag", "github_release", "zenodo_version_doi", "published_at"):
+            self.assertIsNone(snapshot[field])  # None had been assigned at preparation.
+        records = status["publication_records"]
+        self.assertEqual(records["github_releases"], "https://github.com/doctorzhu0105-cmd/idd-causal-target-analysis/releases")
+        previous = status["historical_releases"]
+        r1 = previous["v1.3.0"]
+        self.assertEqual(r1["git_tag"], "v1.3.0")
+        self.assertEqual(r1["commit"], "6ada8319292387c63e27346d22ffd847708ef71e")
+        self.assertEqual(r1["published_at"], "2026-11-17T13:59:36Z")
+        self.assertEqual(r1["zenodo_version_doi"], "10.5281/zenodo.24312891")
+        self.assertEqual(records["r1_zenodo_series"], "https://doi.org/" + r1["zenodo_concept_doi"])
+        self.assertEqual(previous["v1.2.0"]["zenodo_concept_doi"], "10.5281/zenodo.21486870")
+        self.assertNotEqual(r1["zenodo_concept_doi"], previous["v1.2.0"]["zenodo_concept_doi"])
 
     def test_conditional_evidence_tiers_and_separate_populations(self):
         p = ROOT / "revision_r1/results/K1_CONDITIONAL_EVIDENCE_COUNTS.tsv"
