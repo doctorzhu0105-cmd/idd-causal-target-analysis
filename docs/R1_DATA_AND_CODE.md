@@ -1,6 +1,6 @@
 # R1 data and code scope
 
-v1.2.0 remains the latest verified public release at the time this local candidate was prepared. Historical release files, tags and their Git history are retained. v1.3.0 is planned; no new DOI, commit, tag or release URL is invented.
+The R1 software was published on 17 November 2026 as [v1.3.0](https://github.com/doctorzhu0105-cmd/idd-causal-target-analysis/releases/tag/v1.3.0) (commit `6ada8319292387c63e27346d22ffd847708ef71e`; [version DOI](https://doi.org/10.5281/zenodo.24312891), [R1 concept DOI](https://doi.org/10.5281/zenodo.24312890)). The v1.3.1 maintenance update aligns verifier names, command-line entry points and release documentation. It does not change estimators or reported scientific results. For the release date, consult [GitHub Releases](https://github.com/doctorzhu0105-cmd/idd-causal-target-analysis/releases); for the version DOI, use the record for the exact software version in the [R1 archive on Zenodo](https://doi.org/10.5281/zenodo.24312890).
 
 The R1 evidence population starts with 7,437 planned gene-endpoint keys: 7,284 matched and 153 nonmatched. The matched set contains 1,074 K1-to-K1, 2,529 K1-to-multivariate and 3,681 multivariate-to-multivariate transitions. A key match is distinct from exact SNP-set identity.
 
@@ -8,4 +8,4 @@ Within the 7,284, 6,087 complete precision comparisons were historically seriali
 
 The 1,068 numeric rows are withheld pending data-provider and file-level redistribution checks. Their withheld status does not assert that reuse is prohibited. No raw or participant-level data, allele/SNP files, restricted LD matrices or internal reports are included in the new R1 addition. The existing historic public results are retained; MIT applies to software and does not grant third-party data rights. Any source data access is subject to provider terms.
 
-The 7,437-row S6/S16 coverage serialization with its state field is distinct from the historical 7,284-row multiplicity P/q/BH/BY attachment. Historical reference identity is not a blanket license for newly reconstructed derived data. The four QWEN components are independent numerical verifiers of supplied saved inputs. Complete original MR/GWAS/LD recreation, all historical execution chains, and an end-to-end reproduction have not been established.
+The 7,437-row S6/S16 coverage serialization with its state field is distinct from the historical 7,284-row multiplicity P/q/BH/BY attachment. Historical reference identity is not a blanket license for newly reconstructed derived data. The four saved-input components are independent numerical verifiers of supplied saved inputs. Complete original MR/GWAS/LD recreation, all historical execution chains, and an end-to-end reproduction have not been established.

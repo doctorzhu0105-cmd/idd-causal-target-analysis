@@ -1,22 +1,39 @@
 {
-  "identity": "V1.3.0_R1_REPOSITORY_UPDATE_CANDIDATE",
-  "target_version": "1.3.0",
-  "release_state": "LOCAL_PREPARATION_NOT_PUBLISHED",
-  "git_tag": null,
-  "github_release": null,
-  "zenodo_version_doi": null,
-  "last_verified_public_release": {
-    "git_tag": "v1.2.0",
-    "commit": "a056dbc4684df6ee28dbce73de761ea21090fdf0",
-    "github_release": "https://github.com/doctorzhu0105-cmd/idd-causal-target-analysis/releases/tag/v1.2.0",
-    "zenodo_version_doi": "10.5281/zenodo.22164256",
-    "zenodo_concept_doi": "10.5281/zenodo.21486870"
+  "version": "1.3.1",
+  "update_type": "maintenance",
+  "scope": "Verifier naming, command-line entry points and release documentation; scientific calculations and reported results are unchanged.",
+  "publication_records": {
+    "github_releases": "https://github.com/doctorzhu0105-cmd/idd-causal-target-analysis/releases",
+    "r1_zenodo_series": "https://doi.org/10.5281/zenodo.24312890",
+    "citation_guidance": "Use the GitHub release for the cited version and the version DOI and publication date shown in its corresponding Zenodo record. The series DOI is not a version DOI."
   },
-  "historical_scientific_catalogue_label": "MASTER 1.5.0, associated with the v1.2.0 extension",
-  "author_reports_v1_3_draft": "SAVED_NOT_INDEPENDENTLY_VERIFIED",
+  "preparation_snapshot": {
+    "as_of": "2026-11-18",
+    "scope": "Recorded during pre-publication preparation; these fields describe this observation only.",
+    "git_tag": null,
+    "github_release": null,
+    "zenodo_version_doi": null,
+    "published_at": null
+  },
+  "historical_releases": {
+    "v1.3.0": {
+      "git_tag": "v1.3.0",
+      "commit": "6ada8319292387c63e27346d22ffd847708ef71e",
+      "published_at": "2026-11-17T13:59:36Z",
+      "github_release": "https://github.com/doctorzhu0105-cmd/idd-causal-target-analysis/releases/tag/v1.3.0",
+      "zenodo_version_doi": "10.5281/zenodo.24312891",
+      "zenodo_concept_doi": "10.5281/zenodo.24312890"
+    },
+    "v1.2.0": {
+      "git_tag": "v1.2.0",
+      "commit": "a056dbc4684df6ee28dbce73de761ea21090fdf0",
+      "github_release": "https://github.com/doctorzhu0105-cmd/idd-causal-target-analysis/releases/tag/v1.2.0",
+      "zenodo_version_doi": "10.5281/zenodo.22164256",
+      "zenodo_concept_doi": "10.5281/zenodo.21486870"
+    }
+  },
+  "historical_scientific_catalogue_label": "MASTER 1.5.0 (v1.2.0 catalogue layer)",
   "manuscript_authority": false,
   "third_party_raw_or_participant_level_data_included": false,
-  "conditional_k1_rows_redistribution": "WITHHELD_PENDING_FILE_LEVEL_PROVIDER_RIGHTS_REVIEW",
-  "note": "Preparation snapshot only; no v1.3.0 tag, release URL, commit, or Zenodo version DOI is asserted.",
-  "status_observed_as_of": "2026-11-17"
+  "conditional_k1_rows_redistribution": "WITHHELD_PENDING_FILE_LEVEL_PROVIDER_RIGHTS_REVIEW"
 }

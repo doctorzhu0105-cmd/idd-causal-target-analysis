@@ -40,6 +40,23 @@ class ReleaseManifestV120Tests(unittest.TestCase):
         }
         historical = {row["relative_path"] for row in self.tsv}
         self.assertTrue(explicitly_updated <= historical)
+        # Pin both generations for the three deliberately maintained files.
+        # This also works in an exported source archive without Git history.
+        maintenance_versions = {
+            "Makefile": (
+                (3019, "a4954e7274e795c9f9a47d649edac30545d1cedfe29d5fc0073f08cbbb7cd67d"),
+                (3134, "4705bfe07f4466faa382dc6df3e04d06faf22fc38aee145f1077d06b2c776def"),
+            ),
+            "py/idd_manuscript_verify.py": (
+                (28703, "fe50e31a91d92dece638cfbb84e4b6e895970579af1113bd7537b2e4f4f8460b"),
+                (28701, "e0ce8ff26fb36bca880d530947b3f3cb047d6ff8fde28afd0db4c97224c7f2cf"),
+            ),
+            "py/idd_ukb_replication.py": (
+                (24831, "395bb105a7132d07d52d9c27d8b18fe519f05f8f82d197ac0658fbe3f9772c46"),
+                (24825, "bcc216412c67aa6484a3892cf8d8bdd8b125b8d993153c18e04e682213b56d6c"),
+            ),
+        }
+        self.assertTrue(maintenance_versions.keys() <= historical)
         for row in self.tsv:
             relative = row["relative_path"]
             path = ROOT / relative
@@ -47,6 +64,11 @@ class ReleaseManifestV120Tests(unittest.TestCase):
             if relative in explicitly_updated:
                 continue
             data = canonical_bytes(path)
+            if relative in maintenance_versions:
+                frozen, candidate = maintenance_versions[relative]
+                self.assertEqual((int(row["bytes"]), row["sha256"]), frozen, relative)
+                self.assertEqual((len(data), hashlib.sha256(data).hexdigest()), candidate, relative)
+                continue
             self.assertEqual(len(data), int(row["bytes"]), relative)
             self.assertEqual(hashlib.sha256(data).hexdigest(), row["sha256"], relative)
 

@@ -112,7 +112,7 @@ def audit_citations(repo: Path, skip_online: bool) -> tuple[list[dict[str, Any]]
 
     audit_rows = []
     session = requests.Session()
-    session.headers["User-Agent"] = "Codex manuscript DOI audit"
+    session.headers["User-Agent"] = "IDD manuscript DOI audit"
     for entry in entries:
         row: dict[str, Any] = {
             **entry,

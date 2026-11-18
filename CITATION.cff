@@ -1,8 +1,8 @@
 cff-version: 1.2.0
-message: "Please cite the project software; this file targets version 1.3.0, whose publication is verified separately."
+message: "Cite the software version used. For v1.3.1 release details, see GitHub Releases; for the version DOI, use the corresponding record in the R1 Zenodo series (https://doi.org/10.5281/zenodo.24312890)."
 type: software
 title: "Configuration-dependent instrument adequacy, exposure information and precision in cis-Mendelian randomization: a catalogue-wide empirical evaluation"
-version: 1.3.0
+version: 1.3.1
 authors:
   - family-names: Zhu
     given-names: Lingfeng

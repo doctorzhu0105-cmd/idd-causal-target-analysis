@@ -1,1 +1,1 @@
-"""Independent, bounded QWEN verification components."""
+"""Independent, bounded numerical verification components."""
