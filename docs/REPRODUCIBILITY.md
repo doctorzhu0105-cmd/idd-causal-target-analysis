@@ -6,7 +6,8 @@
 conda env create -f environment/environment.yml
 conda activate idd-causal-target-analysis
 python -B -m unittest discover -s tests -p "test_*.py"
-python tools/verify_package.py --root .
+python -B -m unittest discover -s revision_r1/tests -p "test_*.py"
+python -B tools/verify_package.py --root .
 ```
 
 The Python environment records Python, NumPy, pandas, SciPy, and Matplotlib versions. Restore R dependencies from `environment/renv.lock`. PLINK and SMR are external executables and are not redistributed.
@@ -86,6 +87,9 @@ The K=1 second-order calculation is `sqrt(SE^2 + beta^2 / min_F)` for K=1 rows o
 The associations between information changes and precision changes are descriptive. No scalar adequacy score was optimized. The same-panel bootstrap is not independent replication. The included null diagnostics are not known-truth simulation. No raw or participant-level third-party data are bundled.
 
 
-## Planned R1 v1.3.0 additions
+## R1 components and v1.3.1 maintenance candidate
 
-The components under revision_r1 are bounded code and verification tools for authorized supplied inputs. The R1 singleton census separates 6,087 historical complete comparisons from 1,068 conditionally reconstructed scalar comparisons, whose C3 source state remains COMPUTED_UNVERIFIED. The keyed numeric derivative and underlying third-party inputs are not distributed pending file-level rights review. Four QWEN programs independently verify saved inputs; they are not original historical generators. No complete original-data-to-manuscript replay is claimed.
+The components under revision_r1 are bounded code and verification tools for authorized supplied inputs. The R1 singleton census separates 6,087 historical complete comparisons from 1,068 conditionally reconstructed scalar comparisons, whose C3 source state remains COMPUTED_UNVERIFIED. The keyed numeric derivative and underlying third-party inputs are not distributed pending file-level rights review. Four independent numerical programs verify saved inputs; they are not original historical generators. No complete original-data-to-manuscript replay is claimed.
+
+
+For the current CLI choices, config names and authorized-input interface, see [the R1 guide](../revision_r1/README.md). Release identity and citation details are in [RELEASE_STATUS.json](../RELEASE_STATUS.json).

@@ -197,7 +197,7 @@ def query_outcomes(instruments: pd.DataFrame, cache_path: Path, refresh: bool) -
         "records": {},
     }
     session = requests.Session()
-    session.headers["User-Agent"] = "Codex IDD manuscript outcome-cohort evaluation"
+    session.headers["User-Agent"] = "IDD manuscript outcome-cohort evaluation"
     for row in instruments.itertuples(index=False):
         chromosome = str(int(row.chr_b37))
         position = int(row.pos_b37)

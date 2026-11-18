@@ -1,4 +1,4 @@
-"""QWEN independent numerical verifier, adapted for isolated inputs and outputs."""
+"""Independent numerical verifier, adapted for isolated inputs and outputs."""
 import numpy as np, pandas as pd, json, os
 
 def run(paired, reference, output_dir):
@@ -79,5 +79,5 @@ def run(paired, reference, output_dir):
       "A_floor_active_when_F_lt_2lambda":bool(np.allclose(aA(np.array([10.,15.]),10),0.5)),
     }
     print(json.dumps(res,indent=2,ensure_ascii=False))
-    with open(os.path.join(OUT,"qwen_ab_verification_results.json"),"w",encoding="utf-8") as f:
+    with open(os.path.join(OUT,"ab_verification_results.json"),"w",encoding="utf-8") as f:
         json.dump(res,f,indent=2,ensure_ascii=False)

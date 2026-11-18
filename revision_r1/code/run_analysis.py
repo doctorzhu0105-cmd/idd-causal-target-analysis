@@ -16,7 +16,7 @@ PACKAGE = HERE.parent
 sys.path.insert(0, str(HERE))
 
 SUPPORTED = ('givw', 'attenuation', 'k1-propagation', 'k-transition', 'r39-primary',
-             'qwen-ab', 'qwen-rho', 'qwen-r37', 'qwen-psd',
+             'verify-ab', 'verify-rho', 'verify-r37', 'verify-psd',
              'figure-1', 'figure-2', 'figure-s1', 'figure-s2', 'figure-s3')
 
 def load_file(directory: Path, name: str) -> Path:
@@ -85,21 +85,21 @@ def main() -> int:
             result = compute(source)
             out.mkdir(parents=True, exist_ok=False)
             (out/'result.json').write_text(json.dumps(result, indent=2, allow_nan=False)+'\n', encoding='utf-8')
-        elif args.analysis in ('qwen-ab', 'qwen-rho', 'qwen-r37', 'qwen-psd'):
+        elif args.analysis in ('verify-ab', 'verify-rho', 'verify-r37', 'verify-psd'):
             # Independent saved-result audits, not original analysis generators.
-            if args.analysis == 'qwen-ab':
-                from verification.qwen_ab import run
+            if args.analysis == 'verify-ab':
+                from verification.verify_ab import run
                 first = load_file(inputs, config.get('paired'))
                 second = load_file(inputs, config.get('reference'))
                 out.mkdir(parents=True, exist_ok=False)
                 run(first, second, out)
             else:
-                if args.analysis == 'qwen-rho':
-                    from verification.qwen_rho import run
-                elif args.analysis == 'qwen-r37':
-                    from verification.qwen_r37 import run
+                if args.analysis == 'verify-rho':
+                    from verification.verify_rho import run
+                elif args.analysis == 'verify-r37':
+                    from verification.verify_r37 import run
                 else:
-                    from verification.qwen_psd import run
+                    from verification.verify_psd import run
                 first = load_file(inputs, config.get('input'))
                 out.mkdir(parents=True, exist_ok=False)
                 run(first, out)

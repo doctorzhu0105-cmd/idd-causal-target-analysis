@@ -11,6 +11,7 @@ import json
 import re
 from pathlib import Path
 
+from build_r1_release_manifest import MEMBERSHIP, manifest_rows
 from build_manifest import TEXT_SUFFIXES, canonical_bytes, iter_package_files
 
 
@@ -125,13 +126,28 @@ def main() -> int:
     with inventory_path.open(encoding="utf-8", newline="") as handle:
         inventory_rows = list(csv.DictReader(handle, delimiter="\t"))
     inventory_paths = {row["path"] for row in inventory_rows}
-    inventory_dirs = (root / "py", root / "R", root / "tests", root / "analysis_p0_correlated_mr_20260814" / "scripts")
     expected_inventory_paths = {
-        path.relative_to(root).as_posix()
-        for directory in inventory_dirs
-        for path in directory.glob("*")
-        if path.is_file() and path.suffix.lower() in {".py", ".r"}
+        name for name in actual if Path(name).suffix.lower() in {".py", ".r"}
     }
+    if len(inventory_rows) != len(inventory_paths):
+        failures.append("duplicate_code_inventory_path")
+    for row in inventory_rows:
+        path = root / row["path"]
+        if path.is_file() and canonical_sha256(path) != row["source_sha256"]:
+            failures.append(f"code_inventory_digest_mismatch:{row['path']}")
+    with (root / MEMBERSHIP).open(encoding="utf-8", newline="") as handle:
+        release_rows = list(csv.DictReader(handle, delimiter="\t"))
+    if release_rows != list(manifest_rows(root)):
+        failures.append("current_release_manifest_mismatch")
+    with (root / "revision_r1/CODE_SOURCE_IDENTITY.tsv").open(encoding="utf-8", newline="") as handle:
+        source_rows = list(csv.DictReader(handle, delimiter="\t"))
+    source_paths = {row["path"] for row in source_rows}
+    expected_sources = {n for n in actual if n.startswith("revision_r1/code/") and n.endswith(".py")}
+    if source_paths != expected_sources or len(source_paths) != len(source_rows):
+        failures.append("revision_source_identity_membership_mismatch")
+    for row in source_rows:
+        if row["path"] in actual and canonical_sha256(root / row["path"]) != row["sha256"]:
+            failures.append(f"revision_source_identity_digest_mismatch:{row['path']}")
     if inventory_paths != expected_inventory_paths:
         failures.append(f"code_inventory_mismatch:missing={sorted(expected_inventory_paths - inventory_paths)}:extra={sorted(inventory_paths - expected_inventory_paths)}")
 
@@ -146,9 +162,10 @@ def main() -> int:
 
     release = json.loads((root / "RELEASE_STATUS.json").read_text(encoding="utf-8"))
     expected_release = {
-        "identity": "V1.3.0_R1_REPOSITORY_UPDATE_CANDIDATE",
-        "target_version": "1.3.0",
-        "release_state": "LOCAL_PREPARATION_NOT_PUBLISHED",
+        "identity": "V1.3.1_R1_MAINTENANCE_CANDIDATE",
+        "target_version": "1.3.1",
+        "release_state": "RELEASE_CANDIDATE",
+        "publication_status": "NOT_YET_PUBLISHED",
         "git_tag": None,
         "github_release": None,
         "zenodo_version_doi": None,
@@ -158,9 +175,10 @@ def main() -> int:
             failures.append(f"release_status_mismatch:{key}:{release.get(key)!r}")
     historical = release.get("last_verified_public_release", {})
     for key, expected in {
-        "git_tag": "v1.2.0",
-        "commit": "a056dbc4684df6ee28dbce73de761ea21090fdf0",
-        "zenodo_version_doi": "10.5281/zenodo.22164256",
+        "git_tag": "v1.3.0",
+        "commit": "6ada8319292387c63e27346d22ffd847708ef71e",
+        "zenodo_version_doi": "10.5281/zenodo.24312891",
+        "zenodo_concept_doi": "10.5281/zenodo.24312890",
     }.items():
         if historical.get(key) != expected:
             failures.append(f"historical_release_mismatch:{key}:{historical.get(key)!r}")

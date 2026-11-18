@@ -1,0 +1,5 @@
+# v1.3.1 — unpublished maintenance candidate
+
+v1.3.1 gives the four independent saved-input numerical verifiers descriptive program, config and CLI names. Their entry points, generated filenames and metadata are synchronized with the tests and file manifests. No estimator, scientific threshold, numerical result definition or data redistribution policy changes. For working examples see [the R1 guide](../revision_r1/README.md).
+
+The preceding [v1.3.0 release](https://github.com/doctorzhu0105-cmd/idd-causal-target-analysis/releases/tag/v1.3.0) remains immutable at commit `6ada8319292387c63e27346d22ffd847708ef71e` and [version DOI 10.5281/zenodo.24312891](https://doi.org/10.5281/zenodo.24312891). The intended series is [R1 concept DOI 10.5281/zenodo.24312890](https://doi.org/10.5281/zenodo.24312890); the v1.2.0 series is separate. No version DOI, tag or date of publication has been assigned to v1.3.1. The candidate does not expand the scientific scope of reproduction, including the conditional status of the 1,068 singleton comparisons and the restrictions on upstream data.

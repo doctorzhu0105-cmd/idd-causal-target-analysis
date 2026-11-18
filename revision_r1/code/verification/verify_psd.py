@@ -1,4 +1,4 @@
-"""QWEN independent numerical verifier, adapted for isolated inputs and outputs."""
+"""Independent numerical verifier, adapted for isolated inputs and outputs."""
 import numpy as np, pandas as pd, os, json, hashlib
 
 def run(manifest, output_dir):

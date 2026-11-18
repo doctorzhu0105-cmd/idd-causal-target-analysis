@@ -1,4 +1,4 @@
-"""QWEN independent numerical verifier, adapted for isolated inputs and outputs."""
+"""Independent numerical verifier, adapted for isolated inputs and outputs."""
 import json, os
 import numpy as np
 import pandas as pd
@@ -58,6 +58,6 @@ def run(paired, output_dir):
         "signed_grid_point_counts": signed,
         "monotonicity_check": n_rho0 >= n_0177 >= n_010 >= n_1 >= n_psd,
     }
-    with open(os.path.join(OUT, "qwen_wp3_verification_results.json"), "w", encoding="utf-8") as f:
+    with open(os.path.join(OUT, "rho_verification_results.json"), "w", encoding="utf-8") as f:
         json.dump(res, f, indent=2, ensure_ascii=False)
     print(json.dumps(res, indent=2, ensure_ascii=False))
